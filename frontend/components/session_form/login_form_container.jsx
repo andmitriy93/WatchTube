@@ -3,10 +3,10 @@ import { connect } from 'react-redux';
 import SessionForm from './session_form';
 import { login } from '../../actions/session';
 
-const mSTP = state => {
+const mSTP = ({ errors }) => {
     return {
+        errors: errors.session,
         formType: 'login',
-
     }
 }
 
@@ -16,4 +16,4 @@ const mDTP = dispatch => {
     };
 };
 
-export const connect(mSTP, mDTP)(SessionForm);
+export default connect(mSTP, mDTP)(SessionForm);
