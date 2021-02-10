@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
 import sessionReducer from './session';
 
-const combineReducers({
+const combineReducers = ({
     session: sessionReducer,
 });
 
