@@ -9,7 +9,7 @@ const App = () => (
   <div>
     <header>
       <Link to="/">
-        <h1>YouTuubee</h1>
+        <h3>YouTuubee</h3>
       </Link>
     </header>
     <Switch>
