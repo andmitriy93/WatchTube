@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-    helper_method: :current_user, :logged_in?
+    helper_method :current_user, :logged_in?
 
     def current_user
         return nil unless session[:session_token]
@@ -25,6 +25,7 @@ class ApplicationController < ActionController::Base
     def require_logged_in!
         unless current_user
             render json: { base: ['invalid crenetials'] }, status: 401
+        end
             # redirect_to new_session_url unless logged_in?
     end
 
