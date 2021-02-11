@@ -18,14 +18,14 @@ export const receiveErrors = (errors) => ({
   errors,
 });
 
-export const signup = (user) => (dispatch) =>
-  APIUtil.signup(user).then(
+export const createNewUser = (formUser) => (dispatch) =>
+  APIUtil.signup(formUser).then(
     (user) => dispatch(receiveCurrentUser(user)),
     (err) => dispatch(receiveErrors(err.responseJSON))
   );
 
-export const login = (user) => (dispatch) =>
-  APIUtil.login(user).then(
+export const login = (formUser) => (dispatch) =>
+  APIUtil.login(formUser).then(
     (user) => dispatch(receiveCurrentUser(user)),
     (err) => dispatch(receiveErrors(err.responseJSON))
   );

@@ -1,10 +1,11 @@
 import React from "react";
 
-class SessionForm extends React.Component {
+class Signup extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       username: "",
+      email: "",
       password: "",
     };
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -18,24 +19,14 @@ class SessionForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    const user = Object.assign({}, this.state);
-    this.props.processForm(user);
+    this.props.createNewUser(this.state)
+      .then(this.props.history.push())
   }
-
-//   renderErrors() {
-//     return (
-//       <ul>
-//         {this.props.errors.map((error, i) => (
-//           <li key={`error-${i}`}>{error}</li>
-//         ))}
-//       </ul>
-//     );
-//   }
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
-        Sign in to continue to YouTuubee
+      <form>
+        <h2>Sign Up</h2>
         <br />
         <label>
           Username:
@@ -43,6 +34,15 @@ class SessionForm extends React.Component {
             type="text"
             value={this.state.username}
             onChange={this.update("username")}
+          />
+        </label>
+        <br/>
+        <label>
+          Email:
+          <input
+            type="text"
+            value={this.state.email}
+            onChange={this.update("email")}
           />
         </label>
         <br />
@@ -55,10 +55,10 @@ class SessionForm extends React.Component {
           />
         </label>
         <br />
-        <input type="submit" value={this.props.formType} />
+        <button onClick={this.handleSubmit}>Sign Up</button>
       </form>
     );
   }
 }
 
-export default SessionForm;
+export default Signup;
