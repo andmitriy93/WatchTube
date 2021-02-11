@@ -1,8 +1,6 @@
-import { combineReducer } from "redux";
+import { combineReducers } from "redux";
 import users from "./users";
 
-const entitiesReducer = combineReducer({
+export default combineReducers({
   users,
 });
-
-export default entitiesReducer;
