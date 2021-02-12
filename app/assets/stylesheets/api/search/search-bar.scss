@@ -1,0 +1,32 @@
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.search-bar-btn {
+  background-color: grey;
+  border: none;
+  color: black;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 10px;
+  border-radius: 2px;
+  transition-duration: 0.3s;
+}
+
+.search-bar-btn:hover {
+  background-color: black;
+  color: white;
+}
+
+// .search-btn {
+//   display: flex;
+//   position: center;
+// }

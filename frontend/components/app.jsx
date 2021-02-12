@@ -5,14 +5,15 @@ import { AuthRoute, ProtectedRoute } from "../utils/route_util";
 import NavBarContainer from "./nav_bar/nav_bar_container";
 import SignUpFormContainer from "./session_form/signup_form_container";
 import LogInFormContainer from "./session_form/login_form_container";
+import SearchBar from "./search/search";
 // import Home from "./home/home";
 
 export default () => (
   <div>
+    <SearchBar />
     <Route path="/" component={NavBarContainer} />
     {/* <Route exact path="/" component={Home} /> */}
     <AuthRoute path="/login" component={LogInFormContainer} />
     <AuthRoute path="/signup" component={SignUpFormContainer} />
   </div>
 );
-
