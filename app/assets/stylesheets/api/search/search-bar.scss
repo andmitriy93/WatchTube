@@ -15,7 +15,8 @@
   padding: 10px 15px;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
+  display: flex;
+  align-items: center;
   font-size: 10px;
   border-radius: 2px;
   transition-duration: 0.3s;
@@ -26,7 +27,7 @@
   color: white;
 }
 
-// .search-btn {
-//   display: flex;
-//   position: center;
-// }
+.search-btn {
+  display: flex;
+  align-items: center;
+}
