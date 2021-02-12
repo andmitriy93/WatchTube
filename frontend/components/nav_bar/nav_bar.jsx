@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { FaAlignRight } from "react-icons/fa";
+import SearchBar from '../search/search'
 
 export default ({ currentUser, logout }) => {
   const display = currentUser ? (
@@ -9,10 +9,11 @@ export default ({ currentUser, logout }) => {
       <button onClick={logout}>Log Out</button>
     </div>
   ) : (
-    <div>
-      <Link to="/signup">Sign Up</Link>
-      <br />
-      <Link to="/login">Log In</Link>
+    <div className='nav'>
+      <div className="center"><SearchBar /></div>
+      <br/>
+      <Link className="btn" to="/signup">Sign Up</Link>
+      <Link className="btn" to="/login">Log In</Link>
     </div>
   );
 
