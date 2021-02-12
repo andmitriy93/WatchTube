@@ -4,9 +4,9 @@ import session from "./session_reducer";
 import entities from "./entities";
 
 const rootReducer = combineReducers({
+  entities,
   session,
   errors,
-  entities,
 });
 
 export default rootReducer;

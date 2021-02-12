@@ -1,26 +1,35 @@
-import React from 'react';
-import { login } from '../../utils/session';
+import React from "react";
+import { login } from "../../utils/session";
 
 class Login extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      username: '',
-      password: '',
+      username: "",
+      password: "",
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   update(field) {
-    return e => {
-      this.setState({ [field]: e.currentTarget.value })
-    }
+    return (e) => {
+      this.setState({ [field]: e.currentTarget.value });
+    };
   }
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.login(this.state)
-      .then(this.props.history.push()) // not sure what it does
+    this.props.login(this.state).then(this.props.history.push()); // not sure what it does
+  }
+
+  renderErrors() {
+    return (
+      <ul>
+        {this.props.errors.map((error, i) => (
+          <li key={`error-${i}`}>{error}</li>
+        ))}
+      </ul>
+    );
   }
 
   render() {
@@ -28,25 +37,28 @@ class Login extends React.Component {
       <div>
         <h2>Log In</h2>
         <form>
-          <label>Username:
-            <input 
-              type="text" 
+          <label>
+            Username:
+            <input
+              type="text"
               value={this.state.username}
-              onChange={this.update('username')}
+              onChange={this.update("username")}
             />
           </label>
 
-          <label>Password:
-            <input 
+          <label>
+            Password:
+            <input
               type="password"
               value={this.state.password}
-              onChange={this.update('password')}
+              onChange={this.update("password")}
             />
           </label>
           <button onClick={this.handleSubmit}>Log In</button>
+          {this.renderErrors()}
         </form>
       </div>
-    )
+    );
   }
 }
 

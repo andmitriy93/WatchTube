@@ -19,8 +19,17 @@ class Signup extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.createNewUser(this.state)
-      .then(this.props.history.push())
+    this.props.createNewUser(this.state).then(this.props.history.push());
+  }
+
+  renderErrors() {
+    return (
+      <ul>
+        {this.props.errors.map((error, i) => (
+          <li key={`error-${i}`}>{error}</li>
+        ))}
+      </ul>
+    );
   }
 
   render() {
@@ -36,7 +45,7 @@ class Signup extends React.Component {
             onChange={this.update("username")}
           />
         </label>
-        <br/>
+        <br />
         <label>
           Email:
           <input
@@ -56,6 +65,7 @@ class Signup extends React.Component {
         </label>
         <br />
         <button onClick={this.handleSubmit}>Sign Up</button>
+        {this.renderErrors()}
       </form>
     );
   }
