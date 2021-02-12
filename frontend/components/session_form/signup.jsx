@@ -24,11 +24,11 @@ class Signup extends React.Component {
 
   renderErrors() {
     return (
-      <ul>
+      <div>
         {this.props.errors.map((error, i) => (
           <li key={`error-${i}`}>{error}</li>
         ))}
-      </ul>
+      </div>
     );
   }
 
