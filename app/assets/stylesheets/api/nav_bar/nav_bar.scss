@@ -22,9 +22,12 @@
   display: flex;
   justify-content: space-between;
   padding: 10px;
+  position: sticky;
+  top: 0;
   .logo {
     img {
       width: 80px;
+      color: #ffff;
     }
   }
   .btn {

@@ -11,6 +11,7 @@ export default ({ currentUser, logout }) => {
   ) : (
     <div className='nav'>
       <div className="logo">
+        {/* <span>Menu</span> */}
         <Link className="img" to="/" ><img src={window.YoutubeURL} /></Link>
       </div>
       <SearchBar />
