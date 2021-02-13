@@ -10,11 +10,11 @@ class SideBar extends React.Component {
     return (
       <div className="sidebar">
         <ul className="sideNav">
-          <li>
+          <p>
             <Link to="/">Home</Link>
-          </li>
-          <li>Trending</li>
-          <li>Subscriptions</li>
+          </p>
+          <p>Trending</p>
+          <p>Subscriptions</p>
           <li>
             <h4>
               Log in to like videos, <br /> and comment, and subscribe
