@@ -10,7 +10,7 @@ class SideBar extends React.Component {
     return (
       <div className="sidebar">
         <ul className="sideNav">
-          <p>
+          <p className="home-link">
             <Link to="/">Home</Link>
           </p>
           <p>Trending</p>
