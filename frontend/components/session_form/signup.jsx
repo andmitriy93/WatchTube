@@ -9,12 +9,21 @@ class Signup extends React.Component {
       password: "",
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleDemo = this.handleDemo.bind(this);
   }
 
   update(field) {
     return (e) => {
       this.setState({ [field]: e.currentTarget.value });
     };
+  }
+
+  handleDemo() {
+    this.props.createNewUser({
+      username: 'Demo User',
+      email: 'user_demo@gmail.com',
+      password: '123456'
+    }).then(() => this.props.history.push())
   }
 
   handleSubmit(e) {
@@ -63,6 +72,7 @@ class Signup extends React.Component {
           </label>
           <br />
           <button onClick={this.handleSubmit}>Sign Up</button>
+          <button className="demo" onClick={() => this.handleDemo()}>Demo Login</button>
           {this.renderErrors()}
         </form>
       </div>
