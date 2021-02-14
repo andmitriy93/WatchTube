@@ -10,16 +10,22 @@ class SideBar extends React.Component {
     return (
       <div className="sidebar">
         <ul className="sideNav">
-          <p className="home-link">
-            <Link to="/">Home</Link>
-          </p>
-          <p>Trending</p>
-          <p>Subscriptions</p>
+          <li className="home-link">
+            <p>
+              <Link to="/">Home</Link>
+            </p>
+          </li>
           <li>
-            <h4>
+            <p>Trending</p>
+          </li>
+          <li>
+            <p>Subscriptions</p>
+          </li>
+          <li>
+            <p>
               Log in to like videos, <br /> and comment, and subscribe
-            </h4>
-            <button>
+            </p>
+            <button className="btn-login">
                 <Link to="/login">Login</Link>
             </button>
           </li>

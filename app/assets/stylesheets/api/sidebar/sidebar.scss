@@ -1,15 +1,49 @@
 .sidebar {
     display: flex;
     background-color: #212121;
-    width: 400px;
+    width: 300px;
     height: 900px;
-
+    position: fixed;
+    margin-top: 0;
     
 }
 
 .sideNav {
     color: #6d6d6d;
+    list-style-type: none;
+    padding-left: 0;
 }
+
+p {
+    margin-left: 20px;
+}
+
+.btn-login {
+    margin-left: 20px;
+}
+
+li a {
+    height: 25px;
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+}
+
+li:hover {
+    background-color: white;
+}
+
+// .home-link a {
+//     // height: 25px;
+//     text-decoration: none;
+//     color: inherit;
+//     position: relative;
+//     display: table-cell;
+//     vertical-align: middle;
+//     width: 14rem;
+// }
+
+
 
 // .home-link {
 //     background-color: #212121;
