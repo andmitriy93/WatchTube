@@ -5,7 +5,7 @@ import SearchBar from '../search/search'
 export default ({ currentUser, logout }) => {
   const display = currentUser ? (
     <div>
-      <h3>Welcome {currentUser.username}</h3>
+        <h3 className="welcome">Welcome {currentUser.username}</h3>
       <button onClick={logout}>Log Out</button>
     </div>
   ) : (
