@@ -1,5 +1,5 @@
 import React from 'react';
-import SideBar from '../sidebar/sidebar';
+import SideBarContainer from '../sidebar/sidebar_container';
 
 class Home extends React.Component {
   constructor(props){
@@ -8,7 +8,7 @@ class Home extends React.Component {
   render() {
     return (
       <div className="home">
-        <SideBar />
+        <SideBarContainer />
       </div>
     )
   }

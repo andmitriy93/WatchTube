@@ -46,7 +46,6 @@ export default ({ currentUser }) => {
   ) : (
     <div>
       <p>
-        {console.log(currentUser)}
         Log in to like videos, <br /> and comment, and subscribe
       </p>
       <button className="btn-login">

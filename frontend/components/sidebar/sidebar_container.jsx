@@ -6,4 +6,6 @@ const mSTP = (state) => ({
   currentUser: state.session.currentUser,
 });
 
-export default connect(mSTP)(SideBar);
+
+export default connect(mSTP, null)(SideBar);
+

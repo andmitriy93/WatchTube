@@ -9,3 +9,12 @@
     background-color: rgb(240, 240, 240);
     box-shadow: 1px 1px 1px darkblue;
   }
+
+
+  .error-render {
+    display: block;
+    .err-msg {
+      text-decoration: none;
+      color: red;
+    }
+  }
