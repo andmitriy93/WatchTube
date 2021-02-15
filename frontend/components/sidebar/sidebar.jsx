@@ -41,7 +41,6 @@ import { Link } from "react-router-dom";
 export default ({ currentUser }) => {
   const greeting = currentUser ? (
     <div>
-      <h1>nothing</h1>
     </div>
   ) : (
     <div>

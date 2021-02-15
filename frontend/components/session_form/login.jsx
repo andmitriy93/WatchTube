@@ -63,7 +63,7 @@ class Login extends React.Component {
               onChange={this.update("password")}
             />
           </label>
-          <button onClick={this.handleSubmit}>Log In</button>
+          <button onClick={this.handleSubmit}>Confirm</button>
           <button className="demo" onClick={() => this.handleDemo()}>Demo Login</button>
           {this.renderErrors()}
         </form>

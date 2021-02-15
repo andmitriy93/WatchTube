@@ -10,10 +10,12 @@ import ErrorsRender from './errors/errors'
 
 export default () => (
   <div>
-      <Route path="/" component={NavBarContainer} />
+      <NavBarContainer />
+    <Switch>
+      <AuthRoute exact path="/login" component={LogInContainer} />
+      <AuthRoute exact path="/signup" component={SignUpContainer} />
       <Route exact path="/" component={Home} />
-      <AuthRoute path="/login" component={LogInContainer} />
-      <AuthRoute path="/signup" component={SignUpContainer} />
       <Route path="*" component={ErrorsRender} />
+    </Switch>
   </div>
 );

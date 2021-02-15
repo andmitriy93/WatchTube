@@ -33,9 +33,9 @@ class Signup extends React.Component {
 
   renderErrors() {
     return (
-      <div>
+      <div className="error-render">
         {this.props.errors.map((error, i) => (
-          <li key={`error-${i}`}>{error}</li>
+          <li className="err-msg" key={`error-${i}`}>{error}</li>
         ))}
       </div>
     );

@@ -8,8 +8,12 @@ class Api::SessionsController < ApplicationController
           login(@user)
           render "api/users/show"
         else
-          render json: ["Invalid username/password combination"], status: 401
+          render json: ["Enter username and password"], status: 401
         end
+    end
+
+    def show
+      @user = User.find_by(id: params[:id])
     end
 
     def destroy
