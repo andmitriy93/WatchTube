@@ -1,5 +1,6 @@
 import React from "react";
 import { login } from "../../utils/session";
+import { Link } from 'react-router-dom';
 
 class Login extends React.Component {
   constructor(props) {
@@ -44,10 +45,10 @@ class Login extends React.Component {
   render() {
     return (
       <div className="login-form">
-        <h2>Log In</h2>
+        <h2>Sign In</h2>
+
         <form>
-          <label>
-            Username:
+          <label>Username:
             <input
               type="text"
               value={this.state.username}
@@ -55,15 +56,20 @@ class Login extends React.Component {
             />
           </label>
 
-          <label>
-            Password:
+          <label>Password:
             <input
               type="password"
               value={this.state.password}
               onChange={this.update("password")}
             />
           </label>
-          <button onClick={this.handleSubmit}>Confirm</button>
+
+          <button onClick={this.handleSubmit}>Next</button>
+
+          <Link to="/signup">
+            <button className="create-acc-btn">Create account</button>
+          </Link>
+
           <button className="demo" onClick={() => this.handleDemo()}>Demo Login</button>
           {this.renderErrors()}
         </form>
