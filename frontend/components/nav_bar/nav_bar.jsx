@@ -5,7 +5,7 @@ import SearchBar from '../search/search'
 export default ({ currentUser, logout }) => {
   const display = currentUser ? (
     <div>
-        <h3 className="welcome">Welcome {currentUser.username}</h3>
+        {/* <h3 className="welcome">Welcome {currentUser.username}</h3> */}
       <button onClick={logout}>Log Out</button>
     </div>
   ) : (
@@ -16,8 +16,7 @@ export default ({ currentUser, logout }) => {
       </div>
       <SearchBar />
       <div>
-      <Link className="btn" to="/login">Log In</Link>
-      <Link className="btn" to="/signup">Sign Up</Link>
+      <Link className="btn" to="/login">Sign In</Link>
       </div>
       
     </div>

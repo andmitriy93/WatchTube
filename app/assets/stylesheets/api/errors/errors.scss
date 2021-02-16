@@ -1,14 +1,15 @@
 .btn {
-    background-color: white;
+    background-color: #212121;
     padding: 10px;
-    box-shadow: 1px 1px 1px lightslategray;
+    box-shadow: 1px 1px 1px #3ea6ff;
+    border: 1px #3ea6ff;
+    color: #3ea6ff;
     text-decoration: none;
-    border: 1px groove;
   }
-  .btn:hover {
-    background-color: rgb(240, 240, 240);
-    box-shadow: 1px 1px 1px darkblue;
-  }
+  // .btn:hover {
+  //   background-color: rgb(240, 240, 240);
+  //   box-shadow: 1px 1px 1px darkblue;
+  // }
 
   .error-render {
     display: block;

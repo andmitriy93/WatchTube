@@ -8,6 +8,7 @@
     
 }
 
+
 .sideNav {
     color: #6d6d6d;
     list-style-type: none;
@@ -19,7 +20,15 @@ p {
 }
 
 .btn-login {
+    text-decoration: none;
     margin-left: 20px;
+    font-size: 15px;
+    background-color: #212121;
+    color: #3ea6ff;
+    padding: 10px;
+    cursor: pointer;
+    // box-shadow: 1px 1px 1px #3ea6ff;
+    border: 1px solid #3ea6ff;
 }
 
 li a {
