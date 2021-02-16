@@ -77,9 +77,7 @@ class Signup extends React.Component {
 
           <button onClick={this.handleSubmit}>Next</button>
           {/* <button className="demo" onClick={() => this.handleDemo()}>Demo Login</button> */}
-          <Link to="/login">
-            <button>Sign in instead</button>
-          </Link>
+          <Link className="sign-in-instead" to="/login">Sign in instead</Link>
 
           {this.renderErrors()}
         </form>
