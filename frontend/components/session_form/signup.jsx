@@ -47,7 +47,8 @@ class Signup extends React.Component {
       <div className="signup-form">
         <form>
 
-          <h2>Sign Up</h2>
+          <span className="cga">Create your Google Account</span>
+          <span className="cty">to continue to Youtube</span>
 
           <label>Username:
             <input

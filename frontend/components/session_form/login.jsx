@@ -45,9 +45,9 @@ class Login extends React.Component {
   render() {
     return (
       <div className="login-form">
-        <h2>Sign In</h2>
 
         <form>
+        <h2>Sign In</h2>
           <label>Username:
             <input
               type="text"
@@ -66,9 +66,7 @@ class Login extends React.Component {
 
           <button onClick={this.handleSubmit}>Next</button>
 
-          <Link to="/signup">
-            <button className="create-acc-btn">Create account</button>
-          </Link>
+            <Link className="create-acc" to="/signup">Create account</Link>
 
           <button className="demo" onClick={() => this.handleDemo()}>Demo Login</button>
           {this.renderErrors()}
