@@ -45,31 +45,31 @@ class Login extends React.Component {
   render() {
     return (
       <div className="login-form">
-
         <form>
-        <h2>Sign In</h2>
-          <label>Username:
-            <input
-              type="text"
-              value={this.state.username}
-              onChange={this.update("username")}
-            />
-          </label>
+          <div className="login-container">
+            <label>Username:
+              <input
+                type="text"
+                value={this.state.username}
+                onChange={this.update("username")}
+              />
+            </label>
 
-          <label>Password:
-            <input
-              type="password"
-              value={this.state.password}
-              onChange={this.update("password")}
-            />
-          </label>
+            <label>Password:
+              <input
+                type="password"
+                value={this.state.password}
+                onChange={this.update("password")}
+              />
+            </label>
 
-          <button onClick={this.handleSubmit}>Next</button>
+            <button onClick={this.handleSubmit}>Next</button>
 
-            <Link className="create-acc" to="/signup">Create account</Link>
+              <Link className="create-acc" to="/signup">Create account</Link>
 
-          <button className="demo" onClick={() => this.handleDemo()}>Demo Login</button>
-          {this.renderErrors()}
+            <button className="demo" onClick={() => this.handleDemo()}>Demo Login</button>
+            {this.renderErrors()}
+          </div>
         </form>
       </div>
     );

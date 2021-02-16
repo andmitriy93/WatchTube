@@ -46,7 +46,7 @@ class Signup extends React.Component {
     return (
       <div className="signup-form">
         <form>
-          <div className="box">
+          <div className="create-acc-container">
             <div className="cga">
               <span>Create your Google Account</span>
             </div>

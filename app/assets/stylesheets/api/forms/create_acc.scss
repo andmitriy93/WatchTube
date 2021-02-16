@@ -19,7 +19,7 @@
       align-items: center;
       padding: 48px 40px 36px;
       
-      .box {
+      .create-acc-container {
           width: 360px;
           height: 520px;
 
@@ -36,11 +36,6 @@
               padding: 8px 0px 0px;
               margin-bottom: 40px;
           }
-
-        //   .fields {
-        //       display: inline-block;
-        //       margin: 10px;
-        //   }
       }
     }
 
@@ -60,14 +55,18 @@
       margin-left: 150px;
       margin-top: 100px;
       cursor: default;
-      text-shadow: none;
+      text-shadow: darkblue;
     }
+
+    button:hover {
+      background-color: #105cbf;
+      box-shadow: 1px 1px 1px #1a73e8;
+  }
   }
 
   .sign-in-instead {
       color: #1a73e8;
       text-decoration: none;
-    //   padding: 48px 40px 36px;
   }
 
   .username-field {
