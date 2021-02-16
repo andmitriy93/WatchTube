@@ -9,7 +9,7 @@
   form {
     height: 530px;
     width: 450px;
-    border-radius: 8px;
+    // border-radius: 8px;
     border: 1px solid #dadce0;
     background: #fff;
     display: flex;
@@ -72,7 +72,7 @@
   }
 
   button {
-    text-rendering: auto;
+    text-rendering: inherit;
     padding: 5px;
     margin-top: 80px;
     justify-content: space-between;
@@ -82,12 +82,12 @@
     color: #fff;
     background-color: #1a73e8;
     cursor: pointer;
-    text-shadow: darkblue;
+    // text-shadow: darkblue;
   }
 
   button:hover {
     background-color: #105cbf;
-    box-shadow: 1px 1px 1px #1a73e8;
+    // box-shadow: 1px 1px 1px #1a73e8;
   }
 }
 
