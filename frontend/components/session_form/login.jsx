@@ -83,16 +83,10 @@ class Login extends React.Component {
               </label>
             </div>
             {this.renderErrors()}
-
-            <div className="next-btn">
-              <button onClick={this.handleSubmit}>Next</button>
-            </div>
-
-              <Link className="create-acc-link" to="/signup">Create account</Link>
-
-            <div className="demo-usr">
-              <button className="demo" onClick={() => this.handleDemo()}>Demo Login</button>
-            </div>
+            <Link className="create-acc-link" to="/signup">Create account</Link>
+            <button className="demo-btn" onClick={() => this.handleDemo()}>Demo Login</button>
+            <button className="next-btn" onClick={this.handleSubmit}>Next</button>
+          
           </div>
         </form>
       </div>

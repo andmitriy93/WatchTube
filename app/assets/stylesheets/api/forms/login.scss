@@ -5,6 +5,7 @@
   height: 90vh;
   justify-content: center;
   align-items: center;
+
   form {
     height: 530px;
     width: 450px;
@@ -15,31 +16,73 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-
+    
     .login-container {
       width: 350px;
       height: 400px;
 
+      .si {
+        display: block;
+        font-family: 'Google Sans','Noto Sans Myanmar UI',arial,sans-serif;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 1.33;
+        color: #202124;
+        padding: 13px 0px 0px;
+        margin-bottom: 0;
+        margin-top: 0;
+        text-align: center;
+      }
 
+      .tcty {
+        padding: 8px 0px 0px;
+        color: #202124;
+        font-size: 16px;
+        font-weight: 400;
+        letter-spacing: .1px;
+        text-align: center;
+        margin-bottom: 30px;
+      }
 
       input {
         margin: 2px 2px 0 2px;
         padding: 12px 14px;
         width: 320px;
       }
+
+      // .link-to-create-acc {
+      //   display: block;
+      // }
+      //   .create-acc-link {
+      //     margin: 8px;
+      //     color: #1a73e8;
+      //     position: inherit;
+      //     height: 25px;
+      //     transform: translateY(-50%);
+      //     padding: 15px;
+      //     margin-bottom: 100px;
+      //     z-index: 1;
+      //     text-decoration: none;
+      //   }
     }
   }
   label {
     padding: 5px;
-    display: block;
+    display: inline-block;
   }
+
   button {
-    display: flex;
+    display: inline-block;
+    text-rendering: auto;
     padding: 5px;
-    margin: 10px;
+    // margin-top: 50px;
+    // margin-left: 270px;
+    width: 70px;
+    // height: 40px;
     color: #fff;
     background-color: #1a73e8;
+    cursor: pointer;
+    text-shadow: darkblue;
   }
 
   button:hover {
@@ -48,18 +91,26 @@
   }
 }
 
-  div > .next-btn {
-    display: flex;
-    margin-left: 50px;
-  }
-
   .create-acc-link {
     color: #1a73e8;
     position: inherit;
     height: 25px;
-    transform: translateY(-50%);
-    padding: 15px;
-    margin: 10px;
+    // transform: translateY(-50%);
+    padding: 0;
     z-index: 1;
     text-decoration: none;
+  }
+
+  .usr-psw-login::after {
+    content: 'Forgot email?';
+    display: block;
+    position: relative;
+    cursor: pointer;
+    text-align: left;
+    font-size: 13.5px;
+    font-weight: 500;
+    color: #1a73e8;
+    border-radius: 4px;
+    margin-left: 10px;
+    margin-bottom: 30px;
   }
