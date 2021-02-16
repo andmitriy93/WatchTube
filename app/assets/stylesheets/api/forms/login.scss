@@ -72,11 +72,11 @@
   }
 
   button {
-    display: inline-block;
     text-rendering: auto;
     padding: 5px;
-    // margin-top: 50px;
-    // margin-left: 270px;
+    margin-top: 80px;
+    justify-content: space-between;
+    margin-left: 50px;
     width: 70px;
     // height: 40px;
     color: #fff;
@@ -91,11 +91,13 @@
   }
 }
 
+
+
   .create-acc-link {
     color: #1a73e8;
     position: inherit;
     height: 25px;
-    // transform: translateY(-50%);
+    transform: translateY(-50%);
     padding: 0;
     z-index: 1;
     text-decoration: none;
