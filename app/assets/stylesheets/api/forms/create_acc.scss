@@ -6,14 +6,38 @@
     justify-content: center;
     align-items: center;
     form {
-      height: 390px;
-      width: 320px;
-      background: rgb(240, 240, 240);
+    //   height: 390px;
+    //   width: 320px;
+      width: 450px;
+      height: 600px;
+      border-radius: 8px;
+      border: 1px solid #dadce0;
+      background: #fff;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      padding: 48px 40px 36px;
+      
+      .box {
+          width: 360px;
+          height: 520px;
+
+          .cga {
+            font-family: 'Google Sans','Noto Sans Myanmar UI',arial,sans-serif;
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 1.3333;
+            padding: 16px 0px 4px;
+          }
+
+          .cty {
+              padding: 8px 0px 0px;
+              margin-bottom: 20px;
+          }
+      }
     }
+
     label {
       padding: 5px;
       display: block;
@@ -32,4 +56,5 @@
 
   .sign-in-instead {
       color: #1a73e8;
+    //   padding: 48px 40px 36px;
   }

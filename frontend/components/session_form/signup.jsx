@@ -46,40 +46,45 @@ class Signup extends React.Component {
     return (
       <div className="signup-form">
         <form>
+          <div className="box">
+            <div className="cga">
+              <span>Create your Google Account</span>
+            </div>
+            <div className="cty">
+              <span>to continue to Youtube</span>
+            </div>
 
-          <span className="cga">Create your Google Account</span>
-          <span className="cty">to continue to Youtube</span>
+            <label>Username:
+              <input
+                type="text"
+                value={this.state.username}
+                onChange={this.update("username")}
+              />
+            </label>
 
-          <label>Username:
-            <input
-              type="text"
-              value={this.state.username}
-              onChange={this.update("username")}
-            />
-          </label>
+            <label>Email:
+              <input
+                type="text"
+                value={this.state.email}
+                onChange={this.update("email")}
+              />
+            </label>
 
-          <label>Email:
-            <input
-              type="text"
-              value={this.state.email}
-              onChange={this.update("email")}
-            />
-          </label>
+            <label>Password:
+              <input
+                type="password"
+                value={this.state.password}
+                onChange={this.update("password")}
+              />
+            </label>
+            <br />
 
-          <label>Password:
-            <input
-              type="password"
-              value={this.state.password}
-              onChange={this.update("password")}
-            />
-          </label>
-          <br />
+            <button onClick={this.handleSubmit}>Next</button>
+            {/* <button className="demo" onClick={() => this.handleDemo()}>Demo Login</button> */}
+            <Link className="sign-in-instead" to="/login">Sign in instead</Link>
 
-          <button onClick={this.handleSubmit}>Next</button>
-          {/* <button className="demo" onClick={() => this.handleDemo()}>Demo Login</button> */}
-          <Link className="sign-in-instead" to="/login">Sign in instead</Link>
-
-          {this.renderErrors()}
+            {this.renderErrors()}
+          </div>
         </form>
       </div>
     );
