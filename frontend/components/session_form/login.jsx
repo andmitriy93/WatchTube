@@ -52,6 +52,15 @@ class Login extends React.Component {
           </div>
 
           <div className="login-container">
+
+            <div className="si">
+              <span>Sign in</span>
+            </div>
+
+            <div className="tcty">
+              <span>to continue to YouTube</span>
+            </div>
+
             <div className="usr-name-login">
               <label>
                 <input
@@ -75,11 +84,15 @@ class Login extends React.Component {
             </div>
             {this.renderErrors()}
 
-            <button onClick={this.handleSubmit}>Next</button>
+            <div className="next-btn">
+              <button onClick={this.handleSubmit}>Next</button>
+            </div>
 
-              <Link className="create-acc" to="/signup">Create account</Link>
+              <Link className="create-acc-link" to="/signup">Create account</Link>
 
-            <button className="demo" onClick={() => this.handleDemo()}>Demo Login</button>
+            <div className="demo-usr">
+              <button className="demo" onClick={() => this.handleDemo()}>Demo Login</button>
+            </div>
           </div>
         </form>
       </div>

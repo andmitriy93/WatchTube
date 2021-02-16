@@ -57,7 +57,7 @@ class Signup extends React.Component {
             </div>
 
             <div className="cty">
-              <span>to continue to Youtube</span>
+              <span>to continue to YouTube</span>
             </div>
 
             <div className="fields">

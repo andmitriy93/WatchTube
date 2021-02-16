@@ -1,39 +1,65 @@
-.create-acc {
-    //  color: #fff;
-     color: #1a73e8;
-    //  background-color: #1a73e8;
-     position: inherit;
-    //  top: 50%;
-     height: 25px;
-     transform: translateY(-50%);
-     padding: 15px;
-     margin: 10px;
-     z-index: 1;
-   }
-  
-   .login-form {
+.login-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 90vh;
+  justify-content: center;
+  align-items: center;
+  form {
+    height: 530px;
+    width: 450px;
+    border-radius: 8px;
+    border: 1px solid #dadce0;
+    background: #fff;
     display: flex;
     flex-direction: column;
-    width: 100%;
-    height: 90vh;
     justify-content: center;
     align-items: center;
-    form {
-      height: 300px;
-      width: 300px;
-      background: rgb(240, 240, 240);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+
+
+    .login-container {
+      width: 350px;
+      height: 400px;
+
+
+
+      input {
+        margin: 2px 2px 0 2px;
+        padding: 12px 14px;
+        width: 320px;
+      }
     }
-    label {
-      padding: 5px;
-      display: block;
-    }
-    button {
-      display: block;
-      padding: 5px;
-      margin: 10px;
-    }
+  }
+  label {
+    padding: 5px;
+    display: block;
+  }
+  button {
+    display: flex;
+    padding: 5px;
+    margin: 10px;
+    color: #fff;
+    background-color: #1a73e8;
+  }
+
+  button:hover {
+    background-color: #105cbf;
+    box-shadow: 1px 1px 1px #1a73e8;
+  }
+}
+
+  div > .next-btn {
+    display: flex;
+    margin-left: 50px;
+  }
+
+  .create-acc-link {
+    color: #1a73e8;
+    position: inherit;
+    height: 25px;
+    transform: translateY(-50%);
+    padding: 15px;
+    margin: 10px;
+    z-index: 1;
+    text-decoration: none;
   }
