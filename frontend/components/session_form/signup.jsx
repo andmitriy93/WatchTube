@@ -55,7 +55,7 @@ class Signup extends React.Component {
             <div className="cga">
               <span>Create your Google Account</span>
             </div>
-            
+
             <div className="cty">
               <span>to continue to Youtube</span>
             </div>
@@ -93,6 +93,7 @@ class Signup extends React.Component {
                   />
                 </label>
               </div>
+            {this.renderErrors()}
             </div>
             <br />
 
@@ -101,7 +102,6 @@ class Signup extends React.Component {
             <button onClick={this.handleSubmit}>Next</button>
             {/* <button className="demo" onClick={() => this.handleDemo()}>Demo Login</button> */}
 
-            {this.renderErrors()}
           </div>
         </form>
       </div>

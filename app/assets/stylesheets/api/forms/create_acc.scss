@@ -8,8 +8,8 @@
     form {
     //   height: 390px;
     //   width: 320px;
-      width: 450px;
-      height: 500px;
+      width: 430px;
+      height: 470px;
       border-radius: 8px;
       border: 1px solid #dadce0;
       background: #fff;
@@ -19,14 +19,13 @@
       align-items: center;
       padding: 48px 40px 36px;
 
-      
       .create-acc-container {
         width: 360px;
         height: 520px;
         
         .g-logo {
           width: 100px;
-          
+
         }
         .cga {
           // margin-top: 30px;
@@ -39,8 +38,10 @@
 
         .cty {
             padding: 8px 0px 0px;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
         }
+
+        
       }
     }
 
@@ -57,7 +58,7 @@
       width: 70px;
       text-rendering: auto;
       margin: 10px;
-      margin-left: 150px;
+      margin-left: 170px;
       margin-top: 100px;
       cursor: default;
       text-shadow: darkblue;

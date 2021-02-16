@@ -46,29 +46,40 @@ class Login extends React.Component {
     return (
       <div className="login-form">
         <form>
-          <div className="login-container">
-            <label>Username:
-              <input
-                type="text"
-                value={this.state.username}
-                onChange={this.update("username")}
-              />
-            </label>
 
-            <label>Password:
-              <input
-                type="password"
-                value={this.state.password}
-                onChange={this.update("password")}
-              />
-            </label>
+          <div className="g-logo">
+              <img src={window.googleLogo} />
+          </div>
+
+          <div className="login-container">
+            <div className="usr-name-login">
+              <label>
+                <input
+                  type="text"
+                  value={this.state.username}
+                  placeholder="Email or phone"
+                  onChange={this.update("username")}
+                />
+              </label>
+            </div>
+
+            <div className="usr-psw-login">
+              <label>
+                <input
+                  type="password"
+                  value={this.state.password}
+                  placeholder="Password"
+                  onChange={this.update("password")}
+                />
+              </label>
+            </div>
+            {this.renderErrors()}
 
             <button onClick={this.handleSubmit}>Next</button>
 
               <Link className="create-acc" to="/signup">Create account</Link>
 
             <button className="demo" onClick={() => this.handleDemo()}>Demo Login</button>
-            {this.renderErrors()}
           </div>
         </form>
       </div>
