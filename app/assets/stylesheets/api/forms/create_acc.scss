@@ -18,24 +18,29 @@
       justify-content: center;
       align-items: center;
       padding: 48px 40px 36px;
+
       
       .create-acc-container {
-          width: 360px;
-          height: 520px;
+        width: 360px;
+        height: 520px;
+        
+        .g-logo {
+          width: 100px;
+          
+        }
+        .cga {
+          // margin-top: 30px;
+          font-family: 'Google Sans','Noto Sans Myanmar UI',arial,sans-serif;
+          font-size: 24px;
+          font-weight: 400;
+          line-height: 1.3333;
+          padding: 16px 0px 4px;
+        }
 
-          .cga {
-            margin-top: 30px;
-            font-family: 'Google Sans','Noto Sans Myanmar UI',arial,sans-serif;
-            font-size: 24px;
-            font-weight: 400;
-            line-height: 1.3333;
-            padding: 16px 0px 4px;
-          }
-
-          .cty {
-              padding: 8px 0px 0px;
-              margin-bottom: 40px;
-          }
+        .cty {
+            padding: 8px 0px 0px;
+            margin-bottom: 40px;
+        }
       }
     }
 
@@ -82,4 +87,17 @@
   .password-field {
       display: inline-block;
       padding-bottom: 20px;
+  }
+
+  .password-field::after {
+    content: 'Use 8 or more characters with a mix of letters, numbers & symbols';
+    display: block;
+    font-size: 11.5px;
+    color: #5F6368;
+    margin-left: 10px;
+    
+  }
+  img {
+    width: 75px;
+    height: 24px;
   }

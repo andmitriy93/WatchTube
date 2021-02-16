@@ -46,10 +46,16 @@ class Signup extends React.Component {
     return (
       <div className="signup-form">
         <form>
+
+          <div className="g-logo">
+            <img src={window.googleLogo}/>
+          </div>
+
           <div className="create-acc-container">
             <div className="cga">
               <span>Create your Google Account</span>
             </div>
+            
             <div className="cty">
               <span>to continue to Youtube</span>
             </div>
