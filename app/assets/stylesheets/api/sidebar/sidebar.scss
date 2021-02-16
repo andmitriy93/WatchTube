@@ -20,7 +20,6 @@ p {
 }
 
 .btn-login {
-    text-decoration: none;
     margin-left: 20px;
     font-size: 15px;
     background-color: #212121;
@@ -29,6 +28,11 @@ p {
     cursor: pointer;
     // box-shadow: 1px 1px 1px #3ea6ff;
     border: 1px solid #3ea6ff;
+}
+
+.link-login-btn {
+    text-decoration: none;
+    color: #3ea6ff;
 }
 
 li a {

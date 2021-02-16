@@ -51,9 +51,7 @@ class Login extends React.Component {
       <div className="login-form">
         <form>
 
-          <div className="g-logo">
-              <img src={window.googleLogo} />
-          </div>
+
 
           <div className="login-container">
 
@@ -62,7 +60,7 @@ class Login extends React.Component {
             </div>
 
             <div className="tcty">
-              <span>to continue to YouTube</span>
+              <span>to continue to YouTuubee</span>
             </div>
 
             <div className="usr-name-login">

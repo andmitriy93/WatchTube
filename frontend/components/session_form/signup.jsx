@@ -10,7 +10,6 @@ class Signup extends React.Component {
       password: "",
     };
     this.handleSubmit = this.handleSubmit.bind(this);
-    // this.handleDemo = this.handleDemo.bind(this);
   }
 
   componentWillUnmount() {
@@ -22,14 +21,6 @@ class Signup extends React.Component {
       this.setState({ [field]: e.currentTarget.value });
     };
   }
-
-  // handleDemo() {
-  //   this.props.createNewUser({
-  //     username: 'Demo User',
-  //     email: 'user_demo@gmail.com',
-  //     password: '123456'
-  //   }).then(() => this.props.history.push())
-  // }
 
   handleSubmit(e) {
     e.preventDefault();
@@ -51,17 +42,14 @@ class Signup extends React.Component {
       <div className="signup-form">
         <form>
 
-          <div className="g-logo">
-            <img src={window.googleLogo}/>
-          </div>
 
           <div className="create-acc-container">
             <div className="cga">
-              <span>Create your Google Account</span>
+              <span>Create your Account</span>
             </div>
 
             <div className="cty">
-              <span>to continue to YouTube</span>
+              <span>to continue to YouTuubee</span>
             </div>
 
             <div className="fields">
@@ -104,8 +92,7 @@ class Signup extends React.Component {
             <Link className="sign-in-instead" to="/login">Sign in instead</Link>
             
             <button onClick={this.handleSubmit}>Next</button>
-            {/* <button className="demo" onClick={() => this.handleDemo()}>Demo Login</button> */}
-
+            
           </div>
         </form>
       </div>

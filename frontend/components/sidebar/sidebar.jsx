@@ -48,7 +48,7 @@ export default ({ currentUser }) => {
         Log in to like videos, <br /> and comment, and subscribe
       </p>
       <button className="btn-login">
-        <Link to="/login">Sign In</Link>
+        <Link className="link-login-btn" to="/login">Sign In</Link>
       </button>
     </div>
   );
