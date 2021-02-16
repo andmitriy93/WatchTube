@@ -9,7 +9,7 @@
     //   height: 390px;
     //   width: 320px;
       width: 450px;
-      height: 600px;
+      height: 500px;
       border-radius: 8px;
       border: 1px solid #dadce0;
       background: #fff;
@@ -24,6 +24,7 @@
           height: 520px;
 
           .cga {
+            margin-top: 30px;
             font-family: 'Google Sans','Noto Sans Myanmar UI',arial,sans-serif;
             font-size: 24px;
             font-weight: 400;
@@ -33,28 +34,53 @@
 
           .cty {
               padding: 8px 0px 0px;
-              margin-bottom: 20px;
+              margin-bottom: 40px;
           }
+
+        //   .fields {
+        //       display: inline-block;
+        //       margin: 10px;
+        //   }
       }
     }
 
     label {
       padding: 5px;
-      display: block;
+      display: inline-block;
     }
     button {
       color: #fff;
       background-color: #1a73e8;
       position: inherit;
       top: 50%;
-      height: 48px;
-      transform: translateY(-50%);
-      padding: 5px;
+      height: 30px;
+      width: 70px;
+      text-rendering: auto;
       margin: 10px;
+      margin-left: 150px;
+      margin-top: 100px;
+      cursor: default;
+      text-shadow: none;
     }
   }
 
   .sign-in-instead {
       color: #1a73e8;
+      text-decoration: none;
     //   padding: 48px 40px 36px;
+  }
+
+  .username-field {
+      display: inline-block;
+      margin-bottom: 20px;
+      margin-right: 10px;
+  }
+
+  .email-field {
+      display: inline-block;
+  }
+
+  .password-field {
+      display: inline-block;
+      padding-bottom: 20px;
   }

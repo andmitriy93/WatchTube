@@ -54,34 +54,46 @@ class Signup extends React.Component {
               <span>to continue to Youtube</span>
             </div>
 
-            <label>Username:
-              <input
-                type="text"
-                value={this.state.username}
-                onChange={this.update("username")}
-              />
-            </label>
+            <div className="fields">
+              <div className="username-field">
+                <label>
+                  <input
+                    type="text"
+                    value={this.state.username}
+                    placeholder="Full name"
+                    onChange={this.update("username")}
+                  />
+                </label>
+              </div>
 
-            <label>Email:
-              <input
-                type="text"
-                value={this.state.email}
-                onChange={this.update("email")}
-              />
-            </label>
+              <div className="email-field">
+                <label>
+                  <input
+                    type="text"
+                    value={this.state.email}
+                    placeholder="Your email adress"
+                    onChange={this.update("email")}
+                  />
+                </label>
+              </div>
 
-            <label>Password:
-              <input
-                type="password"
-                value={this.state.password}
-                onChange={this.update("password")}
-              />
-            </label>
+              <div className="password-field">
+                <label>
+                  <input
+                    type="password"
+                    value={this.state.password}
+                    placeholder="Password"
+                    onChange={this.update("password")}
+                  />
+                </label>
+              </div>
+            </div>
             <br />
 
+            <Link className="sign-in-instead" to="/login">Sign in instead</Link>
+            
             <button onClick={this.handleSubmit}>Next</button>
             {/* <button className="demo" onClick={() => this.handleDemo()}>Demo Login</button> */}
-            <Link className="sign-in-instead" to="/login">Sign in instead</Link>
 
             {this.renderErrors()}
           </div>
