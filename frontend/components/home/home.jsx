@@ -1,5 +1,6 @@
 import React from 'react';
 import SideBarContainer from '../sidebar/sidebar_container';
+import VideoIndexContainer from '../video/video_index_container';
 
 class Home extends React.Component {
   constructor(props){
@@ -9,6 +10,7 @@ class Home extends React.Component {
     return (
       <div className="home">
         <SideBarContainer />
+        <VideoIndexContainer />
       </div>
     )
   }

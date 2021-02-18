@@ -2,3 +2,22 @@
     display: flex;
     // height: 100%;
 }
+
+.videos {
+
+}
+
+.vid {
+    display: inline-block;
+    margin-left: 250px;
+}
+
+.vid-player {
+    // align-items: right;
+    width: 320px;
+    height: 180px;
+}
+
+.desc {
+    scroll-padding-top: 5px;
+}

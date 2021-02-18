@@ -18,11 +18,23 @@
 //   }
 // }
 
+
+
+.nav-bar {
+  // position: fixed;
+  // display: flex;
+  // justify-content: space-between;
+  // width: 500px;
+
+
+}
+
 .nav {
   display: flex;
   justify-content: space-between;
   padding: 10px;
-  position: sticky;
+  // position: sticky;
+  // position: absolute;
   top: 0;
   .logo {
     img {
