@@ -1,7 +1,6 @@
 import React from 'react';
 
 const VideoIndexItem = props => {
-    // debugger
     return (
         <div className="vid">
             <video className="vid-player" controls src={props.video.video_url} width="350"/>
