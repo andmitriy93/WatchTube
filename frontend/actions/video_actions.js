@@ -15,12 +15,12 @@ const receiveVideo = video => ({
 
 
 
-export default fetchVideos = () => dispatch => {
+export const fetchVideos = () => dispatch => {
     return APIUtil.fetchVideos()
         .then(videos => dispatch(receiveVideos(videos)))
 };
 
-export default fetchVideo = videoId => dispatch => {
+export const fetchVideo = videoId => dispatch => {
     return APIUtil.fetchVideo(videoId)
-        .then(video => dispatch(fetchVideo(video)))
+        .then(video => dispatch(receiveVideo(video)))
 }
