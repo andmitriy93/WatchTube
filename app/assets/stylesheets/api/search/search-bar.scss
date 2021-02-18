@@ -17,6 +17,7 @@
   border-radius: 2px;
   transition-duration: 0.3s;
 
+
   .visually-hidden {
     clip: rect(0 0 0 0);
     clip-path: inset(50%);
@@ -32,6 +33,7 @@
   width: 351px;
   height: 34px;
   background-color: black;
+  color: white;
 }
 
 .search-bar-btn:hover {
