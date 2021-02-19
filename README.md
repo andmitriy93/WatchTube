@@ -26,8 +26,6 @@ To run this project, install it locally using commands: <br />
 <br />
 
 ![npm start](https://github.com/andmitriy93/Fullstack_Project_Youtube/blob/main/screenshots/Screen%20Shot%202021-02-20%20at%201.35.00%20AM.png) 
-
-<br />
 <br />
 
 Then use commmand for rails: <br />
@@ -35,8 +33,6 @@ Then use commmand for rails: <br />
 Finally run the server with `$ rails s` command. Make sure all this commands run inside of the project folder!
 
 <br /> 
-<br />
-
 ![rails server](https://github.com/andmitriy93/Fullstack_Project_Youtube/blob/main/screenshots/Screen%20Shot%202021-02-20%20at%201.35.29%20AM.png)
 
 
