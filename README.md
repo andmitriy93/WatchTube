@@ -38,9 +38,11 @@ You can check live demo. Click on this link [Live demo](https://youtuubee.heroku
 
 
 ### Features
-List of features ready and TODOs for future development
-* Create a new user account
-* Login to existing account
+List of features ready and TODOs for future development:
+<br />
+I have used two separed forms for sign in and sign up, to do that i have used React-redux library
+* Create a new user account - Signup form for new users
+* Login to existing account - Login form for users that already signed up
 * Logout
 
 To-do list:
