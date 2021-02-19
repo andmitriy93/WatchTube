@@ -1,7 +1,19 @@
-# README
+# README YouTuubee app
+  ##### This is a YouTube clone created with Ruby on Rails, JS, React and Redux
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Table of Contents
+* General info
+* Technologies
+* Setup
+* Status
+
+
+
+
+
+
+
+
 
 Things you may want to cover:
 
