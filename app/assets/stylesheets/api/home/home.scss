@@ -4,8 +4,11 @@
     background-color: #191919;
 }
 
-.videos {
 
+@media screen and (max-width: 500px) {
+    div.home {
+        display: none;
+    }
 }
 
 .vid {
