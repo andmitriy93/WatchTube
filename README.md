@@ -20,7 +20,7 @@
 
 ### Setup
 To run this project, intall it locally using commands: <br />
-![npm commands](./screenshots/Screen Shot 2021-02-20 at 12.51.54 AM.png)
+![npm commands](https://github.com/andmitriy93/Fullstack_Project_Youtube/blob/main/screenshots/Screen%20Shot%202021-02-20%20at%2012.51.54%20AM.png)
 
 ### Live demo
 You can check live demo. Click on this link [Live demo](https://youtuubee.herokuapp.com/?#/)
