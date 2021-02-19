@@ -19,9 +19,8 @@
  * Rails 5
 
 ### Setup
-To run this project, intall it locally using commands:
-* $ npm install
-* $ npm start
+To run this project, intall it locally using commands: <br />
+![npm commands](./screenshots/Screen Shot 2021-02-20 at 12.51.54 AM.png)
 
 ### Live demo
 You can check live demo. Click on this link [Live demo](https://youtuubee.herokuapp.com/?#/)
