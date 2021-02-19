@@ -1,10 +1,11 @@
 .home {
     display: flex;
     background-color: #191919;
+    width: 100%;
 }
 
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 60%) {
     div.home {
         width: 50%;
     }
