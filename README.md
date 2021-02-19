@@ -6,6 +6,7 @@
 * [Technologies](#technologies)
 * [Setup](#setup)
 * [Live demo](https://youtuubee.herokuapp.com/?#/)
+* [Features](#features)
 * [Status](#setup)
 
 ### General info
@@ -23,8 +24,6 @@ To run this project, install it locally using commands: <br />
 `$ npm install` <br />
 `$ npm start` to run frontend components <br />
 
-<br />
-
 ![npm start](https://github.com/andmitriy93/Fullstack_Project_Youtube/blob/main/screenshots/Screen%20Shot%202021-02-20%20at%201.35.00%20AM.png) 
 
 
@@ -38,7 +37,7 @@ Finally run the server with `$ rails s` command. Make sure all this commands run
 You can check live demo. Click on this link [Live demo](https://youtuubee.herokuapp.com/?#/)
 
 
-### Status
+### Features
 List of features ready and TODOs for future development
 * Create a new user account
 * Login to existing account
@@ -51,5 +50,7 @@ To-do list:
 * User can search videos and other users
 
 
+### Status
+Project is: _in progress_
 
 
