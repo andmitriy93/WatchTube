@@ -52,3 +52,10 @@
 .welcome {
   color: white;
 }
+
+@media screen and (max-width: 600px) {
+  .nav-bar {
+    float: none;
+    width: 100%;
+  }
+}

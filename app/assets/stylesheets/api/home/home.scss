@@ -1,13 +1,12 @@
 .home {
     display: flex;
-    // height: 100%;
     background-color: #191919;
 }
 
 
 @media screen and (max-width: 500px) {
     div.home {
-        display: none;
+        width: 50%;
     }
 }
 
@@ -17,12 +16,6 @@
 }
 
 .vid-player {
-    // align-items: right;
     width: 320px;
     height: 180px;
 }
-
-// .desc {
-//     color: #fff
-// }
-
