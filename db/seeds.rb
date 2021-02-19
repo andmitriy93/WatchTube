@@ -12,7 +12,11 @@ User.destroy_all
 Video.destroy_all
 
 
-demo_user = User.create(username: 'Demo', email: 'user_demo@gmail.com', password: '12345678')
+demo = User.create!({
+    username: 'Demo User',
+    email: 'user_demo@gmail.com',
+    password: '12345678'
+    })
 
 video1 = Video.create(title: 'marvel trailer', author_id: demo_user.id)
 video2 = Video.create(title: 'another marver clip', author_id: demo_user.id)
