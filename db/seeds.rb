@@ -18,13 +18,13 @@ demo = User.create!({
     password: '12345678'
     })
 
-video1 = Video.create(title: 'marvel trailer', author_id: demo_user.id)
-video2 = Video.create(title: 'another marver clip', author_id: demo_user.id)
-video3 = Video.create(title: 'Thor vs Hulk', author_id: demo_user.id)
-video4 = Video.create(title: 'Marvel2', author_id: demo_user.id)
-video5 = Video.create(title: 'Avengers', author_id: demo_user.id)
-video6 = Video.create(title: 'John Wick1', author_id: demo_user.id)
-video7 = Video.create(title: 'Dota', author_id: demo_user.id)
+video1 = Video.create(title: 'marvel trailer', author_id: demo.id)
+video2 = Video.create(title: 'another marver clip', author_id: demo.id)
+video3 = Video.create(title: 'Thor vs Hulk', author_id: demo.id)
+video4 = Video.create(title: 'Marvel2', author_id: demo.id)
+video5 = Video.create(title: 'Avengers', author_id: demo.id)
+video6 = Video.create(title: 'John Wick1', author_id: demo.id)
+video7 = Video.create(title: 'Dota', author_id: demo.id)
 
 
 file1 = open('https://youtube-clone-dev.s3-us-west-1.amazonaws.com/yhoS5zG6LU23yDK2HB5Fcp1o')
