@@ -50,11 +50,6 @@ video7.clip.attach(io: file7, filename: 'video7.mp4')
 # })
 
 
-
-
-
-
-
 # file1 = File.open('/Users/dmitriian/Desktop/src/videoplayback.mp4')
 # file2 = File.open("/Users/dmitriian/Desktop/src/marvel.mp4")
 # file3 = File.open('/Users/dmitriian/Desktop/src/videoplayback (1).mp4')

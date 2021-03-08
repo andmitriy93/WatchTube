@@ -51,8 +51,6 @@ class Login extends React.Component {
       <div className="login-form">
         <form>
 
-
-
           <div className="login-container">
 
             <div className="si">
