@@ -4,11 +4,17 @@ class CommentsController < ApplicationController
     render :index
   end
 
+  def show
+    @comment = Comment.find_by(id: params[:id])
+    render :show
+  end
+
+
   def create
     @comment = Comment.new(comment_params)
 
     if @comment.save
-      render :index
+      render :show
     else
       render json: @comment.errors.full_messages, status: 401
     end
@@ -16,7 +22,12 @@ class CommentsController < ApplicationController
 
 
   def update
-
+    @comment = Comment.find_by(id: params[:id])
+    if @comment.update(comment_params)
+      render :show
+    else
+      render json: @comment.errors.full_messages, 422
+    end
   end
 
   def destroy

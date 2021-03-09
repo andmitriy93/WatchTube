@@ -3,7 +3,7 @@ Rails.application.routes.draw do
     resources :users
     resource :session, only: [:create, :destroy, :show]
     resources :videos, only: [:index, :show]
-    resources :comments, only: [:create, :index, :destroy, :edit, :update]
+    resources :comments, only: [:create, :index, :destroy, :edit, :show, :update]
   end
 
   root to: "static_pages#root"
