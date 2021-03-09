@@ -12,6 +12,7 @@ class User < ApplicationRecord
         class_name: :Comment
 
     after_initialize :ensure_session_token
+    # skip_before_action :verify_authenticity_token
 
     def self.find_by_credentials(username, password)
         user = User.find_by(username: username)
