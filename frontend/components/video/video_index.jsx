@@ -10,8 +10,8 @@ class VideoIndex extends React.Component {
     render() {
         let videos = this.props.videos.map(video => <VideoIndexItem video={video} key={video.id} />)
         return (
-            <div className="video">
-                <ul>{videos}</ul>
+            <div className="vid-container">
+                <div className="vid-item">{videos}</div>
             </div>
         )
     }
