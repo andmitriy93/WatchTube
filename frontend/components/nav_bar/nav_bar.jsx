@@ -11,16 +11,11 @@ export default ({ currentUser, logout }) => {
     </div>
   ) : (
     <div className="nav">
-      <div className="logo">
-        {/* <span>Menu</span> */}
-        <Link className="img" to="/">
+        <Link className="img-youtube" to="/">
           <img src={window.YoutubeURL} />
         </Link>
-      </div>
       <SearchBar />
-      <div>
-        <Link className="btn" to="/login">Sign In</Link>
-      </div>
+      <Link className="navbar-login-btn" to="/login">Sign In</Link>
     </div>
   );
 

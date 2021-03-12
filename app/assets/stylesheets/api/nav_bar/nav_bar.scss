@@ -1,31 +1,5 @@
 
-// .nav {
-//   display: flex;
-//   justify-content: space-between;
-//   padding: 10px;
-//   // position: sticky;
-//   // position: absolute;
-//   top: 0;
-//   .logo {
-//     img {
-//       width: 80px;
-//       color: #ffff;
-//     }
-//   }
-//   .btn {
-//     background-color: #212121;
-//     color: #3ea6ff;
-//     padding: 10px;
-//     // box-shadow: 1px 1px 1px #3ea6ff;
-//     text-decoration: none;
-//     border: 1px solid #3ea6ff;
-//     border-radius: 10px;
-//   }
-//   .btn:hover {
-//     background-color: #0e1012;
-//     // box-shadow: 1px 1px 1px darkblue;
-//   }
-// }
+
 
 @media screen and (max-width: 600px) {
   header {
@@ -37,14 +11,14 @@
 .welcome {
   font-size: 20px;
   font-weight: 700;
-  border: 1px solid rgb(78, 125, 7);
+  color: pink;
+  margin: 10px;
 }
 
 
 .nav-bar {
   display: inline;
   justify-content: space-between;
-  border: 2px solid black;
 }
 
 
@@ -52,16 +26,31 @@
   display: flex;
   height: 50px;
   justify-content: space-between;
-  border: 1px solid red;
-  // background-color: #212121;
+  background-color: #212121;
 }
 
 .logout-btn {
     background-color: #212121;
     color: #3ea6ff;
     padding: 10px;
-    // box-shadow: 1px 1px 1px #3ea6ff;
     text-decoration: none;
     border: 1px solid #3ea6ff;
     border-radius: 10px;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+  border: 1px solid rgb(101, 9, 9);
+  background-color: #212121;
+}
+
+.navbar-login-btn {
+  background-color: #212121;
+  color: #3ea6ff;
+  padding: 10px;
+  text-decoration: none;
+  border: 1px solid #3ea6ff;
+  border-radius: 10px;
 }
