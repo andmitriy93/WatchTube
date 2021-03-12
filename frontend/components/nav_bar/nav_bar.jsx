@@ -5,9 +5,9 @@ import SearchBar from "../search/search";
 export default ({ currentUser, logout }) => {
   const display = currentUser ? (
     <div className="nav-curr-user">
-      <SearchBar />
       <h3 className="welcome">Welcome {currentUser.username}</h3>
-      <button onClick={logout}>Log Out</button>
+      <SearchBar />
+      <button className="logout-btn" onClick={logout}>Log Out</button>
     </div>
   ) : (
     <div className="nav">
@@ -25,7 +25,7 @@ export default ({ currentUser, logout }) => {
   );
 
   return (
-    <header className="nav-bar">
+    <header>
       <div>{display}</div>
     </header>
   );

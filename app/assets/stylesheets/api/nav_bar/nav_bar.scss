@@ -27,17 +27,19 @@
 //   }
 // }
 
+@media screen and (max-width: 600px) {
+  header {
+    float: none;
+    width: 100%;
+  }
+}
+
 .welcome {
-  // width: 300px;
+  font-size: 20px;
+  font-weight: 700;
   border: 1px solid rgb(78, 125, 7);
 }
 
-// @media screen and (max-width: 600px) {
-//   .nav-bar {
-//     float: none;
-//     width: 100%;
-//   }
-// }
 
 .nav-bar {
   display: inline;
@@ -45,6 +47,21 @@
   border: 2px solid black;
 }
 
-.nav-curr-user {
 
+.nav-curr-user {
+  display: flex;
+  height: 50px;
+  justify-content: space-between;
+  border: 1px solid red;
+  // background-color: #212121;
+}
+
+.logout-btn {
+    background-color: #212121;
+    color: #3ea6ff;
+    padding: 10px;
+    // box-shadow: 1px 1px 1px #3ea6ff;
+    text-decoration: none;
+    border: 1px solid #3ea6ff;
+    border-radius: 10px;
 }
