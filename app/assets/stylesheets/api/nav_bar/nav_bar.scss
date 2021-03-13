@@ -1,6 +1,4 @@
 
-
-
 @media screen and (max-width: 600px) {
   header {
     float: none;
@@ -16,10 +14,10 @@
 }
 
 
-.nav-bar {
-  display: inline;
-  justify-content: space-between;
-}
+// .nav-bar {
+//   display: inline;
+//   justify-content: space-between;
+// }
 
 
 .nav-curr-user {
@@ -27,6 +25,8 @@
   height: 50px;
   justify-content: space-between;
   background-color: #212121;
+  position: fixed;
+  width: 100%;
 }
 
 .logout-btn {
@@ -44,6 +44,8 @@
   height: 50px;
   border: 1px solid rgb(101, 9, 9);
   background-color: #212121;
+  position: fixed;
+  width: 100%;
 }
 
 .navbar-login-btn {
