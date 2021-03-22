@@ -2,9 +2,11 @@ import React from 'react';
 
 const VideoIndexItem = props => {
     return (
-        <div className="vid">
-            <video className="vid-player" controls src={props.video.video_url} width="300" />
-            <p className="desc">{props.video.id} {props.video.title}</p>
+        <div className="video-wrapper">
+            <div className="video-container">
+                <video className="vid-player" src={props.video.video_url} width="300" />
+                <p className="desc">{props.video.id} {props.video.title}</p>
+            </div>
         </div>
     )
 }
