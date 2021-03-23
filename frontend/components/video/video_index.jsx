@@ -1,4 +1,5 @@
 import React from 'react';
+import video_index_container from './video_index_container';
 import VideoIndexItem from './video_index_item';
 
 
@@ -16,5 +17,32 @@ class VideoIndex extends React.Component {
         )
     }
 }
+
+// export default VideoIndex;
+
+// class VideoIndex extends React.Component {
+//     componentDidMount() {
+//         this.props.fetchVideos();
+//     }
+
+//     render() {
+//         const { videos } = this.props;
+//         debugger
+//         return (
+//             <div className="video-wrapper">
+//                 {videos.map((video) => {
+//                      <div className="video-container">
+//                            <video
+//                                 className="video-player"
+//                                 src={video.video_url}
+//                                 width="300"
+//                             />
+//                      </div>
+//                 })}
+
+//             </div>
+//         )
+//     }
+// }
 
 export default VideoIndex;
