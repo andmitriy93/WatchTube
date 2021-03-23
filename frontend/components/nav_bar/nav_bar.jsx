@@ -1,29 +1,26 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import SearchBar from '../search/search'
+import SearchBar from "../search/search";
 
 export default ({ currentUser, logout }) => {
   const display = currentUser ? (
-    <div>
-        {/* <h3 className="welcome">Welcome {currentUser.username}</h3> */}
-      <button onClick={logout}>Log Out</button>
+    <div className="nav-curr-user">
+      <h3 className="welcome">Welcome {currentUser.username}</h3>
+      <SearchBar />
+      <button className="logout-btn" onClick={logout}>Log Out</button>
     </div>
   ) : (
-    <div className='nav'>
-      <div className="logo">
-        {/* <span>Menu</span> */}
-        <Link className="img" to="/" ><img src={window.YoutubeURL} /></Link>
-      </div>
+    <div className="nav">
+        <Link className="img-youtube" to="/">
+          <img src={window.YoutubeURL} />
+        </Link>
       <SearchBar />
-      <div>
-      <Link className="btn" to="/login">Sign In</Link>
-      </div>
-      
+      <Link className="navbar-login-btn" to="/login">Sign In</Link>
     </div>
   );
 
   return (
-    <header className="nav-bar">
+    <header>
       <div>{display}</div>
     </header>
   );

@@ -40,8 +40,7 @@ import { Link } from "react-router-dom";
 
 export default ({ currentUser }) => {
   const greeting = currentUser ? (
-    <div>
-    </div>
+    <div></div>
   ) : (
     <div>
       <p>
@@ -72,5 +71,3 @@ export default ({ currentUser }) => {
     </div>
   );
 };
-
-

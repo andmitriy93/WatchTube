@@ -1,61 +1,58 @@
 
-// .nav-bar {
-//   display: flex;
-//   justify-content: space-between;
-//   padding: 20px;
-//   background: white;
-//   align-items: center;
-//   .btn {
-//     background-color: white;
-//     padding: 10px;
-//     box-shadow: 1px 1px 1px lightslategray;
-//     text-decoration: none;
-//     border: 1px groove;
-//   }
-//   .btn:hover {
-//     background-color: rgb(240, 240, 240);
-//     box-shadow: 1px 1px 1px darkblue;
-//   }
-// }
-
-
-
-
-.nav {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px;
-  // position: sticky;
-  // position: absolute;
-  top: 0;
-  .logo {
-    img {
-      width: 80px;
-      color: #ffff;
-    }
-  }
-  .btn {
-    background-color: #212121;
-    color: #3ea6ff;
-    padding: 10px;
-    // box-shadow: 1px 1px 1px #3ea6ff;
-    text-decoration: none;
-    border: 1px solid #3ea6ff;
-    border-radius: 10px;
-  }
-  .btn:hover {
-    background-color: #0e1012;
-    // box-shadow: 1px 1px 1px darkblue;
+@media screen and (max-width: 600px) {
+  header {
+    float: none;
+    width: 100%;
   }
 }
 
 .welcome {
-  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  color: pink;
+  margin: 10px;
 }
 
-@media screen and (max-width: 600px) {
-  .nav-bar {
-    float: none;
-    width: 100%;
-  }
+
+// .nav-bar {
+//   display: inline;
+//   justify-content: space-between;
+// }
+
+
+.nav-curr-user {
+  display: flex;
+  height: 50px;
+  justify-content: space-between;
+  background-color: #212121;
+  position: fixed;
+  width: 100%;
+}
+
+.logout-btn {
+    background-color: #212121;
+    color: #3ea6ff;
+    padding: 10px;
+    text-decoration: none;
+    border: 1px solid #3ea6ff;
+    border-radius: 10px;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+  border: 1px solid rgb(101, 9, 9);
+  background-color: #212121;
+  position: fixed;
+  width: 100%;
+}
+
+.navbar-login-btn {
+  background-color: #212121;
+  color: #3ea6ff;
+  padding: 10px;
+  text-decoration: none;
+  border: 1px solid #3ea6ff;
+  border-radius: 10px;
 }
