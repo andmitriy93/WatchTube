@@ -9,6 +9,7 @@ class VideoShow extends React.Component {
     this.props.fetchVideos();
   }
   render() {
+    debugger
     if(!this.props.currentVideo) return null;
     return (
       <div>
