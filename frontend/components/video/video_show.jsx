@@ -13,7 +13,6 @@ class VideoShow extends React.Component {
     return (
       <div>
         <NavBar />
-        {/* <SideBar /> */}
         <video
           className="video-show-player"
           src={this.props.currentVideo.video_url}
