@@ -1,5 +1,7 @@
 import React from "react";
 import { withRouter } from "react-router";
+import NavBar from '../nav_bar/nav_bar_container';
+import SideBar from '../sidebar/sidebar_container';
 
 class VideoShow extends React.Component {
   componentDidMount() {
@@ -10,17 +12,16 @@ class VideoShow extends React.Component {
     if(!this.props.currentVideo) return null;
     return (
       <div>
-        <h2>Test</h2>
-        {/* {this.props.currentVideo} */}
+        <NavBar />
+        {/* <SideBar /> */}
         <video
-          className="video-player"
+          className="video-show-player"
           src={this.props.currentVideo.video_url}
-          width="500"
-          // autoPlay
+          controls
         />
       </div>
     );
   }
 }
 
-export default VideoShow;
+export default withRouter(VideoShow);
