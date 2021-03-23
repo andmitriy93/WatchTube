@@ -2,6 +2,7 @@ import React from "react";
 import { withRouter } from "react-router";
 import NavBar from '../nav_bar/nav_bar_container';
 import SideBar from '../sidebar/sidebar_container';
+import Comments from '../comments/comments_container';
 
 class VideoShow extends React.Component {
   componentDidMount() {
@@ -9,16 +10,16 @@ class VideoShow extends React.Component {
     this.props.fetchVideos();
   }
   render() {
-    debugger
     if(!this.props.currentVideo) return null;
     return (
-      <div>
+      <div className="video-show-outter">
         <NavBar />
         <video
           className="video-show-player"
           src={this.props.currentVideo.video_url}
           controls
         />
+        <Comments />
       </div>
     );
   }
