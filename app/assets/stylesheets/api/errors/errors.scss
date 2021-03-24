@@ -1,17 +1,50 @@
-.btn {
-    background-color: #212121;
-    padding: 10px;
-    // box-shadow: 1px 1px 1px #3ea6ff;
-    border: 1px #3ea6ff;
-    border-radius: 10px;
-    color: #3ea6ff;
-    text-decoration: none;
-  }
-  // .btn:hover {
-  //   background-color: rgb(240, 240, 240);
-  //   box-shadow: 1px 1px 1px darkblue;
-  // }
+.container-404 {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  color: #343434;
+  font-family: "montserrat", sans-serif;
+  // min-height: 100vh;
+}
 
+.container-404 h1{
+  font-size: 160px;
+  margin: 0;
+  font-weight: 900;
+  letter-spacing: 20px;
+  background: #212121;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.container-404 img{
+  height: 150px;
+  width: 150px;
+
+}
+
+.link-back-404-btn {
+  text-decoration: none;
+  background: #f92a0aaa;
+  color: #fff;
+  padding: 12px 24px;
+  display: inline-block;
+  border-radius: 25px;
+  font-size: 14px;
+  text-transform: uppercase;
+  transition: 0.4s;
+}
+
+.link-back-404-btn:hover {
+  background: #f92a0a;
+}
+
+
+
+
+  // style errors for login page
   .error-render {
     display: block;
     .err-msg {
