@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import Comments from "./comments_component";
+import Comments from "./comments_index";
 import {
   fetchComments,
   createComment,

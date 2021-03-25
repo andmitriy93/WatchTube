@@ -2,7 +2,6 @@ import React from "react";
 import { withRouter } from "react-router";
 import NavBar from '../nav_bar/nav_bar_container';
 import SideBar from '../sidebar/sidebar_container';
-import Comments from '../comments/comments_container';
 
 class VideoShow extends React.Component {
   componentDidMount() {

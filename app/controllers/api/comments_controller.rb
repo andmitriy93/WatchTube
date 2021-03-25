@@ -1,7 +1,9 @@
-class CommentsController < ApplicationController
+class Api::CommentsController < ApplicationController
+
   def index
     @comments = Comment.all
-    render :index
+    # render :index
+    render json: ('All comments')
   end
 
   def show
@@ -11,10 +13,11 @@ class CommentsController < ApplicationController
 
 
   def create
-    @comment = Comment.new(comment_params)
+    @comment = Comment.new(author_id: current_user.id, video_id: params[:comment][:video_id], body: params[:comment][:body])
 
     if @comment.save
-      render :show
+      # render :show
+      render json: ('Comment is saved')
     else
       render json: @comment.errors.full_messages, status: 401
     end
@@ -26,7 +29,7 @@ class CommentsController < ApplicationController
     if @comment.update(comment_params)
       render :show
     else
-      render json: @comment.errors.full_messages, 422
+      render json: @comment.errors.full_messages, status: 422
     end
   end
 
@@ -46,7 +49,7 @@ class CommentsController < ApplicationController
   private
 
   def comment_params
-    params.require(:comment).permit(:author_id, :video_id, :body)
+    params.require(:comment).permit(:video_id, :body) #add video_id
   end
 
 end

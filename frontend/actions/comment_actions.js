@@ -25,8 +25,8 @@ const removeComment = (commentId) => {
   };
 };
 
-export const fetchComments = () => (dispatch) => {
-  return CommentAPIUtil.fetchComments().then((comments) =>
+export const fetchComments = (userId) => (dispatch) => {
+  return CommentAPIUtil.fetchComments(userId).then((comments) =>
     dispatch(receiveComments(comments))
   );
 };

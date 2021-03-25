@@ -18,6 +18,8 @@ class Login extends React.Component {
   }
 
   update(field) {
+    console.log(this.state.username)
+    console.log(this.state.password)
     return (e) => {
       this.setState({ [field]: e.currentTarget.value });
     };
@@ -66,7 +68,7 @@ class Login extends React.Component {
                 <input
                   type="text"
                   value={this.state.username}
-                  placeholder="Email or phone"
+                  placeholder="Enter your username"
                   onChange={this.update("username")}
                 />
               </label>
@@ -84,11 +86,11 @@ class Login extends React.Component {
             </div>
             {this.renderErrors()}
             <Link className="create-acc-link" to="/signup">Create account</Link>
-            <button className="demo-btn" onClick={() => this.handleDemo()}>Demo Login</button>
             <button className="next-btn" onClick={this.handleSubmit}>Next</button>
           
           </div>
         </form>
+            <button className="demo-btn" onClick={() => this.handleDemo()}>Demo Login</button>
       </div>
     );
   }

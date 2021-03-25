@@ -14,7 +14,6 @@ class Comments extends React.Component {
     if (!this.props.comments) return null;
     return (
       <div></div>
-
       // <div className="comments-outter">
       //   <form className="comments-form">
       //     <div className="comments-container">

@@ -1,7 +1,8 @@
-export const fetchComments = () => {
+export const fetchComments = (userId) => {
   return $.ajax({
-    url: "/api/comments",
+    url: `/api/users/${userId}/comments`,
     method: "GET",
+    data: { userId }
   });
 };
 
