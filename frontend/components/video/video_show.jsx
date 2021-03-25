@@ -21,7 +21,7 @@ class VideoShow extends React.Component {
           src={this.props.currentVideo.video_url}
           controls
         />
-        <Comments />
+
       </div>
     );
   }
