@@ -6,7 +6,6 @@
 # reference like Benchbnb index for the benches
 
 @videos.each do |video|
-
     json.set! video.id do
         json.partial! 'video', video: video
     end

@@ -7,6 +7,7 @@ class CommentsForm extends React.Component {
     this.state = {
       body: '',
       author_id: this.props.author_id,
+      video_id: this.props.videoId
     }
   }
 
