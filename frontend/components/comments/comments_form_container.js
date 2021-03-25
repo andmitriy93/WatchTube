@@ -10,7 +10,7 @@ import {
 const mSTP = (state) => {
   return {
     errors: state.errors,
-    author_id: state.session.currentUser.id
+    // author_id: state.session.currentUser.id
   };
 };
 
