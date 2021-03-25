@@ -27,7 +27,6 @@ class VideoIndex extends React.Component {
 
 //     render() {
 //         const { videos } = this.props;
-//         debugger
 //         return (
 //             <div className="video-wrapper">
 //                 {videos.map((video) => {

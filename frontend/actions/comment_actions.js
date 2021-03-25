@@ -1,7 +1,7 @@
 import * as CommentAPIUtil from "../utils/comments_util";
 
 export const RECEIVE_COMMENTS = "RECEIVE_COMMENTS";
-export const RECEIVE_CURRENT_COMMENT = "RECEIVE_CURRENT_COMMENT";
+export const RECEIVE_COMMENT = "RECEIVE_COMMENT";
 export const REMOVE_COMMENT = "REMOVE_COMMENT";
 
 const receiveComments = (comments) => {
@@ -11,9 +11,9 @@ const receiveComments = (comments) => {
   };
 };
 
-const receiveCurrentComment = (comment) => {
+const receiveComment = (comment) => {
   return {
-    type: RECEIVE_CURRENT_COMMENT,
+    type: RECEIVE_COMMENT,
     comment,
   };
 };
@@ -33,19 +33,19 @@ export const fetchComments = () => (dispatch) => {
 
 export const fetchComment = (commentId) => (dispatch) => {
   return CommentAPIUtil.fetchComment(commentId).then((comment) =>
-    dispatch(receiveCurrentComment(comment))
+    dispatch(receiveComment(comment))
   );
 };
 
 export const createComment = (comment) => (dispatch) => {
   return CommentAPIUtil.createComment(comment).then((comment) =>
-    dispatch(receiveCurrentComment(comment))
+    dispatch(receiveComment(comment))
   );
 };
 
 export const updateComment = (comment) => (dispatch) => {
   return CommentAPIUtil.updateComment(comment).then((comment) =>
-    dispatch(receiveCurrentComment(comment))
+    dispatch(receiveComment(comment))
   );
 };
 
