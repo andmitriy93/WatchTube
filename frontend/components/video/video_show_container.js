@@ -6,16 +6,15 @@ import VideoShow from './video_show'
 
 const mSTP = (state, ownProps) => {
   return {
-    videoId: ownProps.match.params.videoId,
+    videoId: parseInt(ownProps.match.params.videoId),
     currentUser: state.session.currentUser,
-    currentVideo: state.entities.videos[ownProps.match.params.videoId]
+    video: state.entities.videos[parseInt(ownProps.match.params.videoId)]
   };
 }
 
 const mDTP = dispatch => {
   return {
-    // fetchVideo: (videoId) => dispatch(fetchVideo(videoId))
-    fetchVideos: () => dispatch(fetchVideos())
+    fetchVideo: (videoId) => dispatch(fetchVideo(videoId))
   }
 }
 

@@ -5,6 +5,7 @@
 //     data: { userId }
 //   });
 // };
+
 export const fetchComments = () => {
   return $.ajax({
     url: `/api/comments`,

@@ -1,13 +1,11 @@
 import React from "react";
-import CommentsFormContainer from './comments_form_container'
 
 class Comments extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       body: '',
-
-      // author_id: this.props.currentUser.id
+      author_id: this.props.currentUser.username
     }
   }
 
@@ -18,22 +16,25 @@ class Comments extends React.Component {
 
   render() {
     const { comments } = this.props;
-    // console.log(comments)
     if (!this.props.comments) return null;
       
     const filteredComments = comments.map((comment) => {
       if (comment.video_id === parseInt(this.props.videoId)) {
         return (
-          <div key={comment.id}>
-            {comment.body}
-            <div>hello</div>
+          <div>
+            <div className="comments-index-video-show" key={comment.id}>
+              {comment.body}
+              <br/>
+              {comment.author_id}
+            </div>
           </div>
         )
       }
     })
+    console.log(filteredComments)
 
     return (
-      <div>{filteredComments}</div>
+      <div className="comments-index-outter">{filteredComments}</div>
     );
   }
 }

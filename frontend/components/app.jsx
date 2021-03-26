@@ -7,7 +7,6 @@ import SignUpContainer from "./session_form/signup_form_container";
 import LogInContainer from "./session_form/login_form_container";
 import VideoShowContainer from "./video/video_show_container";
 import Home from "./home/home";
-// import CommentsContainer from './comments/comments_container'
 import CommentsFormContainer from './comments/comments_form_container'
 import ErrorsRender from "./errors/errors";
 
@@ -18,8 +17,6 @@ export default () => (
       <AuthRoute exact path="/login" component={LogInContainer} />
       <AuthRoute exact path="/signup" component={SignUpContainer} />
       <Route path="/videos/:videoId" component={VideoShowContainer} />
-      {/* <Route path="/comments" component={CommentsContainer} /> */}
-      <Route path="/comments" component={CommentsFormContainer} />
       <Route exact path="/" component={Home} />
       <Route path="*" component={ErrorsRender} />
     </Switch>

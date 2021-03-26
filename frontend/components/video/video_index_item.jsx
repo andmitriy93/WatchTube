@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 
 class VideoIndexItem extends React.Component {
   render() {
+    if (!this.props.video) return null
+    console.log(this.props.video)
+
     return (
       <div className="video-wrapper">
         <div className="video-container">
@@ -10,7 +13,9 @@ class VideoIndexItem extends React.Component {
             className="video-player"
             src={this.props.video.video_url}
             width="300"
+            autoPlay loop
           />
+          {console.log(this.props.video)}
           <Link to={`/videos/${this.props.video.id}`}>
           <p className="desc">
             {this.props.video.id} {this.props.video.title}

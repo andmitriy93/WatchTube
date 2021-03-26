@@ -7,21 +7,22 @@ import Comments from '../comments/comments_index_container'
 
 class VideoShow extends React.Component {
   componentDidMount() {
-    // this.props.fetchVideo(this.props.match.params.videoId)
-    this.props.fetchVideos();
+    this.props.fetchVideo(this.props.videoId)
   }
 
   
   render() {
-    if(!this.props.currentVideo) return null;
+    if (!this.props.video) return null
+
+
     return (
       <div className="video-show-outter">
         <NavBar />
         <video
           className="video-show-player"
-          src={this.props.currentVideo.video_url}
+          src={this.props.video.video_url}
           controls
-        />
+          />
         <CommentsForm />
         <Comments videoId={this.props.videoId}/>
       </div>
