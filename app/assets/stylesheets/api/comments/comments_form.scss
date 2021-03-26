@@ -1,0 +1,30 @@
+
+.comments-form-outter {
+  display: flex;
+  position: relative;
+  height: 5%;
+  top: 10%;
+  left: 10%;
+  padding-left: 10%;
+  padding-right: 15%;
+  max-width: 75%;
+  border: 2px solid black;
+
+}
+
+
+.comments-form {
+  display: flex;
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.comments-form-container {
+  width: 100%;
+}
+.comments-form-input {
+  width: 85%;
+  height: 25px;
+  background: transparent;
+}

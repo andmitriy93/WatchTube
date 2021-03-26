@@ -27,13 +27,14 @@ class CommentsForm extends React.Component {
 
   render() {
     return (
-      <div className='comments-outter'>
+      <div className='comments-form-outter'>
         <form className='comments-form'>
-          <div className='comments-container'>
+          <div className='comments-form-container'>
             <input
               type='text'
+              className="comments-form-input"
               value={this.state.body}
-              placeholder='Comments'
+              placeholder='Add a public comment...'
               onChange={this.update('body')}
             />
             <button onClick={this.handleSubmit}>Comment</button>
