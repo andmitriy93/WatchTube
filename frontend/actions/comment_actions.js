@@ -25,8 +25,14 @@ const removeComment = (commentId) => {
   };
 };
 
-export const fetchComments = (userId) => (dispatch) => {
-  return CommentAPIUtil.fetchComments(userId).then((comments) =>
+// export const fetchComments = (userId) => (dispatch) => {  // userId
+//   return CommentAPIUtil.fetchComments(userId).then((comments) =>
+//     dispatch(receiveComments(comments))
+//   );
+// };
+
+export const fetchComments = () => (dispatch) => {  // userId
+  return CommentAPIUtil.fetchComments().then((comments) =>
     dispatch(receiveComments(comments))
   );
 };

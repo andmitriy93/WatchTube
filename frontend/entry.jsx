@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import Root from "./components/root";
 import configureStore from './store/store';
+import * as CommentUtil from './utils/comments_util';
 
 document.addEventListener("DOMContentLoaded", () => {
   const root = document.getElementById('root');
@@ -20,4 +21,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   ReactDOM.render(<Root store={store} />, root);
   window.getState = store.getState;
+  window.CommentUtil = CommentUtil;
 });
+

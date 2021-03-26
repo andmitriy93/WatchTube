@@ -22,7 +22,7 @@ class CommentsForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault()
-    this.props.createComment(this.state);
+    this.props.createComment(this.state).then(this.setState({ body: '' }));
   }
 
   render() {

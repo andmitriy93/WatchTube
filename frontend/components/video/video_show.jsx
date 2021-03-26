@@ -2,7 +2,8 @@ import React from "react";
 import { withRouter } from "react-router";
 import NavBar from '../nav_bar/nav_bar_container';
 import SideBar from '../sidebar/sidebar_container';
-import CommentsForm from '../comments/comments_form_container' 
+import CommentsForm from '../comments/comments_form_container'
+import Comments from '../comments/comments_index_container'
 
 class VideoShow extends React.Component {
   componentDidMount() {
@@ -22,6 +23,7 @@ class VideoShow extends React.Component {
           controls
         />
         <CommentsForm />
+        <Comments videoId={this.props.videoId}/>
       </div>
     );
   }

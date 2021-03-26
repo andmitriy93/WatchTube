@@ -16,7 +16,7 @@ const mSTP = (state) => {
 
 const mDTP = (dispatch) => {
   return {
-    fetchComments: () => dispatch(fetchComments()),
+    fetchComments: (userId) => dispatch(fetchComments(userId)),
     createComment: (comment) => dispatch(createComment(comment)),
     deleteComment: (commentId) => dispatch(deleteComment(commentId)),
   };
