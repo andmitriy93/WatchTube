@@ -3,6 +3,7 @@ class Comment < ApplicationRecord
     class_name: :Video
   
   belongs_to :author,
+    foreign_key: :author_id,
     class_name: :User
   
 end
