@@ -8,7 +8,7 @@
   justify-content: center;
   display: flex;
   flex-direction: column;
-  overflow: scroll;
+  // overflow: scroll;
 }
 
 .comments-index-video-show {
@@ -16,6 +16,6 @@
   height: 100%;
   width: 100%;
   position: relative;
-  top: -100%;
-  
+  top: 0%;
+  padding-bottom: 5px;
 }

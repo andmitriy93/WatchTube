@@ -21,6 +21,7 @@ class VideoShow extends React.Component {
         <video
           className="video-show-player"
           src={this.props.video.video_url}
+          controlsList="nodownload"
           controls
           />
         <CommentsForm />

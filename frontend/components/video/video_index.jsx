@@ -1,6 +1,7 @@
 import React from 'react';
 import video_index_container from './video_index_container';
 import VideoIndexItem from './video_index_item';
+import { withRouter } from "react-router-dom";
 
 
 class VideoIndex extends React.Component {
@@ -19,4 +20,4 @@ class VideoIndex extends React.Component {
     }
 }
 
-export default VideoIndex;
+export default withRouter(VideoIndex);

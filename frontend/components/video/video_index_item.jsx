@@ -1,24 +1,49 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 
 class VideoIndexItem extends React.Component {
-  render() {
-    if (!this.props.video) return null
-    console.log(this.props.video)
+  playVideo(e) {
+    // console.log(e.target.play());
+    // e.target.currentTime = 0
+    e.target.play();
+  }
 
+  stopVideo(e) {
+    // console.log(e.target);
+    e.target.pause();
+    e.target.currentTime = 0;
+  }
+
+  render() {
+    // console.log(this.props.video);
+    if (!this.props.video) return null;
     return (
-      <div className="video-wrapper">
-        <div className="video-container">
+      <div
+        className='video-wrapper'
+        onClick={() =>
+          this.props.history.push(`/videos/${this.props.video.id}`)
+        }
+      >
+        <div
+          className='video-container'
+          onMouseOver={this.playVideo}
+          onMouseOut={this.stopVideo}
+        >
           <video
-            className="video-player"
+            className='video-player'
             src={this.props.video.video_url}
-            width="300"
+            width='300'
+            controlsList='nodownload'
+            muted='muted'
+            autoPlay={false}
+            preload='auto'
           />
           {console.log(this.props.video)}
-          <Link to={`/videos/${this.props.video.id}`}>
-          <p className="desc">
+          {/* <Link to={`/videos/${this.props.video.id}`}> */}
+          <p className='desc'>
             {this.props.video.id} {this.props.video.title}
-          </p> </Link>
+          </p>{" "}
+          {/* </Link> */}
           {/* <p className="desc">{props.video.id} {props.video.title}</p> */}
         </div>
       </div>
@@ -26,4 +51,4 @@ class VideoIndexItem extends React.Component {
   }
 }
 
-export default VideoIndexItem;
+export default withRouter(VideoIndexItem);
