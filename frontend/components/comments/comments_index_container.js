@@ -9,9 +9,9 @@ import {
 } from "../../actions/comment_actions";
 
 const mSTP = (state, ownProps) => {
-  debugger
+  // debugger
   return {
-    currentUser: state.session.currentUser.id,
+    currentUser: state.session.currentUser,
     currentVideo: state.videoId,
     comments: Object.values(state.entities.comments)
   };

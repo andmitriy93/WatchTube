@@ -21,8 +21,9 @@ class Comments extends React.Component {
     const filteredComments = comments.map((comment) => {
       if (comment.video_id === parseInt(this.props.videoId)) {
         return (
-          <div>
+          <div key={comment.id}>
             <div className="comments-index-video-show" key={comment.id}>
+              {console.log(comment)}
               {comment.body}
               <br/>
               {comment.author_id}
@@ -31,7 +32,6 @@ class Comments extends React.Component {
         )
       }
     })
-    console.log(filteredComments)
 
     return (
       <div className="comments-index-outter">{filteredComments}</div>

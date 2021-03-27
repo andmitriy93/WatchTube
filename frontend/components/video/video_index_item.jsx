@@ -13,7 +13,6 @@ class VideoIndexItem extends React.Component {
             className="video-player"
             src={this.props.video.video_url}
             width="300"
-            autoPlay loop
           />
           {console.log(this.props.video)}
           <Link to={`/videos/${this.props.video.id}`}>
