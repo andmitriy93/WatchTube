@@ -8,9 +8,9 @@ Rails.application.routes.draw do
       resources :likes
     end
 
-    resources :videos do 
-      resources :likes
-    end
+    # resources :videos do 
+    #   resources :likes
+    # end
 
     resource :session, only: [:create, :destroy, :show]
     resources :videos, only: [:index, :show]

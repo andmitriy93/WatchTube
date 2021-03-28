@@ -14,6 +14,11 @@ class User < ApplicationRecord
         class_name: :Comment,
         dependent: :destroy
 
+    has_many :likes,
+        foreign_key: :user_id,
+        class_name: :Like,
+        dependent: :destroy
+
     after_initialize :ensure_session_token
     # skip_before_action :verify_authenticity_token
 
