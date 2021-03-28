@@ -51,3 +51,15 @@
   border-radius: 10px;
 }
 
+.nav-profile-menu {
+  border: 2px solid red;
+  display: flex;
+  align-items: center;
+}
+
+.fas.fa-user-circle {
+  font-size: 2rem;
+  color: #689f39;
+  // background-color: #f8f8ff;
+  background: transparent;
+}
