@@ -11,7 +11,8 @@ class User < ApplicationRecord
 
     has_many :comments,
         foreign_key: :author_id,
-        class_name: :Comment
+        class_name: :Comment,
+        dependent: :destroy
 
     after_initialize :ensure_session_token
     # skip_before_action :verify_authenticity_token
