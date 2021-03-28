@@ -14,12 +14,6 @@
 }
 
 
-// .nav-bar {
-//   display: inline;
-//   justify-content: space-between;
-// }
-
-
 .nav-curr-user {
   display: flex;
   height: 50px;
@@ -38,7 +32,7 @@
     border-radius: 10px;
 }
 
-.nav {
+.nav-guest {
   display: flex;
   justify-content: space-between;
   height: 50px;
@@ -56,3 +50,4 @@
   border: 1px solid #3ea6ff;
   border-radius: 10px;
 }
+

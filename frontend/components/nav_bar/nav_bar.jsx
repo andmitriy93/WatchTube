@@ -7,14 +7,20 @@ export default ({ currentUser, logout }) => {
     <div className="nav-curr-user">
       <h3 className="welcome">Welcome {currentUser.username}</h3>
       <SearchBar />
+      <div className="nav-profile-menu">
+        <i class="fas fa-user-circle"></i>
+      </div>
       <button className="logout-btn" onClick={logout}>Log Out</button>
     </div>
   ) : (
-    <div className="nav">
+    <div className="nav-guest">
         <Link className="img-youtube" to="/">
           <img src={window.YoutubeURL} />
         </Link>
       <SearchBar />
+      <div className="nav-profile-menu">
+        <i class="fas fa-user-circle"></i>
+      </div>
       <Link className="navbar-login-btn" to="/login">Sign In</Link>
     </div>
   );
