@@ -6,9 +6,11 @@
 }
 
 .search-bar-btn {
-  background-color: #323232;
+  // background-color: #323232;
+  background-color: #f8f8f8;
   color: grey;
-  border: none;
+  border: 1px solid;
+  border-radius: 0 2px 2px 0;
   padding: 10px 15px;
   text-align: center;
   text-decoration: none;
@@ -19,6 +21,9 @@
   transition-duration: 0.3s;
 }
 
+.fas.fa-search {
+  font-size: 12px;
+}
 
 .visually-hidden {
   clip: rect(0 0 0 0);
@@ -33,9 +38,12 @@
 .search-input {
   width: 350px;
   height: 34px;
-  background-color: #131313;
+  // background-color: #131313;
+  background-color: #fff;
   color: white;
   outline: none;
+  border: 1px solid black;
+  border-radius: 0 2px 2px 0;
 }
 
 .search-bar-btn:hover {

@@ -78,9 +78,11 @@ class Navbar extends React.Component {
     } else {
       return (
         <div className='nav-guest'>
-          <Link className='img-youtube' to='/'>
-            <img src={window.YoutubeURL} />
-          </Link>
+          <div className="nav-logo-wrapper">
+            <Link className='img-youtube' to='/'>
+              <img src={window.YoutubeURL} />
+            </Link>
+          </div>
           <SearchBar />
           <div className='nav-profile-menu'>
             <i onClick={this.showMenu} className='fas fa-user-circle'></i>
