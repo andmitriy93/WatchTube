@@ -1,5 +1,5 @@
 class LikesController < ApplicationController
-  before_action :find_comment
+  before_action :find_comment, :find_like, only: [:destroy]
 
   def create
     if already_liked?
@@ -10,10 +10,23 @@ class LikesController < ApplicationController
     render :show
   end
 
+  def destroy
+    if !(already_liked?)
+      flash[:notice] = "Cannot unlike"
+    else
+      @like.destroy
+    end
+    render :show
+  end
+
   private
 
   def find_comment
     @comment = Comment.find(params[:comment_id])
+  end
+
+  def find_like
+    @like = @comment.likes.find(params[:id])
   end
 
   def already_liked?
