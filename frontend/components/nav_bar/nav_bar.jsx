@@ -63,6 +63,9 @@ class Navbar extends React.Component {
         <div className='nav-curr-user'>
           <h3 className='welcome'>Welcome {this.props.currentUser.username}</h3>
           <SearchBar />
+          <div>
+            
+          </div>
           <div className='nav-profile-menu'>
             <i onClick={this.showMenu} className='fas fa-user-circle'></i>
             {this.state.showMenu ? (
@@ -81,6 +84,8 @@ class Navbar extends React.Component {
           <div className="nav-logo-wrapper">
             <Link className='img-youtube' to='/'>
               <img src={window.YoutubeURL} />
+              {/* <i class="fab fa-youtube"></i> */}
+              {/* <span className="nav-logo-text">WatchTube</span> */}
             </Link>
           </div>
           <SearchBar />

@@ -68,6 +68,7 @@
   border: 2px solid red;
   display: flex;
   align-items: center;
+
 }
 
 .fas.fa-user-circle {
@@ -75,4 +76,13 @@
   color: #689f39;
   background: transparent;
   border-radius: 25px;
+  cursor: pointer;
 }
+
+.fab.fa-youtube {
+  background: #fff;
+  color: red;
+  font-size: 24px;
+  border: 1px solid black;
+}
+
