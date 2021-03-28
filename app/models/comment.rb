@@ -8,7 +8,7 @@ class Comment < ApplicationRecord
 
   has_many :likes,
     foreign_key: :comment_id,
-    class_name: :Like
+    class_name: :Like,
     dependent: :destroy
   
 end
