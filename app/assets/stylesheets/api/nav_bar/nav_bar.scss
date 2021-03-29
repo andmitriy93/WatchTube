@@ -18,14 +18,17 @@
   display: flex;
   height: 50px;
   justify-content: space-between;
-  background-color: #212121;
+  // background-color: #212121;
+  background: #f8f8ff;
   position: fixed;
   width: 100%;
+  border: 1px solid;
 }
 
 .logout-btn {
-    background-color: #212121;
-    color: #3ea6ff;
+    // background-color: #212121;
+    background: transparent;
+    color: #065fd4;
     padding: 10px;
     text-decoration: none;
     border: 1px solid #3ea6ff;
@@ -36,18 +39,58 @@
   display: flex;
   justify-content: space-between;
   height: 50px;
-  border: 1px solid rgb(101, 9, 9);
-  background-color: #212121;
+  // border: 1px solid rgb(101, 9, 9);
+  border-bottom: 1px solid;
+  // background-color: #212121;
+  background: #f8f8ff;
   position: fixed;
   width: 100%;
 }
 
 .navbar-login-btn {
-  background-color: #212121;
-  color: #3ea6ff;
-  padding: 10px;
+  // background-color: #212121;
+  background: transparent;
+  color: #065fd4;
+  padding: 5px 10px;
   text-decoration: none;
   border: 1px solid #3ea6ff;
   border-radius: 10px;
+  text-transform: uppercase;
 }
 
+.nav-profile-menu {
+  border: 2px solid red;
+  display: flex;
+  align-items: center;
+
+}
+
+.fas.fa-user-circle {
+  font-size: 2rem;
+  color: #689f39;
+  background: transparent;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.fab.fa-youtube {
+  background: #fff;
+  color: red;
+  font-size: 24px;
+  border: 1px solid black;
+}
+
+.navbar-signin {
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  margin-top: 3px;
+}
+
+.fas.fa-user-circle.signin.navbar {
+  color: #065fd4;
+  font-size: 18px;
+  margin-right: 4px;
+}

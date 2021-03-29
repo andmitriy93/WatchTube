@@ -1,67 +1,114 @@
 .sidebar {
     display: flex;
+    flex-direction: column;
     // background-color: #212121;
+    background: #f8f8ff;
     width: 250px;
-    // width: 15%;
-    // height: 900px;
     height: 100vh;
     position: fixed;
-    margin-top: 20px;
-    border: 1px solid black;
-    
+    border: 1px solid;
+    z-index: 2028;
 }
 
+.sidebar-logo-wrapper {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    // border: 1px solid blue;
+  }
+  
+.img-youtube {
+    text-decoration: none;
+    color: #212121;
+    // background: #f8f8f8;
+}
 
-.sideNav {
+.fab.fa-youtube.logo {
+    color: red;
+    font-size: 1.5em;
+    background: transparent;
+    margin: 0 0 0 5px;
+    border: none;
+}
+
+.sidebar-watchtube {
+    font-size: 1.5em;
+    letter-spacing: -1.7px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 600;
+    margin-left: -3px;
+}
+
+.sidebar-list {
     color: #6d6d6d;
     list-style-type: none;
     padding-left: 0;
 }
 
-p {
-    margin-left: 20px;
+.list-element {
+    // border: 1px solid red;
 }
 
-.btn-login {
+.list-element p{
     margin-left: 20px;
-    font-size: 15px;
-    background-color: #212121;
-    color: #3ea6ff;
-    padding: 10px;
     cursor: pointer;
-    // box-shadow: 1px 1px 1px #3ea6ff;
+}
+
+.sidebar-btn-login {
+    margin-left: 20px;
+    width: 120px;
+    height: 35px;
+    font-size: 15px;
+    // background-color: #212121;
+    background: transparent;
+    color: #065fd4;
+    padding: 5px 15px;
+    cursor: pointer;
     border: 1px solid #3ea6ff;
+}
+
+.list-element.login {
+    display: flex;
+    flex-direction: column;
+}
+
+.list-element.login p {
+    cursor: default;
+}
+
+.fas.fa-user-circle.signin {
+    color: #065fd4;
+    font-size: 18px;
+    margin-right: 4px;
 }
 
 .link-login-btn {
     text-decoration: none;
-    color: #3ea6ff;
+    color: #065fd4;
+    text-transform: uppercase;
+    // padding: 5px 15px;
 }
 
-li a {
-    height: 25px;
+.list-link-home {
     text-decoration: none;
-    color: inherit;
-    position: relative;
+    color: #6d6d6d;
 }
 
-li:hover {
-    background-color: white;
+.fas.fa-home {
+    margin: 0 22px 0 0;
+    font-size: 18px;
+    color: #6d6d6d;
 }
 
-// .home-link a {
-//     // height: 25px;
-//     text-decoration: none;
-//     color: inherit;
-//     position: relative;
-//     display: table-cell;
-//     vertical-align: middle;
-//     width: 14rem;
-// }
+.fas.fa-compass {
+    margin: 0 26px 0 0;
+    font-size: 18px;
+    color: #6d6d6d;
+}
 
-
-
-// .home-link {
-//     background-color: #212121;
-//     color: #6d6d6d;
-// }
+.fab.fa-youtube {
+    margin: 0 24px 0 0;
+    font-size: 18px;
+    color: #6d6d6d;
+}
