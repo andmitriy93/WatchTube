@@ -86,3 +86,14 @@
   border: 1px solid black;
 }
 
+.navbar-signin {
+  display: flex;
+  justify-content: center;
+  outline: none;
+}
+
+.fas.fa-user-circle.signin.navbar {
+  color: white;
+  font-size: 18px;
+  margin-right: 4px;
+}

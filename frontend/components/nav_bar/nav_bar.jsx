@@ -90,15 +90,20 @@ class Navbar extends React.Component {
             </Link>
           </div> */}
           <SearchBar />
-          <div className='nav-profile-menu'>
+          {/* <div className='nav-profile-menu'>
             <i onClick={this.showMenu} className='fas fa-user-circle'></i>
             {this.state.showMenu ? (
               <div className='navbar-menu'>
                 <Link className='navbar-login-btn' to='/login'>
-                  <i className='far fa-user'></i> Sign In
+                <i class="fas fa-user-circle signin"></i> Sign In
                 </Link>
               </div>
             ) : null}
+          </div> */}
+          <div className='navbar-signin'>
+            <Link className='navbar-login-btn' to='/login'>
+            <i class="fas fa-user-circle signin navbar"></i> Sign In
+            </Link>
           </div>
         </div>
       );

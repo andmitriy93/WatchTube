@@ -5,19 +5,19 @@
     width: 250px;
     height: 100vh;
     position: fixed;
-    // margin-top: 50px;
     border: 1px solid black;
+    z-index: 2028;
 }
 
 .sidebar-logo-wrapper {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    border: 1px solid blue;
   }
   
 .img-youtube img {
     width: 100px;
-    border: 1px solid black;
 }
 
 .sidebar-list {
@@ -32,17 +32,33 @@
 
 .list-element p{
     margin-left: 20px;
+    cursor: pointer;
 }
 
 .sidebar-btn-login {
     margin-left: 20px;
+    width: 100px;
     font-size: 15px;
     background-color: #212121;
     color: #3ea6ff;
     padding: 10px;
     cursor: pointer;
-    // box-shadow: 1px 1px 1px #3ea6ff;
-    border: 1px solid #3ea6ff;
+    // border: 1px solid #3ea6ff;
+}
+
+.list-element.login {
+    display: flex;
+    flex-direction: column;
+}
+
+.list-element.login p {
+    cursor: default;
+}
+
+.fas.fa-user-circle.signin {
+    color: white;
+    font-size: 18px;
+    margin-right: 4px;
 }
 
 .link-login-btn {
@@ -50,6 +66,28 @@
     color: #3ea6ff;
 }
 
+.list-link-home {
+    text-decoration: none;
+    color: #6d6d6d;
+}
+
+.fas.fa-home {
+    margin-right: 5px;
+    font-size: 17px;
+    color: #6d6d6d;
+}
+
+.fas.fa-compass {
+    margin-right: 5px;
+    font-size: 17px;
+    color: #6d6d6d;
+}
+
+.fab.fa-youtube {
+    margin-right: 5px;
+    font-size: 17px;
+    color: #6d6d6d;
+}
 
 .sidebar-greeting {
 

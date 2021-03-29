@@ -42,12 +42,12 @@ export default ({ currentUser }) => {
   const greeting = currentUser ? (
     <div></div>
   ) : (
-    <div>
+    <div className="list-element login">
       <p>
-        Log in to like videos, <br /> and comment, and subscribe
+        Log in to like videos,<br/> and comment, and subscribe
       </p>
       <button className="sidebar-btn-login">
-        <Link className="link-login-btn" to="/login">Sign In</Link>
+        <Link className="link-login-btn" to="/login"><i class="fas fa-user-circle signin"></i>Sign In</Link>
       </button>
     </div>
   );
@@ -62,14 +62,14 @@ export default ({ currentUser }) => {
       <ul className="sidebar-list">
         <li className="list-element">
           <p>
-            <Link to="/">Home</Link>
+            <Link className="list-link-home" to="/"><i class="fas fa-home"></i>Home</Link>
           </p>
         </li>
         <li className="list-element">
-          <p>Trending</p>
+          <p><i class="fas fa-compass"></i>Explore</p>
         </li>
         <li className="list-element">
-          <p>Subscriptions</p>
+          <p><i class="fab fa-youtube"></i>Subscriptions</p>
         </li>
         <div className="sidebar-greeting">{greeting}</div>
       </ul>
