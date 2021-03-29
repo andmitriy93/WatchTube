@@ -12,10 +12,10 @@ class Api::CommentsController < ApplicationController
 
 
   def create
-    # @comment = Comment.new(author_id: current_user.id, video_id: params[:comment][:video_id], body: params[:comment][:body])
-    @comment = Comment.new(comment_params)
+    @comment = Comment.new(author_id: current_user.id, video_id: params[:comment][:video_id], body: params[:comment][:body])
+    # @comment = Comment.new(comment_params)
 
-    if @comment.save
+    if @comment.save!
       render :show
     else
       render json: @comment.errors.full_messages, status: 401
@@ -48,7 +48,7 @@ class Api::CommentsController < ApplicationController
   private
 
   def comment_params
-    params.require(:comment).permit(:author_id, :video_id, :body) #add video_id
+    params.require(:comment).permit(:body, :video_id) #add video_id
   end
 
 end

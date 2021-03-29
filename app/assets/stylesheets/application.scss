@@ -13,32 +13,34 @@
  *= require_self
  */
 
-
- @import './api/nav_bar/nav_bar.scss';
- @import './api/search/search-bar.scss';
- @import './api/base/fonts.scss';
- @import './api/home/home.scss';
- @import './api/sidebar/sidebar.scss';
- @import './api/errors/errors.scss';
- @import './api/forms/login.scss';
- @import './api/forms/create_acc.scss';
- @import './api/videos.scss';
- @import './api/comments/comments_form.scss';
- @import './api/comments/comments_index.scss';
+@import "./api/nav_bar/nav_bar.scss";
+@import "./api/search/search-bar.scss";
+@import "./api/base/fonts.scss";
+@import "./api/home/home.scss";
+@import "./api/sidebar/sidebar.scss";
+@import "./api/errors/errors.scss";
+@import "./api/forms/login.scss";
+@import "./api/forms/create_acc.scss";
+@import "./api/videos.scss";
+@import "./api/comments/comments_form.scss";
+@import "./api/comments/comments_index.scss";
+@import "./dark-theme.scss";
 
 * {
   box-sizing: border-box;
 }
 
- html, body, div {
-   padding: 0;
-   margin: 0;
+html,
+body,
+div {
+  padding: 0;
+  margin: 0;
   //  font-family: 'Roboto', 'Noto', sans-serif;
-   font-family: 'Google Sans','Noto Sans Myanmar UI',arial,sans-serif;
- }
+  font-family: "Google Sans", "Noto Sans Myanmar UI", arial, sans-serif;
+}
+
+
 
 button {
   border-radius: 10px;
 }
-
-

@@ -6,11 +6,6 @@
     height: 100vh;
 }
 
-// @media screen and (max-width: 60%) {
-//     div.home {
-//         width: 50%;
-//     }
-// }
 
 .video-wrapper {
     max-width: 75vw;
@@ -31,7 +26,6 @@
 .video-container {
     display: flex;
     flex-direction: column;
-    // position: relative;
     border: 1px solid black;
 }
 

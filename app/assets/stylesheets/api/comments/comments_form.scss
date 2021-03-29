@@ -1,15 +1,17 @@
 
 .comments-form-outter {
+  min-width: 40%;
   display: flex;
   position: relative;
   height: 5%;
   top: 10%;
-  left: 10%;
-  padding-left: 10%;
+  left: 275px;
+  // padding-left: 10%;
   padding-right: 15%;
   max-width: 75%;
-  border: 2px solid black;
+  // border: 2px solid black;
   align-items: center;
+  margin-left: 5px;
 }
 
 

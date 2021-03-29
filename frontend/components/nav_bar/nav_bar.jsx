@@ -35,7 +35,6 @@ class Navbar extends React.Component {
           <h3 className='welcome'>Welcome {this.props.currentUser.username}</h3>
           <SearchBar />
           <div>
-            
           </div>
           <div className='nav-profile-menu'>
             <i onClick={this.showMenu} className='fas fa-user-circle'></i>
@@ -65,7 +64,11 @@ class Navbar extends React.Component {
   }
 
   render() {
-    return <>{this.getNavbar()}</>;
+    return(
+      <>
+        {this.getNavbar()}
+      </>
+    )
   }
 }
 

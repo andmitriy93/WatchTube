@@ -1,22 +1,40 @@
 .comments-index-outter {
-  border: 2px solid red;
+  // border: 2px solid red;
   height: 40%;
   position: relative;
   top: 10%;
-  left: 10%;
+  left: 270px;
   width: 75%;
+  min-width: 500px;
   justify-content: center;
   display: flex;
   flex-direction: column;
-  // overflow: auto;
+  overflow: auto;
   display: block;
+  outline: none;
 }
 
 .comments-index-video-show {
-  border: 2px solid blue;
+  // border: 2px solid blue;
   height: 100%;
   width: 100%;
   position: relative;
   top: 0%;
   padding-bottom: 5px;
+}
+
+.comments-index-author {
+  // border: 1px solid red;
+  padding: 5px 0 5px 5px;
+  margin-left: 5px;
+  font-weight: 700;
+  font-size: 1.2em;
+  font-style: italic;
+}
+
+.comments-index-body {
+  // border: 1px solid blue;
+  margin-left: 5px;
+  max-width: 90%;
+  padding: 0 5px 0 5px;
 }

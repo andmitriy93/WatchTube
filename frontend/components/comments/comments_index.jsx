@@ -27,9 +27,10 @@ class Comments extends React.Component {
           <div key={comment.id}>
             <div className="comments-index-video-show" key={comment.id}>
               {/* <span>User id: {comment.author_id}</span> */}
-              <span>{comment.author.username}</span>
-              <br/>
-              {comment.body}
+              <div className="comments-index-author">{comment.author.username}</div>
+              <div className="comments-index-body">
+                {comment.body}
+              </div>
             </div>
           </div>
         )
