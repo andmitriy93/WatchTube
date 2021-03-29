@@ -56,7 +56,10 @@ export default ({ currentUser }) => {
     <div className="sidebar">
       <div className="sidebar-logo-wrapper">
         <Link className='img-youtube' to='/'>
-          <img src={window.YoutubeURL} />
+          {/* <img src={window.YoutubeURL} /> */}
+          {/* <img src={window.WatchTube} /> */}
+          <i className="fab fa-youtube logo"></i>
+          <span className="sidebar-watchtube" >WatchTube</span>
         </Link>
       </div>
       <ul className="sidebar-list">
@@ -66,10 +69,10 @@ export default ({ currentUser }) => {
           </p>
         </li>
         <li className="list-element">
-          <p><i class="fas fa-compass"></i>Explore</p>
+          <p><i className="fas fa-compass"></i>Explore</p>
         </li>
         <li className="list-element">
-          <p><i class="fab fa-youtube"></i>Subscriptions</p>
+          <p><i className="fab fa-youtube"></i>Subscriptions</p>
         </li>
         <div className="sidebar-greeting">{greeting}</div>
       </ul>
