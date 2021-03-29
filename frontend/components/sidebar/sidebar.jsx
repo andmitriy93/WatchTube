@@ -47,7 +47,7 @@ export default ({ currentUser }) => {
         Log in to like videos,<br/> and comment, and subscribe
       </p>
       <button className="sidebar-btn-login">
-        <Link className="link-login-btn" to="/login"><i class="fas fa-user-circle signin"></i>Sign In</Link>
+        <Link className="link-login-btn" to="/login"><i className="fas fa-user-circle signin"></i>Sign In</Link>
       </button>
     </div>
   );
@@ -65,7 +65,7 @@ export default ({ currentUser }) => {
       <ul className="sidebar-list">
         <li className="list-element">
           <p>
-            <Link className="list-link-home" to="/"><i class="fas fa-home"></i>Home</Link>
+            <Link className="list-link-home" to="/"><i className="fas fa-home"></i>Home</Link>
           </p>
         </li>
         <li className="list-element">

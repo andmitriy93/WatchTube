@@ -56,7 +56,7 @@ class Navbar extends React.Component {
           <SearchBar />
           <div className='navbar-signin'>
             <Link className='navbar-login-btn' to='/login'>
-              <i class="fas fa-user-circle signin navbar"></i> Sign In
+              <i className="fas fa-user-circle signin navbar"></i> Sign In
             </Link>
           </div>
         </div>
