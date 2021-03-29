@@ -3,14 +3,10 @@ import { Link, withRouter } from "react-router-dom";
 
 class VideoIndexItem extends React.Component {
   playVideo(e) {
-    // debugger
-    // console.log(e.target.play());
-    // e.target.currentTime = 0
     e.target.play();
   }
 
   stopVideo(e) {
-    // console.log(e.target);
     e.target.pause();
     e.target.currentTime = 0;
   }
@@ -37,13 +33,10 @@ class VideoIndexItem extends React.Component {
             onMouseOver={this.playVideo}
             onMouseOut={this.stopVideo}
           />
-          {console.log(this.props.video)}
           {/* <Link to={`/videos/${this.props.video.id}`}> */}
           <p className='desc'>
             {this.props.video.id} {this.props.video.title}
           </p>{" "}
-          {/* </Link> */}
-          {/* <p className="desc">{props.video.id} {props.video.title}</p> */}
         </div>
       </div>
     );
