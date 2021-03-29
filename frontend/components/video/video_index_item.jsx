@@ -3,6 +3,7 @@ import { Link, withRouter } from "react-router-dom";
 
 class VideoIndexItem extends React.Component {
   playVideo(e) {
+    // debugger
     // console.log(e.target.play());
     // e.target.currentTime = 0
     e.target.play();
@@ -24,11 +25,7 @@ class VideoIndexItem extends React.Component {
           this.props.history.push(`/videos/${this.props.video.id}`)
         }
       >
-        <div
-          className='video-container'
-          onMouseOver={this.playVideo}
-          onMouseOut={this.stopVideo}
-        >
+        <div className='video-container'>
           <video
             className='video-player'
             src={this.props.video.video_url}
@@ -37,6 +34,8 @@ class VideoIndexItem extends React.Component {
             muted='muted'
             autoPlay={false}
             preload='auto'
+            onMouseOver={this.playVideo}
+            onMouseOut={this.stopVideo}
           />
           {console.log(this.props.video)}
           {/* <Link to={`/videos/${this.props.video.id}`}> */}
