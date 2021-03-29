@@ -57,13 +57,15 @@
 
 .sidebar-btn-login {
     margin-left: 20px;
-    width: 100px;
+    width: 120px;
+    height: 35px;
     font-size: 15px;
-    background-color: #212121;
-    color: #3ea6ff;
-    padding: 10px;
+    // background-color: #212121;
+    background: transparent;
+    color: #065fd4;
+    padding: 5px 15px;
     cursor: pointer;
-    // border: 1px solid #3ea6ff;
+    border: 1px solid #3ea6ff;
 }
 
 .list-element.login {
@@ -76,14 +78,16 @@
 }
 
 .fas.fa-user-circle.signin {
-    color: white;
+    color: #065fd4;
     font-size: 18px;
     margin-right: 4px;
 }
 
 .link-login-btn {
     text-decoration: none;
-    color: #3ea6ff;
+    color: #065fd4;
+    text-transform: uppercase;
+    // padding: 5px 15px;
 }
 
 .list-link-home {

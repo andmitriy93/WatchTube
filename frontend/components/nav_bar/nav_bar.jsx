@@ -102,7 +102,7 @@ class Navbar extends React.Component {
           </div> */}
           <div className='navbar-signin'>
             <Link className='navbar-login-btn' to='/login'>
-            <i class="fas fa-user-circle signin navbar"></i> Sign In
+              <i class="fas fa-user-circle signin navbar"></i> Sign In
             </Link>
           </div>
         </div>

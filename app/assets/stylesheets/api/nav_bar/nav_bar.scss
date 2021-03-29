@@ -19,14 +19,16 @@
   height: 50px;
   justify-content: space-between;
   // background-color: #212121;
-  background-color: #fff;
+  background: #f8f8ff;
   position: fixed;
   width: 100%;
+  border: 1px solid;
 }
 
 .logout-btn {
-    background-color: #212121;
-    color: #3ea6ff;
+    // background-color: #212121;
+    background: transparent;
+    color: #065fd4;
     padding: 10px;
     text-decoration: none;
     border: 1px solid #3ea6ff;
@@ -37,31 +39,23 @@
   display: flex;
   justify-content: space-between;
   height: 50px;
-  border: 1px solid rgb(101, 9, 9);
+  // border: 1px solid rgb(101, 9, 9);
+  border-bottom: 1px solid;
   // background-color: #212121;
-  background-color: #fff;
+  background: #f8f8ff;
   position: fixed;
   width: 100%;
 }
 
-// .nav-logo-wrapper {
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-// }
-
-// .nav-guest img {
-//   width: 80px;
-//   height: 80%;
-// }
-
 .navbar-login-btn {
-  background-color: #212121;
-  color: #3ea6ff;
-  padding: 10px;
+  // background-color: #212121;
+  background: transparent;
+  color: #065fd4;
+  padding: 5px 10px;
   text-decoration: none;
   border: 1px solid #3ea6ff;
   border-radius: 10px;
+  text-transform: uppercase;
 }
 
 .nav-profile-menu {
@@ -87,13 +81,16 @@
 }
 
 .navbar-signin {
+  height: 40px;
   display: flex;
   justify-content: center;
+  align-items: center;
   outline: none;
+  margin-top: 3px;
 }
 
 .fas.fa-user-circle.signin.navbar {
-  color: white;
+  color: #065fd4;
   font-size: 18px;
   margin-right: 4px;
 }
