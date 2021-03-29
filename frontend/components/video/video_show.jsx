@@ -14,7 +14,6 @@ class VideoShow extends React.Component {
   render() {
     if (!this.props.video) return null
 
-
     return (
       <div className="video-show-outter">
         <NavBar />
