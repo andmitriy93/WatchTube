@@ -1,28 +1,40 @@
 .sidebar {
     display: flex;
+    flex-direction: column;
     // background-color: #212121;
     width: 250px;
-    // width: 15%;
-    // height: 900px;
     height: 100vh;
     position: fixed;
-    margin-top: 50px;
+    // margin-top: 50px;
     border: 1px solid black;
-    
 }
 
+.sidebar-logo-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+.img-youtube img {
+    width: 100px;
+    border: 1px solid black;
+}
 
-.sideNav {
+.sidebar-list {
     color: #6d6d6d;
     list-style-type: none;
     padding-left: 0;
 }
 
-p {
+.list-element {
+    border: 1px solid red;
+}
+
+.list-element p{
     margin-left: 20px;
 }
 
-.btn-login {
+.sidebar-btn-login {
     margin-left: 20px;
     font-size: 15px;
     background-color: #212121;
@@ -38,30 +50,7 @@ p {
     color: #3ea6ff;
 }
 
-li a {
-    height: 25px;
-    text-decoration: none;
-    color: inherit;
-    position: relative;
+
+.sidebar-greeting {
+
 }
-
-li:hover {
-    background-color: white;
-}
-
-// .home-link a {
-//     // height: 25px;
-//     text-decoration: none;
-//     color: inherit;
-//     position: relative;
-//     display: table-cell;
-//     vertical-align: middle;
-//     width: 14rem;
-// }
-
-
-
-// .home-link {
-//     background-color: #212121;
-//     color: #6d6d6d;
-// }

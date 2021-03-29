@@ -46,7 +46,7 @@ export default ({ currentUser }) => {
       <p>
         Log in to like videos, <br /> and comment, and subscribe
       </p>
-      <button className="btn-login">
+      <button className="sidebar-btn-login">
         <Link className="link-login-btn" to="/login">Sign In</Link>
       </button>
     </div>
@@ -54,19 +54,24 @@ export default ({ currentUser }) => {
 
   return (
     <div className="sidebar">
-      <ul className="sideNav">
-        <li className="home-link">
+      <div className="sidebar-logo-wrapper">
+        <Link className='img-youtube' to='/'>
+          <img src={window.YoutubeURL} />
+        </Link>
+      </div>
+      <ul className="sidebar-list">
+        <li className="list-element">
           <p>
             <Link to="/">Home</Link>
           </p>
         </li>
-        <li>
+        <li className="list-element">
           <p>Trending</p>
         </li>
-        <li>
+        <li className="list-element">
           <p>Subscriptions</p>
         </li>
-        <div>{greeting}</div>
+        <div className="sidebar-greeting">{greeting}</div>
       </ul>
     </div>
   );
