@@ -8,7 +8,7 @@ export default ({ currentUser, logout }) => {
       <h3 className="welcome">Welcome {currentUser.username}</h3>
       <SearchBar />
       <div className="nav-profile-menu">
-        <i class="fas fa-user-circle"></i>
+        <i className="fas fa-user-circle"></i>
       </div>
       <button className="logout-btn" onClick={logout}>Log Out</button>
     </div>
@@ -19,7 +19,7 @@ export default ({ currentUser, logout }) => {
         </Link>
       <SearchBar />
       <div className="nav-profile-menu">
-        <i class="fas fa-user-circle"></i>
+        <i className="fas fa-user-circle"></i>
       </div>
       <Link className="navbar-login-btn" to="/login">Sign In</Link>
     </div>
