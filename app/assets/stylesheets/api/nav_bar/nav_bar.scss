@@ -23,6 +23,25 @@
   position: fixed;
   width: 100%;
   border: 1px solid;
+  z-index: 1000;
+}
+
+.navbar-menu {
+  position: absolute;
+  right: 10px;
+  background: #f8f8f8;
+  border: 1px solid rgba(156, 154, 154, 0.76);
+  padding-top: 5px;
+  width: 150px;
+  text-align: left;
+  height: 116px;
+  top: 5vh;
+  border-radius: 3px;
+  transition: 0.2s;
+  z-index: 1;
+  display: block;
+  justify-content: center;
+  align-items: center;
 }
 
 .logout-btn {
@@ -33,6 +52,11 @@
     text-decoration: none;
     border: 1px solid #3ea6ff;
     border-radius: 10px;
+    text-align: left;
+}
+
+.fas.fa-sign-out-alt {
+  margin: 0 10px 0 10px;
 }
 
 .nav-guest {
@@ -59,7 +83,7 @@
 }
 
 .nav-profile-menu {
-  border: 2px solid red;
+  // border: 2px solid red;
   display: flex;
   align-items: center;
 
