@@ -39,17 +39,25 @@
     letter-spacing: -1.7px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: 600;
-    margin-left: -3px;
+    margin-left: 0px;
 }
 
 .sidebar-list {
     color: #6d6d6d;
     list-style-type: none;
     padding-left: 0;
+    // border: 1px solid red;
+    height: 100%;
 }
 
 .list-element {
-    // border: 1px solid red;
+    border: 1px solid;
+    margin-bottom: 40px;
+    box-shadow: 3px 3px 5px rgba(255,255,255,0.2);
+}
+
+.list-element:hover {
+    background: #393939;
 }
 
 .list-element p{
