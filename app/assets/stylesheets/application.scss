@@ -39,7 +39,17 @@ div {
   font-family: "Google Sans", "Noto Sans Myanmar UI", arial, sans-serif;
 }
 
+:root {
+  --primary-color: #f8f8ff;
+  --font-color: #212121;
+  --bg-color: #f8f8ff;
+}
 
+[data-theme="dark"] {
+  --primary-color: #212121;
+  --font-color: #f8f8ff;
+  --bg-color: #212121;
+}
 
 button {
   border-radius: 10px;
