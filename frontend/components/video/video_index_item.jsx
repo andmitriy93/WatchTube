@@ -18,13 +18,13 @@ class VideoIndexItem extends React.Component {
     // console.log(this.props.video);
     if (!this.props.video) return null;
     return (
-      <div
-        className='video-wrapper'
-        onClick={() =>
-          this.props.history.push(`/videos/${this.props.video.id}`)
-        }
-      >
-        <div className='video-container'>
+      <div className='video-wrapper'>
+        <div
+          className='video-container'
+          onClick={() =>
+            this.props.history.push(`/videos/${this.props.video.id}`)
+          }
+        >
           <video
             className='video-player'
             src={this.props.video.video_url}
@@ -36,9 +36,12 @@ class VideoIndexItem extends React.Component {
             onMouseOver={this.playVideo}
             onMouseOut={this.stopVideo}
           />
-          <p className='desc'>
-            {this.props.video.id} {this.props.video.title}
-          </p>
+          {/* <div className="video-desc-container"> */}
+            <p className='desc'>
+              {/* {this.props.video.id} {this.props.video.title} */}
+              {this.props.video.title}
+            </p>
+          {/* </div> */}
         </div>
       </div>
     );

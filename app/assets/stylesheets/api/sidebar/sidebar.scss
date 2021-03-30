@@ -1,9 +1,9 @@
 .sidebar {
     display: flex;
     flex-direction: column;
-    // background-color: #212121;
-    background: #f8f8ff;
-    width: 250px;
+    background-color: #222;
+    // background: #f8f8ff;
+    width: 240px;
     height: 100vh;
     position: fixed;
     border: 1px solid;
@@ -20,7 +20,8 @@
   
 .img-youtube {
     text-decoration: none;
-    color: #212121;
+    // color: #212121;
+    color: #f8f8ff;
     // background: #f8f8f8;
 }
 

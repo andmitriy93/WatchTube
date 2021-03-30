@@ -1,36 +1,49 @@
 .home {
-    display: flex;
-    // background-color: #191919;
-    background-color: #f8f8ff;
-    width: 100%;
-    min-height: 100vh;
+  display: flex;
+  background-color: #191919;
+  // background-color: #f8f8ff;
+  // width: 100%;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
 }
 
-
 .video-wrapper {
-    max-width: 75vw;
-    display: inline-block;
-    padding: 10px;
-    // border: 2px solid blue;
-    position: relative;
-    left: 250px;
-    top: 50px;
-    margin-right: 80px;
-    margin-left: 6px;
-    margin-bottom: 15px;
-    flex-wrap: nowrap;
-    justify-content: space-around;
-    cursor: pointer;
+  width: 263px;
+  height: 242px;
+  display: inline-block;
+  // padding: 10px;
+  position: relative;
+  left: 250px;
+  top: 50px;
+  margin-right: 150px;
+  margin-bottom: 40px;
+  margin-left: 1px;
+  flex-wrap: nowrap;
+  // justify-content: space-around;
+  align-items: center;
+  cursor: default;
 }
 
 .video-container {
-    display: flex;
-    flex-direction: column;
-    border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+.video-player {
+  border: 1px solid #fff;
+  border-radius: 5px;
+  width: 255px;
+  height: 143px;
+  background: #191919;
+  box-shadow: -15px -15px 15px rgba(255, 255, 255, 0.2) 15px 15px 15px rgba(0, 0, 0, 0.1);
+  // inset -5px -5px 5px rgba(255,255,255,0.2)
+  // inset 5px 5px 5px rgba(0,0,0, 0.1);
 }
 
-.vid-player {
-    width: 320px;
-    height: 180px;
-    border: 1px solid pink;
+.desc {
+  padding-left: 10px;
+  color: #fff;
+  margin-left: 10px;
+  font-family: "Roboto", "Noto", sans-serif;
 }

@@ -6,8 +6,8 @@
 }
 
 .search-bar-btn {
-  // background-color: #323232;
-  background-color: #f8f8f8;
+  background-color: #323232;
+  // background-color: #f8f8f8;
   width: 65px;
   color: grey;
   border: 1px solid;
@@ -22,7 +22,7 @@
   transition-duration: 0.3s;
   display: flex;
   justify-content: center;
-  cursor: pointer;;
+  cursor: pointer;
 }
 
 .fas.fa-search {
@@ -42,32 +42,19 @@
 .search-input {
   width: 350px;
   height: 34px;
-  // background-color: #131313;
-  background-color: transparent;
+  background-color: #131313;
+  // background-color: transparent;
   font-family: 'Roboto','Noto',sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
-  outline: none;
+  outline: cornflowerblue;
   border: 1px solid;
   border-radius: 0 2px 2px 0;
   padding: 1px 2px;
+  // color: #f8f8ff;
 }
 
-.search-input{
-  width: 350px;
-  height: 34px;
-  // background-color: red;
-  background-color: transparent;
-  font-family: 'Roboto','Noto',sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 24px;
-  outline: none;
-  border: 1px solid;
-  border-radius: 0 2px 2px 0;
-  padding: 1px 2px;
-}
 
 
 .search-bar-btn:hover {
