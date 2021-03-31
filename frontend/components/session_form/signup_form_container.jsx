@@ -4,7 +4,8 @@ import { createNewUser, removeErrors } from "../../actions/session";
 import Signup from "./signup";
 
 const mSTP = (state) => ({
-  errors: Object.values(state.errors.session),
+  // errors: Object.values(state.errors.session),
+  errors: 
 });
 
 const mDTP = (dispatch) => ({

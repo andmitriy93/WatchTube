@@ -89,11 +89,11 @@ class Login extends React.Component {
             </div>
             <div className="login-buttons">
               <Link className="create-acc-link" to="/signup">Create account</Link>
-              <button className="demo-btn" onClick={() => this.handleDemo()}>Demo Login</button>
               <button className="next-btn" onClick={this.handleSubmit}>Next</button>
             </div>
           </div>
         </form>
+              <button className="demo-btn" onClick={() => this.handleDemo()}>Demo Login</button>
       </div>
     );
   }

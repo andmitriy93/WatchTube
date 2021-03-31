@@ -56,7 +56,8 @@ class Navbar extends React.Component {
       return (
         <div className='nav-curr-user'>
         {/* <div className={this.state.navOuter}> */}
-          <h3 className='welcome'>Welcome {this.props.currentUser.username}</h3>
+          {/* <span className='welcome'>Welcome {this.props.currentUser.username}</span> */}
+          <div className="nav-pixel"></div>
           <SearchBar />
           <div>
           </div>
@@ -64,7 +65,9 @@ class Navbar extends React.Component {
             <i onClick={this.showMenu} className='fas fa-user-circle'></i>
             {this.state.showMenu ? (
               <div className='navbar-menu'>
-              {/* <div className={this.state.theme1}> */}
+                <div className="welcome-user-wrap">
+                  <span className='welcome-user'>Welcome <em>{this.props.currentUser.username}</em></span>
+                </div>
                 <div className='logout-btn' onClick={this.logoutUser}>
                   <i className='fas fa-sign-out-alt'></i> Sign out
                 </div>
