@@ -48,12 +48,12 @@ class Signup extends React.Component {
             </div>
 
             <div className="cty">
-              <span>to continue to YouTuubee</span>
+              <span>to continue to WatchTube</span>
             </div>
 
             <div className="signup-fields">
               <div className="username-field">
-                <label>
+                <label className="signup-fields-labels">
                   <input
                     type="text"
                     value={this.state.username}
@@ -90,7 +90,7 @@ class Signup extends React.Component {
 
             <Link className="sign-in-instead" to="/login">Sign in instead</Link>
             
-            <button onClick={this.handleSubmit}>Next</button>
+            <button className="signup-btn" onClick={this.handleSubmit}>Next</button>
             
           </div>
           <div className="signup-img">
