@@ -63,31 +63,35 @@ class Login extends React.Component {
               <span>to continue to WatchTube</span>
             </div>
 
-            <div className="usr-name-login">
-              <label>
-                <input
-                  type="text"
-                  value={this.state.username}
-                  placeholder="Enter your username"
-                  onChange={this.update("username")}
-                />
-              </label>
-            </div>
+            <div className="login-fields">
+              <div className="usr-name-login">
+                <label>
+                  <input
+                    type="text"
+                    value={this.state.username}
+                    placeholder="Enter your username"
+                    onChange={this.update("username")}
+                  />
+                </label>
+              </div>
 
-            <div className="usr-psw-login">
-              <label>
-                <input
-                  type="password"
-                  value={this.state.password}
-                  placeholder="Password"
-                  onChange={this.update("password")}
-                />
-              </label>
+              <div className="usr-psw-login">
+                <label>
+                  <input
+                    type="password"
+                    value={this.state.password}
+                    placeholder="Password"
+                    onChange={this.update("password")}
+                  />
+                </label>
+              </div>
+              {this.renderErrors()}
             </div>
-            {this.renderErrors()}
-            <Link className="create-acc-link" to="/signup">Create account</Link>
-            <button className="next-btn" onClick={this.handleSubmit}>Next</button>
-            <button className="demo-btn" onClick={() => this.handleDemo()}>Demo Login</button>
+            <div className="login-buttons">
+              <Link className="create-acc-link" to="/signup">Create account</Link>
+              <button className="demo-btn" onClick={() => this.handleDemo()}>Demo Login</button>
+              <button className="next-btn" onClick={this.handleSubmit}>Next</button>
+            </div>
           </div>
         </form>
       </div>
