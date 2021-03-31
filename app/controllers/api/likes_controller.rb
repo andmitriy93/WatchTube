@@ -11,6 +11,8 @@ class Api::LikesController < ApplicationController
       if @like.save
         # render json: ['Like! It works!']
         render :show
+      else
+        flash[:notice] = "Please like only once"
       end
     end
     # render :show
