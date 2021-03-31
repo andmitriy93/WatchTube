@@ -17,4 +17,12 @@ const removeLike = (likeId) => {
   };
 };
 
-export const createLike
+export const createLike = (commentId) => {
+  return createLike(commentId) 
+    .then(like => dispatch(receiveLike(like)))
+}
+
+export const deleteLike = (likeId) => {
+  return deleteLike(likeId)
+    .then(() => dispatch(removeLike(likeId)))
+}
