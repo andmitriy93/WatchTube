@@ -1,5 +1,5 @@
 class Api::LikesController < ApplicationController
-  before_action :find_comment
+  before_action :find_comment, only: [:create]
   helper_method :find_comment
 
   def create
@@ -26,6 +26,7 @@ class Api::LikesController < ApplicationController
     end
     render :show
   end
+
 
   private
 
