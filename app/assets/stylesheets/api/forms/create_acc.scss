@@ -65,7 +65,10 @@
   font-size: 14px;
   height: 35px;
   padding: 6px, 8px;
-  // border: 3px solid black;
+}
+
+.signup-fields input:focus {
+  border: 2px solid #1a73e8;
 }
 
 .signup-fields-labels label {

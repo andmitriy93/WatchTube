@@ -50,8 +50,8 @@ class Login extends React.Component {
 
   render() {
     return (
-      <div className="login-form">
-        <form>
+      <div className="login-outter">
+        <form className="login-form">
 
           <div className="login-container">
 
@@ -60,7 +60,7 @@ class Login extends React.Component {
             </div>
 
             <div className="tcty">
-              <span>to continue to YouTuubee</span>
+              <span>to continue to WatchTube</span>
             </div>
 
             <div className="usr-name-login">
@@ -87,10 +87,9 @@ class Login extends React.Component {
             {this.renderErrors()}
             <Link className="create-acc-link" to="/signup">Create account</Link>
             <button className="next-btn" onClick={this.handleSubmit}>Next</button>
-          
+            <button className="demo-btn" onClick={() => this.handleDemo()}>Demo Login</button>
           </div>
         </form>
-            <button className="demo-btn" onClick={() => this.handleDemo()}>Demo Login</button>
       </div>
     );
   }
