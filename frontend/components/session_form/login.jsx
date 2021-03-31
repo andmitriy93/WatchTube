@@ -40,7 +40,7 @@ class Login extends React.Component {
 
   renderErrors() {
     return (
-      <div className="error-render">
+      <div className="error-render login">
         {this.props.errors.map((error, i) => (
           <li className="err-msg" key={`error-${i}`}>{error}</li>
         ))}

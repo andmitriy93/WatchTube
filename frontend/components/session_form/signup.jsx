@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 class Signup extends React.Component {
   constructor(props) {
@@ -27,74 +27,106 @@ class Signup extends React.Component {
     this.props.createNewUser(this.state).then(this.props.history.push());
   }
 
-  renderErrors() {
-    return (
-      <div className="error-render">
-        {this.props.errors.map((error, i) => (
-          <li className="err-msg" key={`error-${i}`}>{error}</li>
-        ))}
-      </div>
-    );
+  // renderErrors() {
+  //   return (
+  //     <div className="error-render">
+  //       {this.props.errors.map((error, i) => (
+  //         <li className="err-msg" key={`error-${i}`}>{error}</li>
+  //       ))}
+  //     </div>
+  //   );
+  // }
+
+  renderUsernameErrors() {
+    if (this.props.errors.includes("Username can't be blank")) {
+      return <div className='error-render'>Username can't be blank*</div>;
+    } else if (this.props.errors.includes("Username has already been taken")) {
+      return (
+        <div className='error-render'>Username has already been taken*</div>
+      );
+    }
+  }
+
+  renderEmailErrors() {
+    if (this.props.errors.includes("Email can't be blank")) {
+      return <div className="error-render">Email can't be blank*</div>
+    } else if (this.props.errors.includes("Email has already been taken")) {
+      return <div className="error-render">Email has already been taken*</div>
+    }
+  }
+
+  renderPasswordErrors() {
+    if (this.props.errors.includes('Password is too short (minimum is 6 characters)')) {
+      return <div className="error-render">Password is too short (minimum is 6 characters)*</div>
+    }
   }
 
   render() {
     return (
-      <div className="signup-outter">
-        <form className="signup-form">
-
-          <div className="create-acc-container">
-            <div className="cga">
+      <div className='signup-outter'>
+        <form className='signup-form'>
+          <div className='create-acc-container'>
+            <div className='cga'>
               <span>Create your Account</span>
             </div>
 
-            <div className="cty">
+            <div className='cty'>
               <span>to continue to WatchTube</span>
             </div>
 
-            <div className="signup-fields">
-              <div className="username-field">
-                <label className="signup-fields-labels">
+            <div className='signup-fields'>
+              <div className='username-field'>
+                <label className='signup-fields-labels'>
                   <input
-                    type="text"
+                    type='text'
                     value={this.state.username}
-                    placeholder="Full name"
+                    placeholder='Full name'
                     onChange={this.update("username")}
                   />
                 </label>
+                <div>{this.renderUsernameErrors()}</div>
               </div>
 
-              <div className="email-field">
+              <div className='email-field'>
                 <label>
                   <input
-                    type="text"
+                    type='text'
                     value={this.state.email}
-                    placeholder="Your email adress"
+                    placeholder='Your email adress'
                     onChange={this.update("email")}
                   />
                 </label>
+                <div>{this.renderEmailErrors()}</div>
               </div>
 
-              <div className="password-field">
-                <label>
+              <div className='password-field'>
+              <label>
                   <input
-                    type="password"
+                    type='password'
                     value={this.state.password}
-                    placeholder="Password"
+                    placeholder='Password'
                     onChange={this.update("password")}
                   />
                 </label>
+                <div>{this.renderPasswordErrors()}</div>
               </div>
-            {this.renderErrors()}
+              {/* {this.renderErrors()} */}
             </div>
             <br />
 
-            <Link className="sign-in-instead" to="/login">Sign in instead</Link>
-            
-            <button className="signup-btn" onClick={this.handleSubmit}>Next</button>
-            
+            <Link className='sign-in-instead' to='/login'>
+              Sign in instead
+            </Link>
+
+            <button className='signup-btn' onClick={this.handleSubmit}>
+              Next
+            </button>
           </div>
-          <div className="signup-img">
-            <img src="https://youtube-clone-seeds.s3-us-west-1.amazonaws.com/account.svg" alt=""/>
+          <div className='signup-img'>
+            <img
+              src='https://youtube-clone-seeds.s3-us-west-1.amazonaws.com/account.svg'
+              alt=''
+            />
           </div>
         </form>
       </div>

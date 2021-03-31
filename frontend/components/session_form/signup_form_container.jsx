@@ -3,10 +3,13 @@ import { connect } from "react-redux";
 import { createNewUser, removeErrors } from "../../actions/session";
 import Signup from "./signup";
 
-const mSTP = (state) => ({
-  // errors: Object.values(state.errors.session),
-  errors: 
-});
+const mSTP = (state) => {
+  return {
+    // errors: Object.values(state.errors.session),
+    errors: state.errors.session
+
+  }
+};
 
 const mDTP = (dispatch) => ({
   createNewUser: (formUser) => dispatch(createNewUser(formUser)),

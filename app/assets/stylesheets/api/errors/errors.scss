@@ -9,7 +9,7 @@
   // min-height: 100vh;
 }
 
-.container-404 h1{
+.container-404 h1 {
   font-size: 160px;
   margin: 0;
   font-weight: 900;
@@ -19,10 +19,9 @@
   -webkit-background-clip: text;
 }
 
-.container-404 img{
+.container-404 img {
   height: 150px;
   width: 150px;
-
 }
 
 .link-back-404-btn {
@@ -41,16 +40,20 @@
   background: #f92a0a;
 }
 
+// style errors for login page && signup page
+.error-render {
+  display: block;
+  list-style-type: none;
+  align-items: flex-start;
+  color: #d93025;
+  font-size: 12px;
+}
 
-
-
-  // style errors for login page
-  .error-render {
-    display: block;
-    .err-msg {
-      list-style-type: none;
-      align-items: flex-start;
-      color: #d93025;
-      font-size: 12px;
-    }
-  }
+.error-render.login{
+  display: block;
+  list-style-type: none;
+  align-items: flex-start;
+  color: #d93025;
+  font-size: 12px;
+  margin-left: 10px;
+}
