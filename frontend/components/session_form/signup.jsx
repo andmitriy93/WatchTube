@@ -39,9 +39,8 @@ class Signup extends React.Component {
 
   render() {
     return (
-      <div className="signup-form">
-        <form>
-
+      <div className="signup-outter">
+        <form className="signup-form">
 
           <div className="create-acc-container">
             <div className="cga">
@@ -52,7 +51,7 @@ class Signup extends React.Component {
               <span>to continue to YouTuubee</span>
             </div>
 
-            <div className="fields">
+            <div className="signup-fields">
               <div className="username-field">
                 <label>
                   <input
@@ -93,6 +92,9 @@ class Signup extends React.Component {
             
             <button onClick={this.handleSubmit}>Next</button>
             
+          </div>
+          <div className="signup-img">
+            <img src="https://youtube-clone-seeds.s3-us-west-1.amazonaws.com/account.svg" alt=""/>
           </div>
         </form>
       </div>
