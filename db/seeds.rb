@@ -21,10 +21,10 @@ demo = User.create!({
     password: '12345678'
     })
 
-video1 = Video.create(title: 'marvel trailer', author_id: demo.id)
-video2 = Video.create(title: 'another marver clip', author_id: demo.id)
-video3 = Video.create(title: 'Thor vs Hulk', author_id: demo.id)
-video4 = Video.create(title: 'Marvel2', author_id: demo.id)
+video1 = Video.create(title: 'Dota trailer', author_id: demo.id)
+video2 = Video.create(title: 'John Wick', author_id: demo.id)
+video3 = Video.create(title: 'Marvel', author_id: demo.id)
+video4 = Video.create(title: 'Marvel Trailer', author_id: demo.id)
 video5 = Video.create(title: 'Avengers', author_id: demo.id)
 video6 = Video.create(title: 'Aquaman', author_id: demo.id)
 video7 = Video.create(title: 'Cobe', author_id: demo.id)
