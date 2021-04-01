@@ -4,8 +4,17 @@ Rails.application.routes.draw do
       resources :comments, only: [:index]
     end
 
+    resources :comments do
+      resources :likes, only: [:create, :destroy]
+    end
+
+    # resources :videos do 
+    #   resources :likes, only: [:create, :destroy]
+    # end
+
     resource :session, only: [:create, :destroy, :show]
     resources :videos, only: [:index, :show]
+    # resource :likes, only: [:destroy]
     resources :comments, only: [:create, :index, :destroy, :show, :update]
   end
 

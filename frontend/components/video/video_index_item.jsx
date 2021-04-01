@@ -3,13 +3,10 @@ import { Link, withRouter } from "react-router-dom";
 
 class VideoIndexItem extends React.Component {
   playVideo(e) {
-    // console.log(e.target.play());
-    // e.target.currentTime = 0
     e.target.play();
   }
 
   stopVideo(e) {
-    // console.log(e.target);
     e.target.pause();
     e.target.currentTime = 0;
   }
