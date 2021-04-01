@@ -13,7 +13,6 @@
  *= require_self
  */
 
-<<<<<<< HEAD
 @import "./api/nav_bar/nav_bar.scss";
 @import "./api/search/search-bar.scss";
 @import "./api/base/fonts.scss";
@@ -26,20 +25,6 @@
 @import "./api/comments/comments_form.scss";
 @import "./api/comments/comments_index.scss";
 // @import "./dark-theme.scss";
-=======
- @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
- @import './api/nav_bar/nav_bar.scss';
- @import './api/search/search-bar.scss';
- @import './api/base/fonts.scss';
- @import './api/home/home.scss';
- @import './api/sidebar/sidebar.scss';
- @import './api/errors/errors.scss';
- @import './api/forms/login.scss';
- @import './api/forms/create_acc.scss';
- @import './api/videos.scss';
- @import './api/comments/comments_form.scss';
- @import './api/comments/comments_index.scss';
->>>>>>> likes
 
 * {
   box-sizing: border-box;
