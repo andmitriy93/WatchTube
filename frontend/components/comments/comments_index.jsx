@@ -8,12 +8,20 @@ class Comments extends React.Component {
       // author_id: this.props.currentUser.username
 
     }
+    this.thumbsUp = this.thumbUp.bind(this)
   }
 
   componentDidMount() {
     // this.props.fetchComments(this.props.currentUser);
     this.props.fetchComments();
 
+  }
+
+  thumbsUp(e) {
+    // debugger
+    e.preventDefault();
+    this.props.createLike(parseInt(e.target.value))
+    // console.log(this.props.likes)
   }
 
 
@@ -27,11 +35,11 @@ class Comments extends React.Component {
         return (
           <div key={comment.id}>
             <div className="comments-index-video-show" key={comment.id}>
-              {/* <span>User id: {comment.author_id}</span> */}
               <div className="comments-index-author">{comment.author.username}</div>
               <div className="comments-index-body">
                 {comment.body}
               </div>
+              <button onClick={this.thumbsUp} value={comment.id}><i className="far fa-thumbs-up"></i>Like</button>
             </div>
           </div>
         )

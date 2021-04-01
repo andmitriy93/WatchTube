@@ -3,7 +3,7 @@ export const createLike = (commentId) => {
   return $.ajax({
     url: `/api/comments/${commentId}/likes`,
     method: 'POST',
-    data: { comment }
+    // data: { commentId }
   })
 }
 
