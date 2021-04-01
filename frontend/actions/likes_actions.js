@@ -22,7 +22,7 @@ export const createLike = (commentId) => {
     .then(like => dispatch(receiveLike(like)))
 }
 
-export const deleteLike = (likeId) => {
-  return deleteLike(likeId)
+export const deleteLike = (commentId, likeId) => {
+  return deleteLike(commentId, likeId)
     .then(() => dispatch(removeLike(likeId)))
 }

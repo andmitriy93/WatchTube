@@ -9,7 +9,7 @@ Rails.application.routes.draw do
     end
 
     # resources :videos do 
-    #   resources :likes
+    #   resources :likes, only: [:create, :destroy]
     # end
 
     resource :session, only: [:create, :destroy, :show]

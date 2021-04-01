@@ -8,9 +8,9 @@ export const createLike = (commentId) => {
 }
 
 
-export const deleteLike = (likeId) => {
+export const deleteLike = (commentId, likeId) => {
   return $.ajax({
-    url: `/api/comments/${commentId}/likes`,
+    url: `/api/comments/${commentId}/likes/${likeId}`,
     method: 'DELETE',
   })
 }
