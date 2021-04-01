@@ -18,6 +18,11 @@ class Api::LikesController < ApplicationController
     # render :show
   end
 
+  def index
+    @likes = Like.all
+    render :index
+  end
+
   def destroy
     if !(already_liked?)
       flash[:notice] = "Cannot unlike"
