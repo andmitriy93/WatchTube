@@ -27,9 +27,15 @@ class Api::LikesController < ApplicationController
     # if !(already_liked?)
     #   flash[:notice] = "Cannot unlike"
     # else
-      @like.destroy
+    #   @like.destroy
     # end
-    render :show
+    # render :show
+    # # end
+
+    if find_like
+      @like.destroy
+      render :show
+    end
   end
 
 
@@ -41,12 +47,12 @@ class Api::LikesController < ApplicationController
   end
 
   def find_like
-    debugger
+    # debugger
     @like = @comment.likes.find(params[:id])
   end
 
-  # def already_liked?
-  #   Like.where(user_id: current_user.id, comment_id: params[:comment_id], video_id: params[:video_id]).exists?
-  # end
+  def already_liked?
+    Like.where(user_id: current_user.id, comment_id: params[:comment_id], video_id: params[:video_id]).exists?
+  end
 
 end

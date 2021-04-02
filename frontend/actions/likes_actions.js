@@ -12,6 +12,7 @@ const receiveLike = (like) => {
 };
 
 const removeLike = (likeId) => {
+  // debugger
   return {
     type: REMOVE_LIKE,
     likeId,

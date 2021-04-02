@@ -14,14 +14,16 @@ const mSTP = (state, ownProps) => {
     currentUser: state.session.currentUser,
     currentVideo: state.entities.videos,
     comments: Object.values(state.entities.comments),
-    likes: Object.values(state.entities.likes)
+    // comment: state.entities.comments[ownProps.match.params.commentId],
+    // commentId: ownProps.match.params.commentId
+    // likes: Object.values(state.entities.likes)
   };
 };
 
 const mDTP = (dispatch) => {
   return {
-    // fetchComments: (userId) => dispatch(fetchComments(userId)),
     fetchComments: () => dispatch(fetchComments()),
+    fetchComment: (commentId) => dispatch(fetchComment(commentId)),
     createComment: (comment) => dispatch(createComment(comment)),
     updateComment: (comment) => dispatch(updateComment(comment)),
     deleteComment: (commentId) => dispatch(deleteComment(commentId)),
