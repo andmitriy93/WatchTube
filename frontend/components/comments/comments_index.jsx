@@ -7,6 +7,7 @@ class Comments extends React.Component {
       liked: false,
     };
     this.thumbsUp = this.thumbsUp.bind(this);
+    this.thumbsDown = this.thumbsDown.bind(this);
   }
 
   componentDidMount() {
@@ -26,7 +27,6 @@ class Comments extends React.Component {
     // if (this.state.liked === false) {
       this.props.createLike(parseInt(e.currentTarget.value));
       this.setState({ liked: !this.state.liked });
-      console.log(this.state.liked)
       // }
     // } else {
     //   this.props.dislike(
@@ -38,15 +38,17 @@ class Comments extends React.Component {
   }
 
   thumbsDown(e) {
+    debugger
     this.props.dislike(parseInt(e.currentTarget.value), this.props.comment[e.currentTarget.value].likes[0]);
     this.setState({ liked: !this.state.liked });
-    console.log(this.state.liked)
+    console.log(this.props.comment[e.currentTarget.value].likes[0])
   }
   // comments[comment.id]
 
   render() {
     if (!this.props.comments) return null;
     const { comments } = this.props;
+    const { liked } = this.state;
 
     comments.reverse();
     const filteredComments = comments.map((comment) => {
@@ -59,9 +61,21 @@ class Comments extends React.Component {
               </div>
               <div className='comments-index-body'>{comment.body}</div>
               <div className="like-comment">
-                <button onClick={this.thumbsUp} value={comment.id}>
-                  <i className="fas fa-thumbs-up"></i>
-                </button>
+                {
+                  (liked === false) 
+                    ? 
+                  <button onClick={this.thumbsUp} value={comment.id}>
+                    <i className="fas fa-thumbs-up"></i>
+                  </button>
+
+                  : 
+                  <button onClick={this.thumbsDown} value={comment.id}>
+                    <i className="fas fa-thumbs-up"></i>
+                  </button>
+                }
+
+
+
                 <span className="like-comment-amount">{comment.likes.length}</span>
               </div>
             </div>
