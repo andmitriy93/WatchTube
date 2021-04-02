@@ -36,6 +36,7 @@ class Api::LikesController < ApplicationController
   private
 
   def find_comment
+    # debugger
     @comment = Comment.find(params[:comment_id])
   end
 

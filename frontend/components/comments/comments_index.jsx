@@ -22,19 +22,27 @@ class Comments extends React.Component {
   // }
 
   thumbsUp(e) {
-    debugger;
-    if (this.state.liked === false) {
-      this.props.createLike(parseInt(e.target.value));
-      this.setState({ liked: true });
+    // debugger
+    // if (this.state.liked === false) {
+      this.props.createLike(parseInt(e.currentTarget.value));
+      this.setState({ liked: !this.state.liked });
+      console.log(this.state.liked)
       // }
-    } else {
-      this.props.dislike(
-        parseInt(e.target.value),
-        this.props.comment[e.target.value].likes[0]
-      );
-      this.setState({ liked: false });
-    }
+    // } else {
+    //   this.props.dislike(
+    //     parseInt(e.target.value),
+    //     this.props.comment[e.target.value].likes[0]
+    //   );
+    //   this.setState({ liked: false });
+    // }
   }
+
+  thumbsDown(e) {
+    this.props.dislike(parseInt(e.currentTarget.value), this.props.comment[e.currentTarget.value].likes[0]);
+    this.setState({ liked: !this.state.liked });
+    console.log(this.state.liked)
+  }
+  // comments[comment.id]
 
   render() {
     if (!this.props.comments) return null;
@@ -51,10 +59,10 @@ class Comments extends React.Component {
               </div>
               <div className='comments-index-body'>{comment.body}</div>
               <div className="like-comment">
-                <i onClick={this.thumbsUp} value={comment.id}   className="fas fa-thumbs-up"></i>
+                <button onClick={this.thumbsUp} value={comment.id}>
+                  <i className="fas fa-thumbs-up"></i>
+                </button>
                 <span className="like-comment-amount">{comment.likes.length}</span>
-                {/* <button onClick={this.thumbsUp} value={comment.id}> */}
-                  {/* </button> */}
               </div>
             </div>
           </div>

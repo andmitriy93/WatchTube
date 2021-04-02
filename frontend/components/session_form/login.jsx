@@ -18,8 +18,6 @@ class Login extends React.Component {
   }
 
   update(field) {
-    console.log(this.state.username)
-    console.log(this.state.password)
     return (e) => {
       this.setState({ [field]: e.currentTarget.value });
     };

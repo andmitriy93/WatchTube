@@ -1,9 +1,10 @@
 
 export const createLike = (commentId) => {
+  // console.log(commentId)
   return $.ajax({
     url: `/api/comments/${commentId}/likes`,
     method: 'POST',
-    // data: { commentId }
+    data: { commentId }
   })
 }
 
