@@ -3,25 +3,22 @@ class Api::LikesController < ApplicationController
   helper_method :find_comment
 
   def create
-    # if already_liked?
-    #   flash[:notice] = "You can't like more than once"
-    # else
-      # @comment.likes.create(user_id: current_user.id)
-      @like = Like.new(user_id: current_user.id, comment_id: @comment.id, video_id: @comment.video_id)
-      if @like.save
-        # render json: ['Like! It works!']
-        render :show
-      else
-        flash[:notice] = "Please like only once"
+      # @like = Like.new(user_id: current_user.id, comment_id: @comment.id, video_id: @comment.video_id)
+      # if @like.save
+      #   # render json: ['Like! It works!']
+      #   render :show
+      # else
+      #   flash[:notice] = "Please like only once"
+      # end
+      @like = Like.new
+      @like.user_id = current_user.id
+      @like.comment_id = params[:id]
+      unless @like.save
+        flash[:errors] = @like.errors.full_messages
       end
-    # end
-    # render :show
+      # render :show
   end
 
-  def index
-    @likes = Like.all
-    render :index
-  end
 
   def destroy
     # if !(already_liked?)
@@ -33,24 +30,24 @@ class Api::LikesController < ApplicationController
     # # end
     @like = Like.find(params[:id])
     @like.destroy
-    render :show
+    # render :show
   end
 
 
-  private
+  # private
 
-  def find_comment
-    # debugger
-    @comment = Comment.find(params[:comment_id])
-  end
+  # def find_comment
+  #   # debugger
+  #   @comment = Comment.find(params[:comment_id])
+  # end
 
-  def find_like
-    # debugger
-    @like = @comment.likes.find(params[:id])
-  end
+  # def find_like
+  #   # debugger
+  #   @like = @comment.likes.find(params[:id])
+  # end
 
-  def already_liked?
-    Like.where(user_id: current_user.id, comment_id: params[:comment_id], video_id: params[:video_id]).exists?
-  end
+  # def already_liked?
+  #   Like.where(user_id: current_user.id, comment_id: params[:comment_id], video_id: params[:video_id]).exists?
+  # end
 
 end
