@@ -25,13 +25,8 @@ const removeComment = (commentId) => {
   };
 };
 
-// export const fetchComments = (userId) => (dispatch) => {  // userId
-//   return CommentAPIUtil.fetchComments(userId).then((comments) =>
-//     dispatch(receiveComments(comments))
-//   );
-// };
-
-export const fetchComments = () => (dispatch) => {  // userId
+export const fetchComments = () => (dispatch) => {
+  // userId
   return CommentAPIUtil.fetchComments().then((comments) =>
     dispatch(receiveComments(comments))
   );
@@ -58,5 +53,17 @@ export const updateComment = (comment) => (dispatch) => {
 export const deleteComment = (commentId) => (dispatch) => {
   return CommentAPIUtil.deleteComment(commentId).then(() =>
     dispatch(removeComment(commentId))
+  );
+};
+
+export const likeComment = (id) => (dispatch) => {
+  return CommentAPIUtil.likeToComment(id).then((comment) =>
+    dispatch(receiveComment(comment))
+  );
+};
+
+export const unLikeComment = (id) => (dispatch) => {
+  return CommentAPIUtil.deleteLikeFromComment(id).then((comment) =>
+    dispatch(receiveComment(comment))
   );
 };
