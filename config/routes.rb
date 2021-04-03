@@ -4,11 +4,7 @@ Rails.application.routes.draw do
       resources :comments, only: [:index]
     end
 
-    resources :comments do
-      resources :likes, only: [:create, :destroy]
-    end
-
-    # resources :videos do 
+    # resources :comments do
     #   resources :likes, only: [:create, :destroy]
     # end
 
@@ -16,8 +12,9 @@ Rails.application.routes.draw do
 
     resource :session, only: [:create, :destroy, :show]
     resources :videos, only: [:index, :show]
-    # resource :likes, only: [:destroy]
     resources :comments, only: [:create, :index, :destroy, :show, :update]
+    resource :likes, only: [:create]
+    delete '/likes', to: 'likes#destroy'
   end
 
   root to: "static_pages#root"
