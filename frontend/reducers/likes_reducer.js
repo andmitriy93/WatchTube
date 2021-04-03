@@ -1,7 +1,7 @@
 import { RECEIVE_LIKE, REMOVE_LIKE } from "../actions/likes_actions";
 
 const likesReducer = (state = {}, action) => {
-  console.log(action)
+  // console.log(action)
   Object.freeze(state);
   let nextState = Object.assign({}, state);
   // debugger

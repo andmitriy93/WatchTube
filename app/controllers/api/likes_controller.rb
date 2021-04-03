@@ -31,11 +31,9 @@ class Api::LikesController < ApplicationController
     # end
     # render :show
     # # end
-
-    if find_like
-      @like.destroy
-      render :show
-    end
+    @like = Like.find(params[:id])
+    @like.destroy
+    render :show
   end
 
 

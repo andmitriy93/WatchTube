@@ -1,17 +1,17 @@
 import { connect } from 'react-redux';
 import SearchBar from './search';
-import { fetchVideos } from "../../actions/video_actions";
+import { searchVideos } from "../../actions/video_actions";
 import { withRouter } from "react-router-dom";
 
 const mSTP = state => {
   return {
-    videos: Object.values(state.entities.videos),
+    videos: Object.values(state.entities.videos)
   }
 }
 
 const mDTP = dispatch => {
   return {
-    fetchVideos: () => dispatch(fetchVideos())
+    searchVideos: (videoTitle) => dispatch(searchVideos(videoTitle))
   }
 }
 

@@ -23,26 +23,36 @@ class SearchBar extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      filtered: []
+      search: '',
+      videos: ''
     }
+
+    this.handleChange = this.handleChange.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
 
   componentDidMount() {
+    
+  }
+
+  handleChange(e) {
+    e.preventDefault();
     this.setState({
-      filtered: this.props.videos
+      search: e.currentTarget.value
     })
   }
 
-  componentWillReceiveProps(nextProps) {
-    this.setState({
-      filtered: nextProps.videos
-    })
+  handleClick(e) {
+    e.preventDefault();
+    this.props.searchVideos(this.state.search)
+    console.log(this.props.videos)
   }
- 
 
   render() {
+
     return (
         <div className="search-btn">
+          {console.log(this.state.videos)}
           <form className="search-bar-form">
             <label>
               <span className="visually-hidden"></span>
@@ -51,8 +61,10 @@ class SearchBar extends React.Component {
               type="text"
               className="search-input"
               placeholder="Search"
+              onChange={this.handleChange}
+              value={this.state.search}
             />
-            <button className="search-bar-btn" type="submit">
+            <button onClick={this.handleClick} className="search-bar-btn" type="submit">
               <i className="fas fa-search"></i>
             </button>
           </form>

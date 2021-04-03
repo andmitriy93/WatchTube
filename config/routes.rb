@@ -12,6 +12,8 @@ Rails.application.routes.draw do
     #   resources :likes, only: [:create, :destroy]
     # end
 
+    get '/videos/search', to: 'videos#search'
+
     resource :session, only: [:create, :destroy, :show]
     resources :videos, only: [:index, :show]
     # resource :likes, only: [:destroy]

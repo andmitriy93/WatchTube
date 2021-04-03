@@ -9,6 +9,13 @@ class Api::VideosController < ApplicationController
         render :index
     end
 
+    def search
+        @videos = Video.where("title LIKE '%#{params[:videoTitle]}%'")
+        render :index
+    end
+    
+    private
+
     def video_params
         params.require(:video).permit(:title, :author_id)
     end
