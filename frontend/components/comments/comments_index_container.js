@@ -6,16 +6,17 @@ import {
   createComment,
   updateComment,
   deleteComment,
-} from "../../actions/comment_actions";
-import { createLike, deleteLike } from '../../actions/likes_actions'
+  likeComment,
+  unLikeComment
 
-const mSTP = (state, ownProps) => {
+} from "../../actions/comment_actions";
+// import { createLike, deleteLike } from '../../actions/likes_actions'
+
+const mSTP = (state) => {
   return {
     currentUser: state.session.currentUser,
     currentVideo: state.entities.videos,
     comments: Object.values(state.entities.comments),
-    // comment: state.entities.comments[ownProps.match.params.commentId],
-    // commentId: ownProps.match.params.commentId
     // likes: Object.values(state.entities.likes)
   };
 };
@@ -28,7 +29,9 @@ const mDTP = (dispatch) => {
     updateComment: (comment) => dispatch(updateComment(comment)),
     deleteComment: (commentId) => dispatch(deleteComment(commentId)),
     createLike: (commentId) => dispatch(createLike(commentId)),
-    dislike: (commentId, likeId) => dispatch(deleteLike(commentId, likeId))
+    dislike: (commentId, likeId) => dispatch(deleteLike(commentId, likeId)),
+    likeComment: id => dispatch(likeComment(id)),
+    unLikeComment: id => dispatch(unLikeComment(id))
   };
 };
 

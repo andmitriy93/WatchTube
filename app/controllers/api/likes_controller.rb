@@ -1,6 +1,6 @@
 class Api::LikesController < ApplicationController
-  before_action :find_comment, only: [:create]
-  helper_method :find_comment
+  # before_action :find_comment, only: [:create]
+  # helper_method :find_comment
 
   def create
       # @like = Like.new(user_id: current_user.id, comment_id: @comment.id, video_id: @comment.video_id)
@@ -16,7 +16,8 @@ class Api::LikesController < ApplicationController
       unless @like.save
         flash[:errors] = @like.errors.full_messages
       end
-      # render :show
+      render :show
+      # redirect_to comment_url(params[:id])
   end
 
 
@@ -28,9 +29,11 @@ class Api::LikesController < ApplicationController
     # end
     # render :show
     # # end
+    debugger
     @like = Like.find(params[:id])
     @like.destroy
-    # render :show
+    render :show
+    # redirect_to comment_url(@like.comment_id)
   end
 
 
