@@ -25,7 +25,7 @@ class VideoIndexItem extends React.Component {
           <video
             className='video-player'
             src={this.props.video.video_url}
-            width='300'
+            // width='300'
             controlsList='nodownload'
             muted='muted'
             autoPlay={false}

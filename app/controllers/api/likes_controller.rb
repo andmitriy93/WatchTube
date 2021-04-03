@@ -29,7 +29,7 @@ class Api::LikesController < ApplicationController
     # end
     # render :show
     # # end
-    debugger
+    # debugger
     @like = Like.find(params[:id])
     @like.destroy
     render :show
