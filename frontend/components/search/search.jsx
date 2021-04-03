@@ -24,35 +24,31 @@ class SearchBar extends React.Component {
     super(props)
     this.state = {
       search: '',
-      videos: ''
+      videos: '',
+      filtered: []
     }
 
     this.handleChange = this.handleChange.bind(this);
     this.handleClick = this.handleClick.bind(this);
   }
 
-  componentDidMount() {
-    
-  }
 
   handleChange(e) {
-    e.preventDefault();
     this.setState({
       search: e.currentTarget.value
     })
   }
 
+
   handleClick(e) {
     e.preventDefault();
-    this.props.searchVideos(this.state.search)
-    console.log(this.props.videos)
+    this.props.searchVideos(this.state.search.replace(/^\w/, (c) => c.toUpperCase()))
   }
 
   render() {
 
     return (
         <div className="search-btn">
-          {console.log(this.state.videos)}
           <form className="search-bar-form">
             <label>
               <span className="visually-hidden"></span>
