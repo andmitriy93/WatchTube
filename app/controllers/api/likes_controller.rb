@@ -20,6 +20,11 @@ class Api::LikesController < ApplicationController
       # redirect_to comment_url(params[:id])
   end
 
+  def index
+    @likes = Like.all
+    render :index
+  end
+
 
   def destroy
     # if !(already_liked?)
@@ -30,9 +35,13 @@ class Api::LikesController < ApplicationController
     # render :show
     # # end
     # debugger
-    @like = Like.find(params[:id])
-    @like.destroy
-    render :show
+    @like = Like.find_by(id: params[:id])
+    @user = current_user
+    if @like && @like.user_id == @user.id
+      @like.destroy
+      render :index
+    else
+      render ["You can't dislike"]
     # redirect_to comment_url(@like.comment_id)
   end
 

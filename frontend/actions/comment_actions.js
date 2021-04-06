@@ -3,6 +3,8 @@ import * as CommentAPIUtil from "../utils/comments_util";
 export const RECEIVE_COMMENTS = "RECEIVE_COMMENTS";
 export const RECEIVE_COMMENT = "RECEIVE_COMMENT";
 export const REMOVE_COMMENT = "REMOVE_COMMENT";
+export const RECEIVE_LIKE = 'RECEIVE_LIKE';
+export const REMOVE_LIKE = 'REMOVE_LIKE';
 
 const receiveComments = (comments) => {
   return {
@@ -24,6 +26,19 @@ const removeComment = (commentId) => {
     commentId,
   };
 };
+
+const receiveLike = like => {
+  return {
+    type: RECEIVE_LIKE,
+    like
+  }
+}
+const removeLike = likeId => {
+  return {
+    type: REMOVE_LIKE,
+    likeId
+  }
+}
 
 export const fetchComments = () => (dispatch) => {
   // userId
@@ -58,12 +73,12 @@ export const deleteComment = (commentId) => (dispatch) => {
 
 export const likeComment = (id) => (dispatch) => {
   return CommentAPIUtil.likeToComment(id).then((comment) =>
-    dispatch(receiveComment(comment))
+    dispatch(receiveLike(comment))
   );
 };
 
 export const unLikeComment = (id) => (dispatch) => {
   return CommentAPIUtil.deleteLikeFromComment(id).then((comment) =>
-    dispatch(receiveComment(comment))
+    dispatch(removeLike(comment))
   );
 };

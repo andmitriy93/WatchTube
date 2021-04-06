@@ -22,7 +22,13 @@ class Comments extends React.Component {
     // debugger;
     e.preventDefault();
     // this.props.unLikeComment(parseInt(e.currentTarget.value));
-    this.props.unLikeComment(e.currentTarget.value);
+    let likeId;
+    // this.props.comments.forEach((comment) => {
+    //   if (comment.id === parseInt(e.currentTarget.value)) {
+    //     likeId = comment.current_user_like_id;
+    //   }
+    // })
+    this.props.unLikeComment(likeId);
   }
 
   render() {
