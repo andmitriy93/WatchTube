@@ -17,7 +17,6 @@ class Api::LikesController < ApplicationController
         flash[:errors] = @like.errors.full_messages
       end
       render :show
-      # redirect_to comment_url(params[:id])
   end
 
   def index
@@ -42,7 +41,7 @@ class Api::LikesController < ApplicationController
       render :index
     else
       render ["You can't dislike"]
-    # redirect_to comment_url(@like.comment_id)
+    end
   end
 
 

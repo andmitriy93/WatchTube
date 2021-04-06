@@ -30,13 +30,13 @@ export const fetchLikes = () => (dispatch) => {
 };
 
 export const likeComment = (like) => (dispatch) => {
-  return CommentAPIUtil.likeToComment(like).then((comment) =>
+  return APIlikes.likeToComment(like).then((comment) =>
     dispatch(receiveLike(comment))
   );
 };
 
 export const unLikeComment = (likeId) => (dispatch) => {
-  return CommentAPIUtil.deleteLikeFromComment(likeId).then(() =>
+  return APIlikes.deleteLikeFromComment(likeId).then(() =>
     dispatch(removeLike(likeId))
   );
 };

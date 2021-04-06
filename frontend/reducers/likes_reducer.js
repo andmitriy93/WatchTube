@@ -25,3 +25,5 @@ const likesReducer = (state = {}, action) => {
       return state;
   }
 }
+
+export default likesReducer;
