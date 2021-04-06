@@ -1,32 +1,43 @@
-// import * as APIlikes from "../utils/likes_util";
+import * as APIlikes from "../utils/likes_util";
 
-// export const RECEIVE_LIKE = "RECEIVE_LIKE";
-// export const REMOVE_LIKE = "REMOVE_LIKE";
+export const RECEIVE_LIKES = "RECEIVE_LIKES";
+export const RECEIVE_LIKE = "RECEIVE_LIKE";
+export const REMOVE_LIKE = "REMOVE_LIKE";
 
-// const receiveLike = (like) => {
-//   // debugger
-//   return {
-//     type: RECEIVE_LIKE,
-//     like,
-//   };
-// };
+const receiveLikes = (likes) => {
+  return {
+    type: RECEIVE_LIKES,
+    likes,
+  };
+};
 
-// const removeLike = (likeId) => {
-//   // debugger
-//   return {
-//     type: REMOVE_LIKE,
-//     likeId,
-//   };
-// };
+const receiveLike = (like) => {
+  return {
+    type: RECEIVE_LIKE,
+    like,
+  };
+};
 
-// export const createLike = (commentId) => (dispatch) => {
-//   return APIlikes.createLike(commentId).then((like) =>
-//     dispatch(receiveLike(like))
-//   );
-// };
+const removeLike = (likeId) => {
+  return {
+    type: REMOVE_LIKE,
+    likeId,
+  };
+};
 
-// export const deleteLike = (commentId, likeId) => (dispatch) => {
-//   return APIlikes.deleteLike(commentId, likeId).then(() =>
-//     dispatch(removeLike(likeId))
-//   );
-// };
+export const fetchLikes = () => (dispatch) => {
+  return APIlikes.fetchLikes().then((likes) => dispatch(receiveLikes(likes)));
+};
+
+export const likeComment = (like) => (dispatch) => {
+  return CommentAPIUtil.likeToComment(like).then((comment) =>
+    dispatch(receiveLike(comment))
+  );
+};
+
+export const unLikeComment = (likeId) => (dispatch) => {
+  return CommentAPIUtil.deleteLikeFromComment(likeId).then(() =>
+    dispatch(removeLike(likeId))
+  );
+};
+

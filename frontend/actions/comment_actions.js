@@ -71,14 +71,14 @@ export const deleteComment = (commentId) => (dispatch) => {
   );
 };
 
-export const likeComment = (id) => (dispatch) => {
-  return CommentAPIUtil.likeToComment(id).then((comment) =>
-    dispatch(receiveLike(comment))
-  );
-};
+// export const likeComment = (id) => (dispatch) => {
+//   return CommentAPIUtil.likeToComment(id).then((comment) =>
+//     dispatch(receiveLike(comment))
+//   );
+// };
 
-export const unLikeComment = (id) => (dispatch) => {
-  return CommentAPIUtil.deleteLikeFromComment(id).then((comment) =>
-    dispatch(removeLike(comment))
-  );
-};
+// export const unLikeComment = (id) => (dispatch) => {
+//   return CommentAPIUtil.deleteLikeFromComment(id).then((comment) =>
+//     dispatch(removeLike(comment))
+//   );
+// };
