@@ -57,7 +57,7 @@ class Comments extends React.Component {
                 )}
 
                 <span className='like-comment-amount'>
-                  {comment.likes}
+                  {comment.likesCount}
                 </span>
               </div>
             </div>

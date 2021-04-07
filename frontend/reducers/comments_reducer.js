@@ -20,15 +20,16 @@ const commentsReducer = (state = {}, action) => {
       delete nextState[action.comment.id];
       return nextState;
     // case RECEIVE_LIKE:
+    //   debugger
     //   comment = nextState[action.like.comment_id];
     //   comment.liked_by_current_user = true;
-    //   comment.likes += 1;
+    //   comment.likesCount += 1;
     //   comment.current_user_like_id = action.like.id
     //   return nextState;
     // case REMOVE_LIKE:
     //   comment = nextState[action.like.comment_id];
     //   comment.liked_by_current_user = false;
-    //   comment.likes -= 1;
+    //   comment.likesCount -= 1;
     //   return nextState;
     default:
       return state;

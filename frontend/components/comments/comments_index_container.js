@@ -6,6 +6,8 @@ import {
   createComment,
   updateComment,
   deleteComment,
+  // likeComment,
+  // unLikeComment
 } from "../../actions/comment_actions";
 import { likeComment, unLikeComment, fetchLikes } from '../../actions/likes_actions'
 

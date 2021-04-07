@@ -10,13 +10,18 @@ class Api::LikesController < ApplicationController
       # else
       #   flash[:notice] = "Please like only once"
       # end
-      @like = Like.new
-      @like.user_id = current_user.id
-      @like.comment_id = params[:id]
-      unless @like.save
+      # debugger
+      @like = Like.new(user_id: current_user.id, comment_id: params[:comment_id])
+      # @like.user_id = current_user.id
+      # @like.comment_id = params[:id]
+      # unless @like.save
+      #   flash[:errors] = @like.errors.full_messages
+      # end
+      if @like.save
+        render :show
+      else
         flash[:errors] = @like.errors.full_messages
       end
-      render :show
   end
 
   def index
@@ -38,14 +43,18 @@ class Api::LikesController < ApplicationController
     @user = current_user
     if @like && @like.user_id == @user.id
       @like.destroy
-      render :index
+      render :show
     else
       render ["You can't dislike"]
     end
   end
 
 
-  # private
+  private
+
+  def like_params
+    params.require(:like).permit(:comment_id)
+  end
 
   # def find_comment
   #   # debugger

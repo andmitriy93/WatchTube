@@ -27,18 +27,32 @@ const removeComment = (commentId) => {
   };
 };
 
-const receiveLike = like => {
-  return {
-    type: RECEIVE_LIKE,
-    like
-  }
-}
-const removeLike = likeId => {
-  return {
-    type: REMOVE_LIKE,
-    likeId
-  }
-}
+// const receiveLike = like => {
+//   return {
+//     type: RECEIVE_LIKE,
+//     like
+//   }
+// }
+// const removeLike = likeId => {
+//   return {
+//     type: REMOVE_LIKE,
+//     likeId
+//   }
+// }
+
+
+// export const likeComment = (like) => (dispatch) => {
+//   return CommentAPIUtil.likeToComment(like).then((like) =>
+//     dispatch(receiveLike(like))
+//   );
+// };
+
+// export const unLikeComment = (likeId) => (dispatch) => {
+//   return CommentAPIUtil.deleteLikeFromComment(likeId).then((comment) =>
+//     dispatch(removeLike(comment))
+//   );
+// };
+
 
 export const fetchComments = () => (dispatch) => {
   // userId
@@ -71,14 +85,3 @@ export const deleteComment = (commentId) => (dispatch) => {
   );
 };
 
-// export const likeComment = (id) => (dispatch) => {
-//   return CommentAPIUtil.likeToComment(id).then((comment) =>
-//     dispatch(receiveLike(comment))
-//   );
-// };
-
-// export const unLikeComment = (id) => (dispatch) => {
-//   return CommentAPIUtil.deleteLikeFromComment(id).then((comment) =>
-//     dispatch(removeLike(comment))
-//   );
-// };
