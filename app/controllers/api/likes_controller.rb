@@ -4,7 +4,8 @@ class Api::LikesController < ApplicationController
 
   def create
       # debugger
-      @like = Like.new(user_id: current_user.id, comment_id: params[:like][:comment_id])
+      # @like = Like.new(user_id: current_user.id, comment_id: params[:like][:comment_id])
+      @like = Like.new(like_params)
       if @like.save
         render :show
       else
@@ -34,7 +35,7 @@ class Api::LikesController < ApplicationController
   private
 
   def like_params
-    params.require(:like).permit(:comment_id)
+    params.require(:like).permit(:user_id, :comment_id)
   end
 
   # def find_comment

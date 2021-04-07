@@ -25,8 +25,8 @@ const removeLike = (likeId) => {
   };
 };
 
-export const fetchLikes = () => (dispatch) => {
-  return APIlikes.fetchLikes().then((likes) => dispatch(receiveLikes(likes)));
+export const fetchLikes = (commentId) => (dispatch) => {
+  return APIlikes.fetchLikes(commentId).then((likes) => dispatch(receiveLikes(likes)));
 };
 
 export const likeComment = (like) => (dispatch) => {
