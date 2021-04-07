@@ -1,8 +1,9 @@
 
-export const fetchLikes = () => {
+export const fetchLikes = (commentId) => {
   return $.ajax({
-    url: '/api/likes',
-    method: 'GET'
+    url: `/api/comments/${commentId}/likes`,
+    method: 'GET',
+    data: { commentId }
   })
 }
 
@@ -16,7 +17,7 @@ export const likeToComment = (like) => {
 
 export const deleteLikeFromComment = (likeId) => {
   return $.ajax({
-    url: "/api/likes",
+    url: `/api/likes/${likeId}`,
     method: "DELETE",
     data: { likeId },
   });

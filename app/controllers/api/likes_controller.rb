@@ -3,20 +3,8 @@ class Api::LikesController < ApplicationController
   # helper_method :find_comment
 
   def create
-      # @like = Like.new(user_id: current_user.id, comment_id: @comment.id, video_id: @comment.video_id)
-      # if @like.save
-      #   # render json: ['Like! It works!']
-      #   render :show
-      # else
-      #   flash[:notice] = "Please like only once"
-      # end
       # debugger
-      @like = Like.new(user_id: current_user.id, comment_id: params[:comment_id])
-      # @like.user_id = current_user.id
-      # @like.comment_id = params[:id]
-      # unless @like.save
-      #   flash[:errors] = @like.errors.full_messages
-      # end
+      @like = Like.new(user_id: current_user.id, comment_id: params[:like][:comment_id])
       if @like.save
         render :show
       else
@@ -31,13 +19,6 @@ class Api::LikesController < ApplicationController
 
 
   def destroy
-    # if !(already_liked?)
-    #   flash[:notice] = "Cannot unlike"
-    # else
-    #   @like.destroy
-    # end
-    # render :show
-    # # end
     # debugger
     @like = Like.find_by(id: params[:id])
     @user = current_user
