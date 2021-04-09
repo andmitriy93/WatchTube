@@ -1,4 +1,4 @@
-# README YouTuubee app
+# README WatchTube app
   > This is a YouTube clone created with Ruby on Rails, JS, React and Redux
 
 ### Table of Contents
@@ -10,7 +10,7 @@
 * [Status](#setup)
 
 ### General info
- YouTuubee is an online video-sharing platform. YouTuubee allows you to create an account, login, put like and leave comments on videos, search 
+ WatchTube is an online video-sharing platform. YouTuubee allows you to create an account, login, put like and leave comments on videos, search 
  a specific video
 
 ### Technologies
