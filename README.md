@@ -42,14 +42,32 @@ List of features ready and TODOs for future development:
 <br />
 I have used two separed forms for sign in and sign up, to do that i have used React-redux library
 * Create a new user account - Signup form for new users
+
+In order to create a new user account you are reequired to fill in all fields(username, password and email)
+![signup form](https://youtube-clone-seeds.s3-us-west-1.amazonaws.com/Screen+Shot+2021-03-31+at+7.55.12+PM.png)
+
 * Login to existing account - Login form for users that already signed up
+
+  If you already have created an account, you can login. Otherwise click on the link to Create a new account
+  ![login page](https://youtube-clone-seeds.s3-us-west-1.amazonaws.com/Screen+Shot+2021-03-31+at+8.49.21+PM.png)
+  
 * Logout
+* Write comments under videos
+  This feature to create comments is available only for logged in users
+![comments-form](https://youtube-clone-seeds.s3-us-west-1.amazonaws.com/Screen+Shot+2021-04-03+at+2.06.10+AM.png)
+
+* Like/dislike comments
+  User can like or dislike(if already liked) comments. This feature also available only for logged in users.
+![like/dislike](https://youtube-clone-seeds.s3-us-west-1.amazonaws.com/Screen+Shot+2021-04-03+at+2.06.10+AM.png)
+
+* Search videos
+  Users can search videos that they want to watch
+  ![search videos]()https://youtube-clone-seeds.s3-us-west-1.amazonaws.com/Screen+Shot+2021-04-10+at+12.29.45+AM.png
 
 To-do list:
-* Logged user can leave comments on videos
-* Logged user can delete their own comments
-* Logged user can like/dislike videos
-* User can search videos and other users
+* Logged user can edit or delete their own comments
+* Logged user can upload videos
+* VIdeo show page with all uploaded videos, comments and likes
 
 
 ### Status
