@@ -62,7 +62,7 @@ In order to create a new user account you are reequired to fill in all fields(us
 
 * Search videos
   Users can search videos that they want to watch
-  ![search videos]()https://youtube-clone-seeds.s3-us-west-1.amazonaws.com/Screen+Shot+2021-04-10+at+12.29.45+AM.png
+  ![search videos](https://youtube-clone-seeds.s3-us-west-1.amazonaws.com/Screen+Shot+2021-04-10+at+12.29.45+AM.png)
 
 To-do list:
 * Logged user can edit or delete their own comments
