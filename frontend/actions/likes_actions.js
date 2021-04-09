@@ -30,8 +30,8 @@ export const fetchLikes = (commentId) => (dispatch) => {
 };
 
 export const likeComment = (like) => (dispatch) => {
-  return APIlikes.likeToComment(like).then((comment) =>
-    dispatch(receiveLike(comment))
+  return APIlikes.likeToComment(like).then((like) =>
+    dispatch(receiveLike(like))
   );
 };
 

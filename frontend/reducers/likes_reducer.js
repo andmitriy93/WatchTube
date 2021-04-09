@@ -7,6 +7,7 @@ const likesReducer = (state = {}, action) => {
   // debugger
   switch(action.type) {
     case RECEIVE_LIKES:
+      debugger
       return action.likes;
     case RECEIVE_LIKE:
       // comment = nextState[action.like.comment_id];
