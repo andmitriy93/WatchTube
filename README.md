@@ -1,4 +1,4 @@
-# README WatchTube app
+# WATCHTUBE app
   > This is a YouTube clone created with Ruby on Rails, JS, React and Redux
 
 ### Table of Contents
