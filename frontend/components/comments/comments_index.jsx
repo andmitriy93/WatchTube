@@ -10,6 +10,7 @@ class Comments extends React.Component {
 
   componentDidMount() {
     this.props.fetchComments();
+    this.props.fetchLikes();
   }
 
   thumbsUp(e) {
@@ -21,18 +22,21 @@ class Comments extends React.Component {
   thumbsDown(e) {
     // debugger;
     e.preventDefault();
-    // this.props.unLikeComment(parseInt(e.currentTarget.value));
-    let likeId;
-    // this.props.comments.forEach((comment) => {
-    //   if (comment.id === parseInt(e.currentTarget.value)) {
-    //     likeId = comment.current_user_like_id;
-    //   }
-    // })
+    let currentUser = this.props.currentUser.id;
+    let commentId = parseInt(e.currentTarget.value);
+    const likeId = this.props.likes.map((like) => {
+      // debugger
+      if (like.comment_id === commentId && like.user_id === currentUser) {
+        // debugger
+        return like.id
+      }
+    })
     this.props.unLikeComment(likeId);
   }
 
   render() {
     if (!this.props.comments) return null;
+    if (!this.props.likes) return null;
     const { comments } = this.props;
 
     // comments.reverse();

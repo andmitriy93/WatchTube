@@ -19,19 +19,24 @@ const receiveLike = (like) => {
 };
 
 const removeLike = (likeId) => {
+
   return {
     type: REMOVE_LIKE,
     likeId,
   };
 };
 
-export const fetchLikes = (commentId) => (dispatch) => {
-  return APIlikes.fetchLikes(commentId).then((likes) => dispatch(receiveLikes(likes)));
+export const fetchLikes = () => (dispatch) => {
+  return APIlikes.fetchLikes().then((likes) => dispatch(receiveLikes(likes)));
 };
 
-export const likeComment = (like) => (dispatch) => {
-  return APIlikes.likeToComment(like).then((like) =>
-    dispatch(receiveLike(like))
+export const likeComment = (commentId) => (dispatch) => {
+  return APIlikes.likeToComment(commentId).then((like) =>
+  { 
+    //  debugger
+    return dispatch(receiveLike(like))
+    
+  }
   );
 };
 

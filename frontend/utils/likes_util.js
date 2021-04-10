@@ -1,17 +1,16 @@
 
-export const fetchLikes = (commentId) => {
+export const fetchLikes = () => {
   return $.ajax({
-    url: `/api/comments/${commentId}/likes`,
+    url: `/api/likes`,
     method: 'GET',
-    data: { commentId }
   })
 }
 
-export const likeToComment = (like) => {
+export const likeToComment = (commentId) => {
   return $.ajax({
     url: "/api/likes",
     method: "POST",
-    data: { like },
+    data: { commentId },
   });
 };
 

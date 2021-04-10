@@ -14,6 +14,10 @@ const commentsReducer = (state = {}, action) => {
     case RECEIVE_COMMENTS:
       return action.comments;
     case RECEIVE_COMMENT:
+    //   comment = nextState[action.like.comment_id];
+    //   comment.liked_by_current_user = true;
+    //   comment.likesCount += 1;
+    //   comment.current_user_like_id = action.like.id
       nextState[action.comment.id] = action.comment;
       return nextState;
     case REMOVE_COMMENT:

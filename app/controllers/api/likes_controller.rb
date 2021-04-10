@@ -6,7 +6,8 @@ class Api::LikesController < ApplicationController
       # debugger
       # @like = Like.new(user_id: current_user.id, comment_id: params[:like][:comment_id])
       # debugger
-      @like = Like.new(user_id: current_user.id, comment_id: params[:comment_id])
+      @like = Like.new(user_id: current_user.id, comment_id: params[:commentId])
+      # debugger
       if @like.save
         render :show
       else
@@ -21,23 +22,23 @@ class Api::LikesController < ApplicationController
 
 
   def destroy
-    # debugger
     @like = Like.find_by(id: params[:id])
     @user = current_user
+    # debugger
     if @like && @like.user_id == @user.id
       @like.destroy
       render :show
     else
-      render ["You can't dislike"]
+      render json: 'Error! could not find like'
     end
   end
 
 
   private
 
-  # def like_params
-  #   params.require(:like).permit(:user_id, :comment_id)
-  # end
+  def like_params
+    params.require(:like).permit(:user_id, :comment_id)
+  end
 
   # def find_comment
   #   # debugger
