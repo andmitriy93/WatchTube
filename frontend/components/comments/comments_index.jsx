@@ -5,23 +5,35 @@ class Comments extends React.Component {
     super(props);
 
     this.state = {
-      comments: this.props.comments
-    }
+      comments: this.props.comments,
+    };
 
     this.thumbsUp = this.thumbsUp.bind(this);
     this.thumbsDown = this.thumbsDown.bind(this);
   }
 
   componentDidMount() {
-    this.props.fetchComments();
+    this.props.fetchComments().then((res) => {
+      // debugger
+      this.setState({ comments: Object.values(res.comments) });
+    });
     this.props.fetchLikes();
   }
 
-  componentDidUpdate(prevProps, prevState) {
-    if (prevState.comments !== this.state.comments) {
-      
-    }
-  }
+  // componentDidUpdate(prevProps, prevState) {
+  //   for (let i = 0; i < prevProps.comments.length; i++) {
+  //     let oldComment = prevProps.comments[i];
+  //     let newComment = this.props.comments[i];
+  //     // console.log(oldComment);
+  //     // console.log(newComment);
+
+  //     if (oldComment.likesCount !== newComment.likesCount) {
+  //       // debugger
+  //       this.setState({ comments: this.props.comments });
+  //       break;
+  //     }
+  //   }
+  // }
 
   thumbsUp(e) {
     // debugger;
@@ -34,21 +46,18 @@ class Comments extends React.Component {
     e.preventDefault();
     let currentUser = this.props.currentUser.id;
     let commentId = parseInt(e.currentTarget.value);
-    // let liked_by_current_user = this.props.comments[parseInt(e.currentTarget.value)].liked_by_current_user
     const likeId = this.props.likes.map((like) => {
-      // debugger
       if (like.comment_id === commentId && like.user_id === currentUser) {
-        // debugger
         return this.props.unLikeComment(like.id);
-        // return like.id
       }
-    })
+    });
   }
 
   render() {
     if (!this.props.comments) return null;
     if (!this.props.likes) return null;
-    const { comments } = this.props;
+    const { comments } = this.state;
+    console.log(comments);
 
     // comments.reverse();
     const filteredComments = comments.map((comment) => {

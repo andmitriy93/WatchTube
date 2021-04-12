@@ -18,11 +18,10 @@ const receiveLike = (like) => {
   };
 };
 
-const removeLike = (likeId) => {
-
+const removeLike = (like) => {
   return {
     type: REMOVE_LIKE,
-    likeId,
+    like,
   };
 };
 
@@ -33,16 +32,14 @@ export const fetchLikes = () => (dispatch) => {
 export const likeComment = (commentId) => (dispatch) => {
   return APIlikes.likeToComment(commentId).then((like) =>
   { 
-    //  debugger
     return dispatch(receiveLike(like))
-    
   }
   );
 };
 
 export const unLikeComment = (likeId) => (dispatch) => {
-  return APIlikes.deleteLikeFromComment(likeId).then(() =>
-    dispatch(removeLike(likeId))
+  return APIlikes.deleteLikeFromComment(likeId).then((like) =>
+    dispatch(removeLike(like))
   );
 };
 
