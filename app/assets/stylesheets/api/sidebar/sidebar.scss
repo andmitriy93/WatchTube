@@ -3,7 +3,7 @@
   flex-direction: column;
   background-color: #222;
   // background: #f8f8ff;
-  width: 240px;
+  width: 15%;
   height: 100vh;
   position: fixed;
   border: 1px solid;
@@ -71,13 +71,12 @@
 //   box-shadow: 3px 3px 5px rgba(255, 255, 255, 0.1);
   font-size: 2rem;
   text-decoration: none;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  display: flex;
 }
 
 .contact i {
   color: #ccc;
-  margin: 10px 22px;
-  justify-content: center;
 }
 
 .contact i:hover {

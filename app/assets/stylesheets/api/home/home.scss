@@ -15,10 +15,12 @@
   display: inline-block;
   padding-top: 25px;
   position: relative;
-  left: 250px;
+  // left: 250px;
+  left: 15%;
   top: 50px;
   margin-bottom: 40px;
-  margin-left: 25px;
+  margin-left: 15px;
+  justify-content: space-evenly;
   flex-wrap: nowrap;
   align-items: center;
   cursor: default;

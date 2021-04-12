@@ -42,37 +42,46 @@ export default ({ currentUser }) => {
   const greeting = currentUser ? (
     <div></div>
   ) : (
-    <div className="list-element login">
+    <div className='list-element login'>
       <p>
-        Log in to like videos,<br/> and comment, and subscribe
+        Log in to like videos,
+        <br /> and comment, and subscribe
       </p>
-      <button className="sidebar-btn-login">
-        <Link className="link-login-btn" to="/login"><i className="fas fa-user-circle signin"></i>Sign In</Link>
+      <button className='sidebar-btn-login'>
+        <Link className='link-login-btn' to='/login'>
+          <i className='fas fa-user-circle signin'></i>Sign In
+        </Link>
       </button>
     </div>
   );
 
   return (
-    <div className="sidebar">
-      <div className="sidebar-logo-wrapper">
+    <div className='sidebar'>
+      <div className='sidebar-logo-wrapper'>
         <Link className='img-youtube' to='/'>
           {/* <img src={window.YoutubeURL} /> */}
           {/* <img src={window.WatchTube} /> */}
-          <i className="fab fa-youtube logo"></i>
-          <span className="sidebar-watchtube" >WatchTube</span>
+          <i className='fab fa-youtube logo'></i>
+          <span className='sidebar-watchtube'>WatchTube</span>
         </Link>
       </div>
-      <ul className="sidebar-list">
-        <li className="list-element">
+      <ul className='sidebar-list'>
+        <li className='list-element'>
           <p>
-            <Link className="list-link-home" to="/"><i className="fas fa-home"></i>Home</Link>
+            <Link className='list-link-home' to='/'>
+              <i className='fas fa-home'></i>Home
+            </Link>
           </p>
         </li>
-        <li className="list-element">
-          <p><i className="fas fa-compass"></i>Explore</p>
+        <li className='list-element'>
+          <p>
+            <i className='fas fa-compass'></i>Explore
+          </p>
         </li>
-        <li className="list-element">
-          <p><i className="fab fa-youtube"></i>Subscriptions</p>
+        <li className='list-element'>
+          <p>
+            <i className='fab fa-youtube'></i>Subscriptions
+          </p>
         </li>
         {/* <div className="sidebar-greeting">{greeting}</div> */}
 
@@ -84,9 +93,27 @@ export default ({ currentUser }) => {
       </ul>
       <footer>
         {/* <li className="list-element"> */}
-          <a className="contact" href="https://github.com/andmitriy93" target="_blank"><i className='fa fa-github'></i></a>
-          <a className="contact" href="https://www.linkedin.com/in/dmitriy-an/" target="_blank"><i className='fa fa-linkedin'></i></a>
-          <a className="contact" href="https://angel.co/u/dmitrii-an" target="_blank"><i className='fa fa-angellist'></i></a>
+        <a
+          className='contact'
+          href='https://github.com/andmitriy93'
+          target='_blank'
+        >
+          <i className='fa fa-github'></i>
+        </a>
+        <a
+          className='contact'
+          href='https://www.linkedin.com/in/dmitriy-an/'
+          target='_blank'
+        >
+          <i className='fa fa-linkedin'></i>
+        </a>
+        <a
+          className='contact'
+          href='https://angel.co/u/dmitrii-an'
+          target='_blank'
+        >
+          <i className='fa fa-angellist'></i>
+        </a>
         {/* </li> */}
       </footer>
     </div>
