@@ -74,7 +74,17 @@ export default ({ currentUser }) => {
         <li className="list-element">
           <p><i className="fab fa-youtube"></i>Subscriptions</p>
         </li>
-        <div className="sidebar-greeting">{greeting}</div>
+        {/* <div className="sidebar-greeting">{greeting}</div> */}
+
+        <li className="list-element">
+          <a className="contact" href="https://github.com/andmitriy93" target="_blank"><i className='fa fa-github'></i></a>
+        </li>
+        <li className="list-element">
+          <a className="contact" href="https://www.linkedin.com/in/dmitriy-an/" target="_blank"><i className='fa fa-linkedin'></i></a>
+        </li>
+        <li className="list-element">
+          <a className="contact" href="https://angel.co/u/dmitrii-an" target="_blank"><i className='fa fa-angellist'></i></a>
+        </li>
       </ul>
     </div>
   );

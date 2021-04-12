@@ -4,6 +4,10 @@ class Comments extends React.Component {
   constructor(props) {
     super(props);
 
+    this.state = {
+      comments: this.props.comments
+    }
+
     this.thumbsUp = this.thumbsUp.bind(this);
     this.thumbsDown = this.thumbsDown.bind(this);
   }
@@ -11,6 +15,12 @@ class Comments extends React.Component {
   componentDidMount() {
     this.props.fetchComments();
     this.props.fetchLikes();
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (prevState.comments !== this.state.comments) {
+      
+    }
   }
 
   thumbsUp(e) {
@@ -24,14 +34,15 @@ class Comments extends React.Component {
     e.preventDefault();
     let currentUser = this.props.currentUser.id;
     let commentId = parseInt(e.currentTarget.value);
+    // let liked_by_current_user = this.props.comments[parseInt(e.currentTarget.value)].liked_by_current_user
     const likeId = this.props.likes.map((like) => {
       // debugger
       if (like.comment_id === commentId && like.user_id === currentUser) {
         // debugger
-        return like.id
+        return this.props.unLikeComment(like.id);
+        // return like.id
       }
     })
-    this.props.unLikeComment(likeId);
   }
 
   render() {
