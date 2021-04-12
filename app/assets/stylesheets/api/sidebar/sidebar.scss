@@ -1,125 +1,145 @@
 .sidebar {
-    display: flex;
-    flex-direction: column;
-    background-color: #222;
-    // background: #f8f8ff;
-    width: 240px;
-    height: 100vh;
-    position: fixed;
-    border: 1px solid;
-    z-index: 2028;
-    box-shadow: 0px 0px 5px rgba(255,255,255,0.2);
+  display: flex;
+  flex-direction: column;
+  background-color: #222;
+  // background: #f8f8ff;
+  width: 240px;
+  height: 100vh;
+  position: fixed;
+  border: 1px solid;
+  z-index: 2028;
+  box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.2);
 }
 
 .sidebar-logo-wrapper {
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    // border: 1px solid blue;
-  }
-  
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  // border: 1px solid blue;
+}
+
 .img-youtube {
-    text-decoration: none;
-    // color: #212121;
-    color: #f8f8ff;
-    // background: #f8f8f8;
+  text-decoration: none;
+  // color: #212121;
+  color: #f8f8ff;
+  // background: #f8f8f8;
 }
 
 .fab.fa-youtube.logo {
-    color: red;
-    font-size: 1.5em;
-    background: transparent;
-    margin: 0 0 0 5px;
-    border: none;
+  color: red;
+  font-size: 1.5em;
+  background: transparent;
+  margin: 0 0 0 5px;
+  border: none;
 }
 
 .sidebar-watchtube {
-    font-size: 1.5em;
-    letter-spacing: -1.7px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-weight: 600;
-    margin-left: 0px;
+  font-size: 1.5em;
+  letter-spacing: -1.7px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 600;
+  margin-left: 0px;
 }
 
 .sidebar-list {
-    color: #6d6d6d;
-    list-style-type: none;
-    padding-left: 0;
-    // border: 1px solid red;
-    height: 100%;
+  color: #6d6d6d;
+  list-style-type: none;
+  padding-left: 0;
+  //   border: 1px solid red;
+  height: 100%;
 }
 
 .list-element {
-    border: 1px solid;
-    margin-bottom: 40px;
-    box-shadow: 3px 3px 5px rgba(255,255,255,0.2);
+  border: 1px solid;
+  margin-bottom: 40px;
+  box-shadow: 3px 3px 5px rgba(255, 255, 255, 0.2);
 }
 
 .list-element:hover {
-    background: #393939;
+  background: #393939;
 }
 
-.list-element p{
-    margin-left: 20px;
-    cursor: pointer;
+.list-element p {
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.sidebar footer {
+  border: 1px solid;
+  margin-bottom: 30px;
+//   box-shadow: 3px 3px 5px rgba(255, 255, 255, 0.1);
+  font-size: 2rem;
+  text-decoration: none;
+  justify-content: space-between;
+}
+
+.contact i {
+  color: #ccc;
+  margin: 10px 22px;
+  justify-content: center;
+}
+
+.contact i:hover {
+//   color: #212121;
+  color: #fff;
 }
 
 .sidebar-btn-login {
-    margin-left: 20px;
-    width: 120px;
-    height: 35px;
-    font-size: 15px;
-    // background-color: #212121;
-    background: transparent;
-    color: #065fd4;
-    padding: 5px 15px;
-    cursor: pointer;
-    border: 1px solid #3ea6ff;
-    outline: none;
+  margin-left: 20px;
+  width: 120px;
+  height: 35px;
+  font-size: 15px;
+  // background-color: #212121;
+  background: transparent;
+  color: #065fd4;
+  padding: 5px 15px;
+  cursor: pointer;
+  border: 1px solid #3ea6ff;
+  outline: none;
 }
 
 .list-element.login {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .list-element.login p {
-    cursor: default;
+  cursor: default;
 }
 
 .fas.fa-user-circle.signin {
-    color: #065fd4;
-    font-size: 18px;
-    margin-right: 4px;
+  color: #065fd4;
+  font-size: 18px;
+  margin-right: 4px;
 }
 
 .link-login-btn {
-    text-decoration: none;
-    color: #065fd4;
-    text-transform: uppercase;
-    // padding: 5px 15px;
+  text-decoration: none;
+  color: #065fd4;
+  text-transform: uppercase;
+  // padding: 5px 15px;
 }
 
 .list-link-home {
-    text-decoration: none;
-    color: #6d6d6d;
+  text-decoration: none;
+  color: #6d6d6d;
 }
 
 .fas.fa-home {
-    margin: 0 22px 0 0;
-    font-size: 18px;
-    color: #6d6d6d;
+  margin: 0 22px 0 0;
+  font-size: 18px;
+  color: #6d6d6d;
 }
 
 .fas.fa-compass {
-    margin: 0 26px 0 0;
-    font-size: 18px;
-    color: #6d6d6d;
+  margin: 0 26px 0 0;
+  font-size: 18px;
+  color: #6d6d6d;
 }
 
 .fab.fa-youtube {
-    margin: 0 24px 0 0;
-    font-size: 18px;
-    color: #6d6d6d;
+  margin: 0 24px 0 0;
+  font-size: 18px;
+  color: #6d6d6d;
 }
