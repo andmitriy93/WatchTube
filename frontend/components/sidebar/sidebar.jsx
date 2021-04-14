@@ -83,7 +83,7 @@ export default ({ currentUser }) => {
             <i className='fab fa-youtube'></i>Subscriptions
           </p>
         </li>
-        {/* <div className="sidebar-greeting">{greeting}</div> */}
+        <div className="sidebar-greeting">{greeting}</div>
 
         {/* <li className="list-element">
           <a className="contact" href="https://github.com/andmitriy93" target="_blank"><i className='fa fa-github'></i></a>
