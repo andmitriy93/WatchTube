@@ -12,7 +12,6 @@ class VideoIndexItem extends React.Component {
   }
 
   render() {
-    // console.log(this.props.video);
     if (!this.props.video) return null;
     return (
       <div className='video-wrapper'>
@@ -25,7 +24,6 @@ class VideoIndexItem extends React.Component {
           <video
             className='video-player'
             src={this.props.video.video_url}
-            // width='300'
             controlsList='nodownload'
             muted='muted'
             autoPlay={false}
