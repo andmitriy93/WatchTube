@@ -11,8 +11,10 @@ class Home extends React.Component {
     return (
       <div className="home">
         <NavBar />
-        <SideBarContainer />
-        <VideoIndexContainer />
+        <div className="home-items-container">
+          <SideBarContainer />
+          <VideoIndexContainer />
+        </div>
       </div>
     )
   }
