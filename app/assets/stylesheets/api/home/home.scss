@@ -9,7 +9,7 @@
 
 
 .home-items-container {
-  border: 2px solid white;
+  // border: 2px solid white;
   width: 100%;
   display: grid;
   grid-template-columns: 15% 85%;
@@ -17,21 +17,24 @@
 
 .vid-container {
   width: 100%;
-  border: 3px solid blue;
+  // border: 3px solid blue;
   overflow: auto;
+  position: relative;
+  top: 8%;
 }
 
 .vid-item {
-  border: 2px solid red;
+  // border: 2px solid red;
   width: 100%;
   height: 100vh;
   display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
-  grid-gap: 10px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 20px;
+  padding: 10px 10px;
 }
 
 
-.video-wrapper {
+// .video-wrapper {
   // width: 20%;
   // height: 242px;
   // display: inline-block;
@@ -51,7 +54,7 @@
   // flex-direction: column;
   // display: grid;
   // grid-template-columns: 25% 25% 25% 25%;
-}
+// }
 
 .video-container {
   display: flex;
