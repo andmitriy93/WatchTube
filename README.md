@@ -10,7 +10,7 @@
 * [Status](#setup)
 
 ### General info
- WatchTube is an online video-sharing platform. YouTuubee allows you to create an account, login, put like and leave comments on videos, search 
+ WatchTube is an online video-sharing platform. WatchTube allows you to create an account, login, put like and leave comments on videos, search 
  a specific video
 
 ### Technologies
