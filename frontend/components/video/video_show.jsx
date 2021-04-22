@@ -31,7 +31,8 @@ class VideoShow extends React.Component {
             <CommentsForm />
             <Comments videoId={this.props.videoId} />
           </div>
-          <div className="video-show-sugg"></div>
+          <div className="video-show-sugg">
+          </div>
         </div>
       </div>
     );

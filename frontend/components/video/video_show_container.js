@@ -8,12 +8,14 @@ const mSTP = (state, ownProps) => {
   return {
     videoId: parseInt(ownProps.match.params.videoId),
     currentUser: state.session.currentUser,
-    video: state.entities.videos[parseInt(ownProps.match.params.videoId)]
+    video: state.entities.videos[parseInt(ownProps.match.params.videoId)],
+    videos: Object.values(state.entities.videos)
   };
 }
 
 const mDTP = dispatch => {
   return {
+    fetchVideos: () => dispatch(fetchVideos()),
     fetchVideo: (videoId) => dispatch(fetchVideo(videoId))
   }
 }
