@@ -3,11 +3,11 @@
   // position: relative;
   // top: 10%;
   // left: 270px;
-  width: 60%;
+  width: 99%;
   min-width: 500px;
   justify-content: center;
-  display: flex;
-  flex-direction: column;
+  // display: flex;
+  // flex-direction: column;
   // overflow: auto;
   display: block;
   outline: none;
@@ -45,7 +45,6 @@
   padding: 0 5px 0 5px;
   font-size: 1em;
   color: #fff;
-  // border: 1px solid black;
 }
 
 .like-comment {
@@ -57,7 +56,6 @@
 }
 
 .like-comment-amount {
-  // color: #dadce0;
   color: #909090;
   font-size: 17px;
   margin-left: 7px;
