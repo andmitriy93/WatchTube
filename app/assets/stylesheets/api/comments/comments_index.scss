@@ -1,14 +1,14 @@
 .comments-index-outter {
-  height: 40%;
-  position: relative;
-  top: 10%;
-  left: 270px;
+  height: 100%;
+  // position: relative;
+  // top: 10%;
+  // left: 270px;
   width: 60%;
   min-width: 500px;
   justify-content: center;
   display: flex;
   flex-direction: column;
-  overflow: auto;
+  // overflow: auto;
   display: block;
   outline: none;
 }

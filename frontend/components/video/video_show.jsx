@@ -17,15 +17,19 @@ class VideoShow extends React.Component {
     return (
       <div className='video-show-outter'>
         <NavBar />
-        <Sidebar />
-        <video
-          className='video-show-player'
-          src={this.props.video.video_url}
-          controlsList='nodownload'
-          controls
-        />
-        <CommentsForm />
-        <Comments videoId={this.props.videoId} />
+        <div className="video-show-sidebar">
+          <Sidebar />
+        </div>
+        <div className="video-show-content">
+          <video
+            className='video-show-player'
+            src={this.props.video.video_url}
+            controlsList='nodownload'
+            controls
+          />
+          <CommentsForm />
+          <Comments videoId={this.props.videoId} />
+        </div>
       </div>
     );
   }

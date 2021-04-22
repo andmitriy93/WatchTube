@@ -14,26 +14,10 @@ class Comments extends React.Component {
 
   componentDidMount() {
     this.props.fetchComments().then((res) => {
-      // debugger
       this.setState({ comments: Object.values(res.comments) });
     });
     this.props.fetchLikes();
   }
-
-  // componentDidUpdate(prevProps, prevState) {
-  //   for (let i = 0; i < prevProps.comments.length; i++) {
-  //     let oldComment = prevProps.comments[i];
-  //     let newComment = this.props.comments[i];
-  //     // console.log(oldComment);
-  //     // console.log(newComment);
-
-  //     if (oldComment.likesCount !== newComment.likesCount) {
-  //       // debugger
-  //       this.setState({ comments: this.props.comments });
-  //       break;
-  //     }
-  //   }
-  // }
 
   thumbsUp(e) {
     // debugger;
