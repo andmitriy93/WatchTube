@@ -16,7 +16,7 @@
   z-index: 9999;
   // border: 2px solid white;
   display: grid;
-  grid-template-columns: 15% 68% 17%;
+  grid-template-columns: 15% 69% 16%;
 }
 
 .video-show-content {
@@ -30,10 +30,13 @@
   // border: 2px solid red;
   padding-top: 1%;
   padding-left: 2%;
+  padding-right: 1%;
   // align-items: center;
 }
 
-
+.video-show-content::-webkit-scrollbar {
+  width: 0.1rem;
+}
 
 .video-show-sugg {
   width: 100%;
@@ -42,12 +45,15 @@
   position: relative;
   top: 8%;
   padding-top: 1%;
-  display: block;
+  padding: 1%;
+  overflow: scroll;
+  box-shadow: 0px 0px 5px rgba(255,255,255,0.1);
 }
 
 .video-show-content video {
-  width: auto;
-  height: 60%;
+  width: 99%;
+  height: 70%;
+  box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.2);
   // border: 2px solid white;
 }
 

@@ -5,6 +5,7 @@ import VideoShow from './video_show'
 
 
 const mSTP = (state, ownProps) => {
+  debugger
   return {
     videoId: parseInt(ownProps.match.params.videoId),
     currentUser: state.session.currentUser,
