@@ -16,7 +16,7 @@ export default () => (
     <Switch>
       <AuthRoute exact path="/login" component={LogInContainer} />
       <AuthRoute exact path="/signup" component={SignUpContainer} />
-      <Route path="/videos/:videoId" component={VideoShowContainer} />
+      <Route exact path="/videos/:videoId" component={VideoShowContainer} />
       <Route exact path="/" component={Home} />
       <Route path="*" component={ErrorsRender} />
     </Switch>
