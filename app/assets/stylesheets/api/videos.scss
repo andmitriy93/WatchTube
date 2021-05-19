@@ -1,6 +1,3 @@
-// Place all the styles related to the videos controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
 
 
 // Only video show page CSS
@@ -9,6 +6,11 @@
   width: 100vw;
   background: #191919;
   display: flex;
+}
+
+
+.video-show-navbar {
+  border: 2px solid red;
 }
 
 .video-show-sidebar {

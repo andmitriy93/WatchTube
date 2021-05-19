@@ -9,9 +9,6 @@ class Navbar extends React.Component {
 
     this.state = {
       showMenu: false,
-      // darkTheme: false,
-      // navOuter: 'nav-curr-user',
-      // theme1: 'navbar-menu'
     };
 
     this.showMenu = this.showMenu.bind(this);
@@ -33,24 +30,6 @@ class Navbar extends React.Component {
     });
   }
 
-  // switchTheme(e) {
-  //   e.preventDefault();
-  //   if (this.state.darkTheme === false) {
-  //     this.setState({
-  //       darkTheme: !this.state.darkTheme,
-  //       navOuter: 'nav-curr-user dark',
-  //       theme1: 'navbar-menu.dark'
-  //     })
-  //   }else {
-  //     this.setState({
-  //       darkTheme: !this.state.darkTheme,
-  //       navOuter: 'nav-curr-user',
-  //       theme1: 'navbar-menu'
-  //     })
-  //   }
-  // } 
-
-
   getNavbar() {
     if (this.props.currentUser) {
       return (
@@ -71,7 +50,6 @@ class Navbar extends React.Component {
                 <div className='logout-btn' onClick={this.logoutUser}>
                   <i className='fas fa-sign-out-alt'></i> Sign out
                 </div>
-                {/* <button onClick={this.switchTheme}>Dark Theme</button> */}
               </div>
             ) : null}
           </div>
