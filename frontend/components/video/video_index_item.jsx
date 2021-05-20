@@ -21,22 +21,24 @@ class VideoIndexItem extends React.Component {
             this.props.history.push(`/videos/${this.props.video.id}`)
           }
         >
-          <video
-            className='video-player'
-            src={this.props.video.video_url}
-            controlsList='nodownload'
-            muted='muted'
-            autoPlay={false}
-            preload='auto'
-            onMouseOver={this.playVideo}
-            onMouseOut={this.stopVideo}
-          />
-          {/* <div className="video-desc-container"> */}
+          <div className="video-show-player-cont">
+            <video
+              className='video-player'
+              src={this.props.video.video_url}
+              controlsList='nodownload'
+              muted='muted'
+              autoPlay={false}
+              preload='auto'
+              onMouseOver={this.playVideo}
+              onMouseOut={this.stopVideo}
+            />
+          </div>
+          <div className='video-desc-container'>
             <p className='desc'>
               {/* {this.props.video.id} {this.props.video.title} */}
               {this.props.video.title}
             </p>
-          {/* </div> */}
+          </div>
         </div>
       </div>
     );
