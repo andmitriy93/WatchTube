@@ -21,7 +21,7 @@ class VideoIndexItem extends React.Component {
             this.props.history.push(`/videos/${this.props.video.id}`)
           }
         >
-          <div className="video-show-player-cont">
+          {/* <div className="video-show-player-cont"> */}
             <video
               className='video-player'
               src={this.props.video.video_url}
@@ -32,13 +32,13 @@ class VideoIndexItem extends React.Component {
               onMouseOver={this.playVideo}
               onMouseOut={this.stopVideo}
             />
-          </div>
-          <div className='video-desc-container'>
+          {/* </div> */}
+          {/* <div className='video-desc-container'> */}
             <p className='desc'>
               {/* {this.props.video.id} {this.props.video.title} */}
               {this.props.video.title}
             </p>
-          </div>
+          {/* </div> */}
         </div>
       </div>
     );

@@ -32,6 +32,9 @@ class VideoShow extends React.Component {
               controlsList='nodownload'
               controls
             />
+            <p className="video-show-desc">
+              {this.props.video.title}
+            </p>
             <CommentsForm />
             <Comments videoId={this.props.videoId} />
           </div>
