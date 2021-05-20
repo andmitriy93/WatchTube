@@ -40,7 +40,7 @@ import { Link } from "react-router-dom";
 
 export default ({ currentUser }) => {
   const greeting = currentUser ? (
-    <div></div>
+    <></>
   ) : (
     <div className='list-element login'>
       <p>

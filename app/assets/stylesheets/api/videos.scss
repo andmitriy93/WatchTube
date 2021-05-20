@@ -6,16 +6,13 @@
   width: 100vw;
   background: #191919;
   display: flex;
+  // flex-direction: column;
+  // overflow: auto;
 }
 
-
-.video-show-navbar {
-  // border: 2px solid red;
-}
 
 .video-show-sidebar {
   width: 100%;
-  z-index: 9999;
   // border: 2px solid white;
   display: grid;
   grid-template-columns: 15% 69% 16%;

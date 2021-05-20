@@ -20,9 +20,9 @@ class VideoShow extends React.Component {
 
     return (
       <div className='video-show-outter'>
-        <div className="video-show-navbar">
+        {/* <div className="video-show-navbar"> */}
           <NavBar />
-        </div>
+        {/* </div> */}
         <div className="video-show-sidebar">
           <Sidebar />
           <div className="video-show-content">
