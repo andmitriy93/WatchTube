@@ -7,7 +7,8 @@ class CommentsForm extends React.Component {
     this.state = {
       body: "",
       author_id: this.props.author_id,
-      video_id: this.props.videos[0].id,
+      // video_id: this.props.videos[0].id,
+      video_id: this.props.videoId
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -25,7 +26,7 @@ class CommentsForm extends React.Component {
   }
 
   render() {
-    // debugger
+    // debugger;
     return (
       <div className='comments-form-outter'>
         <form className='comments-form'>

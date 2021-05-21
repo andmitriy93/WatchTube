@@ -2,10 +2,10 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { fetchVideo, fetchVideos } from '../../actions/video_actions'
 import VideoShow from './video_show'
+import Comments from '../comments/comments_index'
 
 
 const mSTP = (state, ownProps) => {
-  // debugger
   return {
     videoId: parseInt(ownProps.match.params.videoId),
     currentUser: state.session.currentUser,

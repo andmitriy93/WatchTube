@@ -19,6 +19,7 @@ class Comments extends React.Component {
     this.props.fetchLikes();
   }
 
+
   thumbsUp(e) {
     // debugger;
     e.preventDefault();
@@ -41,7 +42,7 @@ class Comments extends React.Component {
     if (!this.props.comments) return null;
     if (!this.props.likes) return null;
     const { comments } = this.state;
-    console.log(comments);
+
 
     // comments.reverse();
     const filteredComments = comments.map((comment) => {

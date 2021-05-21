@@ -12,7 +12,7 @@ const mSTP = (state) => {
   return {
     errors: state.errors,
     author_id: state.session.currentUser,
-    videos: Object.values(state.entities.videos),
+    // videos: Object.values(state.entities.videos),
   };
 };
 

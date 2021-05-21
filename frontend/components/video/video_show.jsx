@@ -10,19 +10,18 @@ import VideoIndexItem from './video_index_item';
 class VideoShow extends React.Component {
   componentDidMount() {
     this.props.fetchVideo(this.props.videoId);
-    this.props.fetchVideos()
+    // this.props.fetchVideos();
   }
 
   render() {
+    // debugger
     if (!this.props.video) return null;
 
-    let videos = this.props.videos.map(video => <VideoIndexItem video={video} key={video.id} />)
+    // let videos = this.props.videos.map(video => <VideoIndexItem video={video} key={video.id} />)
 
     return (
       <div className='video-show-outter'>
-        {/* <div className="video-show-navbar"> */}
           <NavBar />
-        {/* </div> */}
         <div className="video-show-sidebar">
           <Sidebar />
           <div className="video-show-content">
@@ -35,12 +34,12 @@ class VideoShow extends React.Component {
             <p className="video-show-desc">
               {this.props.video.title}
             </p>
-            <CommentsForm />
+            <CommentsForm videoId={this.props.videoId} />
             <Comments videoId={this.props.videoId} />
           </div>
-          <div className="video-show-sugg">
+          {/* <div className="video-show-sugg">
             {videos}
-          </div>
+          </div> */}
         </div>
       </div>
     );
