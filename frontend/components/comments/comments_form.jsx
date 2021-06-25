@@ -7,7 +7,6 @@ class CommentsForm extends React.Component {
     this.state = {
       body: "",
       author_id: this.props.author_id,
-      // video_id: this.props.videos[0].id,
       video_id: this.props.videoId
     };
 
@@ -23,10 +22,10 @@ class CommentsForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault()
     this.props.createComment(this.state).then(this.setState({ body: '' }));
+
   }
 
   render() {
-    // debugger;
     return (
       <div className='comments-form-outter'>
         <form className='comments-form'>

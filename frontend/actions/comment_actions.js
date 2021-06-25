@@ -27,35 +27,8 @@ const removeComment = (commentId) => {
   };
 };
 
-// const receiveLike = like => {
-//   return {
-//     type: RECEIVE_LIKE,
-//     like
-//   }
-// }
-// const removeLike = likeId => {
-//   return {
-//     type: REMOVE_LIKE,
-//     likeId
-//   }
-// }
-
-
-// export const likeComment = (like) => (dispatch) => {
-//   return CommentAPIUtil.likeToComment(like).then((like) =>
-//     dispatch(receiveLike(like))
-//   );
-// };
-
-// export const unLikeComment = (likeId) => (dispatch) => {
-//   return CommentAPIUtil.deleteLikeFromComment(likeId).then((comment) =>
-//     dispatch(removeLike(comment))
-//   );
-// };
-
 
 export const fetchComments = () => (dispatch) => {
-  // userId
   return CommentAPIUtil.fetchComments().then((comments) =>
     dispatch(receiveComments(comments))
   );

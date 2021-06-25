@@ -13,7 +13,6 @@ class Api::CommentsController < ApplicationController
 
   def create
     @comment = Comment.new(author_id: current_user.id, video_id: params[:comment][:video_id], body: params[:comment][:body])
-    # @comment = Comment.new(comment_params)
 
     if @comment.save!
       render :show

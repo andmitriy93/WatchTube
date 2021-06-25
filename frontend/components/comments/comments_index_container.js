@@ -6,8 +6,6 @@ import {
   createComment,
   updateComment,
   deleteComment,
-  // likeComment,
-  // unLikeComment
 } from "../../actions/comment_actions";
 import { likeComment, unLikeComment, fetchLikes } from '../../actions/likes_actions'
 
@@ -16,7 +14,7 @@ const mSTP = (state) => {
     currentUser: state.session.currentUser,
     currentVideo: state.entities.videos,
     comments: Object.values(state.entities.comments),
-    likes: Object.values(state.entities.likes)
+    likes: Object.values(state.entities.likes),
   };
 };
 

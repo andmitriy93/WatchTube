@@ -1,4 +1,5 @@
 import React from "react";
+import CommentForm from './comments_form_container'
 
 class Comments extends React.Component {
   constructor(props) {
@@ -20,14 +21,13 @@ class Comments extends React.Component {
   }
 
 
+
   thumbsUp(e) {
-    // debugger;
     e.preventDefault();
     this.props.likeComment(parseInt(e.currentTarget.value));
   }
 
   thumbsDown(e) {
-    // debugger;
     e.preventDefault();
     let currentUser = this.props.currentUser.id;
     let commentId = parseInt(e.currentTarget.value);
@@ -44,7 +44,6 @@ class Comments extends React.Component {
     const { comments } = this.state;
 
 
-    // comments.reverse();
     const filteredComments = comments.map((comment) => {
       if (comment.video_id === parseInt(this.props.videoId)) {
         return (
@@ -74,8 +73,6 @@ class Comments extends React.Component {
         );
       }
     });
-
-    // debugger
     return <div className='comments-index-outter'>{filteredComments}</div>;
   }
 }

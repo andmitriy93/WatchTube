@@ -8,11 +8,9 @@ import {
 } from "../../actions/comment_actions";
 
 const mSTP = (state) => {
-  // debugger
   return {
     errors: state.errors,
     author_id: state.session.currentUser,
-    // videos: Object.values(state.entities.videos),
   };
 };
 

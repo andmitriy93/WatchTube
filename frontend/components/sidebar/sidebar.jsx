@@ -1,43 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-// class SideBar extends React.Component {
-//   constructor(props) {
-//     super(props);
-//   }
-
-//   render() {
-//     return (
-//       <div className="sidebar">
-//         <ul className="sideNav">
-//           <li className="home-link">
-//             <p>
-//               <Link to="/">Home</Link>
-//             </p>
-//           </li>
-//           <li>
-//             <p>Trending</p>
-//           </li>
-//           <li>
-//             <p>Subscriptions</p>
-//           </li>
-//           if ()
-//           <li>
-//             <p>
-//               Log in to like videos, <br /> and comment, and subscribe
-//             </p>
-//             <button className="btn-login">
-//                 <Link to="/login">Login</Link>
-//             </button>
-//           </li>
-//         </ul>
-//       </div>
-//     );
-//   }
-// }
-
-// export default SideBar;
-
 export default ({ currentUser }) => {
   const greeting = currentUser ? (
     <></>
@@ -59,19 +22,17 @@ export default ({ currentUser }) => {
     <div className='sidebar'>
       <div className='sidebar-logo-wrapper'>
         <Link className='img-youtube' to='/'>
-          {/* <img src={window.YoutubeURL} /> */}
-          {/* <img src={window.WatchTube} /> */}
           <i className='fab fa-youtube logo'></i>
           <span className='sidebar-watchtube'>WatchTube</span>
         </Link>
       </div>
       <ul className='sidebar-list'>
         <li className='list-element'>
-          <p>
-            <Link className='list-link-home' to='/'>
+          <Link className='list-link-home' to='/'>
+            <p>
               <i className='fas fa-home'></i>Home
-            </Link>
-          </p>
+            </p>
+          </Link>
         </li>
         <li className='list-element'>
           <p>
@@ -84,15 +45,8 @@ export default ({ currentUser }) => {
           </p>
         </li>
         <div className="sidebar-greeting">{greeting}</div>
-
-        {/* <li className="list-element">
-          <a className="contact" href="https://github.com/andmitriy93" target="_blank"><i className='fa fa-github'></i></a>
-          <a className="contact" href="https://www.linkedin.com/in/dmitriy-an/" target="_blank"><i className='fa fa-linkedin'></i></a>
-          <a className="contact" href="https://angel.co/u/dmitrii-an" target="_blank"><i className='fa fa-angellist'></i></a>
-        </li> */}
       </ul>
       <footer>
-        {/* <li className="list-element"> */}
         <a
           className='contact'
           href='https://github.com/andmitriy93'
@@ -114,7 +68,6 @@ export default ({ currentUser }) => {
         >
           <i className='fa fa-angellist'></i>
         </a>
-        {/* </li> */}
       </footer>
     </div>
   );

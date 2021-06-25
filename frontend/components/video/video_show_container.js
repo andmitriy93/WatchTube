@@ -6,11 +6,13 @@ import Comments from '../comments/comments_index'
 
 
 const mSTP = (state, ownProps) => {
+  // debugger
   return {
     videoId: parseInt(ownProps.match.params.videoId),
     currentUser: state.session.currentUser,
     video: state.entities.videos[parseInt(ownProps.match.params.videoId)],
-    videos: Object.values(state.entities.videos)
+    videos: Object.values(state.entities.videos),
+    // videoComments: state.entities.videos[parseInt(ownProps.match.params.videoId)].videoComments
   };
 }
 
