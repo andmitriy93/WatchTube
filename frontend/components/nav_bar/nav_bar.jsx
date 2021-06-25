@@ -14,7 +14,6 @@ class Navbar extends React.Component {
     this.showMenu = this.showMenu.bind(this);
     this.logoutUser = this.logoutUser.bind(this);
     this.getNavbar = this.getNavbar.bind(this);
-    // this.switchTheme = this.switchTheme.bind(this);
   }
 
 
@@ -34,8 +33,6 @@ class Navbar extends React.Component {
     if (this.props.currentUser) {
       return (
         <div className='nav-curr-user'>
-        {/* <div className={this.state.navOuter}> */}
-          {/* <span className='welcome'>Welcome {this.props.currentUser.username}</span> */}
           <div className="nav-pixel"></div>
           <SearchBar />
           <div>

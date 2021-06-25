@@ -27,16 +27,6 @@ class Signup extends React.Component {
     this.props.createNewUser(this.state).then(this.props.history.push());
   }
 
-  // renderErrors() {
-  //   return (
-  //     <div className="error-render">
-  //       {this.props.errors.map((error, i) => (
-  //         <li className="err-msg" key={`error-${i}`}>{error}</li>
-  //       ))}
-  //     </div>
-  //   );
-  // }
-
   renderUsernameErrors() {
     if (this.props.errors.includes("Username can't be blank")) {
       return <div className='error-render'>Username can't be blank*</div>;
@@ -110,7 +100,6 @@ class Signup extends React.Component {
                 </label>
                 <div>{this.renderPasswordErrors()}</div>
               </div>
-              {/* {this.renderErrors()} */}
             </div>
             <br />
 

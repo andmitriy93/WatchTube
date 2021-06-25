@@ -5,7 +5,6 @@ import Signup from "./signup";
 
 const mSTP = (state) => {
   return {
-    // errors: Object.values(state.errors.session),
     errors: state.errors.session
 
   }

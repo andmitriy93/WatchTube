@@ -26,14 +26,13 @@ class Login extends React.Component {
   handleDemo() {
     this.props.login({
       username: 'Demo User',
-      // email: 'user_demo@gmail.com',
       password: '12345678',
     }).then(() => this.props.history.push())
   }
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.login(this.state).then(this.props.history.push()); // not sure what it does
+    this.props.login(this.state).then(this.props.history.push());
   }
 
   renderErrors() {

@@ -6,7 +6,6 @@ import Comments from '../comments/comments_index'
 
 
 const mSTP = (state, ownProps) => {
-  // debugger
   return {
     videoId: parseInt(ownProps.match.params.videoId),
     currentUser: state.session.currentUser,

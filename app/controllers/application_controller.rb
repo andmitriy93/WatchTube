@@ -24,11 +24,9 @@ class ApplicationController < ActionController::Base
     end
 
     def require_logged_in!
-        # unless current_user
         unless logged_in?
             render json: { base: ['invalid crenetials'] }, status: 401
         end
-            # redirect_to new_session_url unless logged_in?
     end
 
 end

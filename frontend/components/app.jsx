@@ -12,7 +12,6 @@ import ErrorsRender from "./errors/errors";
 
 export default () => (
   <div>
-    {/* <NavBarContainer /> */}
     <Switch>
       <AuthRoute exact path="/login" component={LogInContainer} />
       <AuthRoute exact path="/signup" component={SignUpContainer} />
