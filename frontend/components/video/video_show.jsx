@@ -7,11 +7,6 @@ import Sidebar from '../sidebar/sidebar_container';
 import VideoIndexItem from './video_index_item';
 
 class VideoShow extends React.Component {
-  // constructor(props) {
-  //   super(props)
-  //   this.state
-  // }
-
   componentDidMount() {
     this.props.fetchVideo(this.props.videoId);
   }

@@ -20,6 +20,14 @@ class Comments extends React.Component {
     this.props.fetchLikes();
   }
 
+  componentDidUpdate(prevProps) {
+    if (prevProps.comments.length !== this.props.comments.length) {
+      this.setState({
+        comments: this.props.comments
+      })
+    }
+  }
+
 
 
   thumbsUp(e) {
