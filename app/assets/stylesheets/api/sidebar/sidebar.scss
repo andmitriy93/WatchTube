@@ -2,8 +2,6 @@
   display: flex;
   flex-direction: column;
   background-color: #222;
-  // background: #f8f8ff;
-  // width: 15%;
   width: 100%;
   max-height: 100vh;
   border: 1px solid;
@@ -16,14 +14,11 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  // border: 1px solid blue;
 }
 
 .img-youtube {
   text-decoration: none;
-  // color: #212121;
   color: #f8f8ff;
-  // background: #f8f8f8;
 }
 
 .fab.fa-youtube.logo {
@@ -47,7 +42,6 @@
   list-style-type: none;
   padding-left: 0;
   padding-top: 20px;
-  //   border: 1px solid red;
   height: 100%;
 }
 
@@ -69,7 +63,6 @@
 .sidebar footer {
   border: 1px solid;
   margin-bottom: 30px;
-//   box-shadow: 3px 3px 5px rgba(255, 255, 255, 0.1);
   font-size: 2rem;
   text-decoration: none;
   justify-content: space-evenly;
@@ -81,7 +74,6 @@
 }
 
 .contact i:hover {
-//   color: #212121;
   color: #fff;
 }
 
@@ -90,7 +82,6 @@
   width: 120px;
   height: 35px;
   font-size: 15px;
-  // background-color: #212121;
   background: transparent;
   color: #065fd4;
   padding: 5px 15px;
@@ -118,7 +109,6 @@
   text-decoration: none;
   color: #065fd4;
   text-transform: uppercase;
-  // padding: 5px 15px;
 }
 
 .list-link-home {
